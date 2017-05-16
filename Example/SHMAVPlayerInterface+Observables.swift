@@ -14,14 +14,14 @@ import RxCocoa
 
 extension SHMAVPlayerInterface
 {
-    func observePlayerStatus(options: ObservingOptions) -> Observable<AVPlayerStatus>
+    public func observePlayerStatus(options: ObservingOptions) -> Observable<AVPlayerStatus>
     {
         return player.rx.observe(AVPlayerStatus.self, "status", options: options.keyValuesObservingOptions, retainSelf: false)
             .ignoreNil()
             .distinctUntilChanged()
     }
     
-    func observePlayerItemStatus(options: ObservingOptions) -> Observable<AVPlayerItemStatus>
+    public func observePlayerItemStatus(options: ObservingOptions) -> Observable<AVPlayerItemStatus>
     {
         assert(player.currentItem != nil, "You have to set player's item first!")
         guard let item = player.currentItem else { return Observable<AVPlayerItemStatus>.empty() }
@@ -31,7 +31,7 @@ extension SHMAVPlayerInterface
             .distinctUntilChanged()
     }
     
-    func observePlayerItemBufferStatus(options: ObservingOptions) -> Observable<PlayerItemBufferStatus>
+    public func observePlayerItemBufferStatus(options: ObservingOptions) -> Observable<PlayerItemBufferStatus>
     {
         assert(player.currentItem != nil, "You have to set player's item first!")
         guard let item = player.currentItem else { return Observable<PlayerItemBufferStatus>.empty() }
@@ -61,13 +61,13 @@ extension SHMAVPlayerInterface
             .distinctUntilChanged()
     }
     
-    func observePlaybackFinished() -> Observable<Void>
+    public func observePlaybackFinished() -> Observable<Void>
     {
         return NotificationCenter.default.rx.notification(.AVPlayerItemDidPlayToEndTime)
             .map({ _ in Void() })
     }
     
-    func observePlaybackPaused(options: ObservingOptions) -> Observable<(paused: Bool, rate: Float)>
+    public func observePlaybackPaused(options: ObservingOptions) -> Observable<(paused: Bool, rate: Float)>
     {
         return player.rx.observe(Float.self, "rate", options: options.keyValuesObservingOptions, retainSelf: false)
             .ignoreNil()
@@ -82,7 +82,7 @@ extension SHMAVPlayerInterface
             })
     }
     
-    func observePlaybackPosition(updateInterval: TimeInterval, updateQueue: DispatchQueue?) -> Observable<TimeInterval>
+    public func observePlaybackPosition(updateInterval: TimeInterval, updateQueue: DispatchQueue?) -> Observable<TimeInterval>
     {
         return Observable.create({[weak player] observer in
             
@@ -110,14 +110,14 @@ extension SHMAVPlayerInterface
         })
     }
     
-    func observeExternalPlaybackActive(options: ObservingOptions) -> Observable<Bool>
+    public func observeExternalPlaybackActive(options: ObservingOptions) -> Observable<Bool>
     {
         return player.rx.observe(Bool.self, "externalPlaybackActive", options: options.keyValuesObservingOptions, retainSelf: false)
             .ignoreNil()
             .distinctUntilChanged()
     }
     
-    func observeAccessLog() -> Observable<AVPlayerItemAccessLogEvent>
+    public func observeAccessLog() -> Observable<AVPlayerItemAccessLogEvent>
     {
         return NotificationCenter.default.rx.notification(.AVPlayerItemNewAccessLogEntry)
             .map({[weak self] _ -> AVPlayerItemAccessLogEvent? in
@@ -128,7 +128,7 @@ extension SHMAVPlayerInterface
     }
     
     
-    func observeErrorLog() -> Observable<AVPlayerItemErrorLogEvent>
+    public func observeErrorLog() -> Observable<AVPlayerItemErrorLogEvent>
     {
         return NotificationCenter.default.rx.notification(.AVPlayerItemNewErrorLogEntry)
             .map({[weak self] _ -> AVPlayerItemErrorLogEvent? in
