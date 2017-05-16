@@ -28,8 +28,6 @@ extension SHMAVPlayerInterface
             queue: configuration.positionUpdateQueue,
             using: {[weak self] positionTime in
                 
-                //call some method which should do some with new position
-                
                 let position = CMTimeGetSeconds(positionTime)
                 
                 self?.playbackPositionSubject.onNext(position)

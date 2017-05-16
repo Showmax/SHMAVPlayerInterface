@@ -42,8 +42,6 @@ extension SHMAVPlayerInterface
             queue: nil,
             using: {[weak self] _ in
                 
-                //call some method which can handle state when playback reached end
-                
                 self?.playbackFinishedSubject.onNext(Void())
         })
     }

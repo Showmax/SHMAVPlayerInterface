@@ -29,32 +29,28 @@
 		3423A9841ECB083F00AA647D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3423A9541ECB07E300AA647D /* Main.storyboard */; };
 		3423A9851ECB084100AA647D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3423A9541ECB07E300AA647D /* Main.storyboard */; };
 		3423A9861ECB084700AA647D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3423A94C1ECB07E300AA647D /* Assets.xcassets */; };
-		3423A9891ECB094800AA647D /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9881ECB094800AA647D /* SHMAVPlayerInterface.swift */; };
-		3423A98A1ECB09AB00AA647D /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9881ECB094800AA647D /* SHMAVPlayerInterface.swift */; };
-		3423A98B1ECB09AC00AA647D /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9881ECB094800AA647D /* SHMAVPlayerInterface.swift */; };
-		3423A98C1ECB09AC00AA647D /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9881ECB094800AA647D /* SHMAVPlayerInterface.swift */; };
 		3423A98E1ECB09D000AA647D /* MyPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A98D1ECB09D000AA647D /* MyPlayerController.swift */; };
 		3423A98F1ECB09D000AA647D /* MyPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A98D1ECB09D000AA647D /* MyPlayerController.swift */; };
-		3445BCDB1ECB101500A234CD /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCDA1ECB101500A234CD /* SHMAVPlayerInterface+Types.swift */; };
-		3445BCDC1ECB101500A234CD /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCDA1ECB101500A234CD /* SHMAVPlayerInterface+Types.swift */; };
-		3445BCDD1ECB101500A234CD /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCDA1ECB101500A234CD /* SHMAVPlayerInterface+Types.swift */; };
-		3445BCDE1ECB101500A234CD /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCDA1ECB101500A234CD /* SHMAVPlayerInterface+Types.swift */; };
-		3445BCE01ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCDF1ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift */; };
-		3445BCE11ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCDF1ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift */; };
-		3445BCE21ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCDF1ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift */; };
-		3445BCE31ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCDF1ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift */; };
-		3445BCE51ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCE41ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift */; };
-		3445BCE61ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCE41ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift */; };
-		3445BCE71ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCE41ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift */; };
-		3445BCE81ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCE41ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift */; };
-		3445BCEA1ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCE91ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift */; };
-		3445BCEB1ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCE91ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift */; };
-		3445BCEC1ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCE91ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift */; };
-		3445BCED1ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCE91ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift */; };
-		3445BCF41ECB163700A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF31ECB163700A234CD /* Logging.swift */; };
-		3445BCF51ECB163700A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF31ECB163700A234CD /* Logging.swift */; };
-		3445BCF61ECB163700A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF31ECB163700A234CD /* Logging.swift */; };
-		3445BCF71ECB163700A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF31ECB163700A234CD /* Logging.swift */; };
+		3445BCFB1ECB283600A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF91ECB283600A234CD /* Logging.swift */; };
+		3445BCFC1ECB283600A234CD /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCFA1ECB283600A234CD /* Observable+IgnoreNil.swift */; };
+		3445BCFD1ECB283B00A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF91ECB283600A234CD /* Logging.swift */; };
+		3445BCFE1ECB283B00A234CD /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCFA1ECB283600A234CD /* Observable+IgnoreNil.swift */; };
+		3445BCFF1ECB283C00A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF91ECB283600A234CD /* Logging.swift */; };
+		3445BD001ECB283C00A234CD /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCFA1ECB283600A234CD /* Observable+IgnoreNil.swift */; };
+		3445BD011ECB283C00A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF91ECB283600A234CD /* Logging.swift */; };
+		3445BD021ECB283C00A234CD /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCFA1ECB283600A234CD /* Observable+IgnoreNil.swift */; };
+		345804871ECB7F04007224FB /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804811ECB7F04007224FB /* SHMAVPlayerInterface.swift */; };
+		3458048A1ECB7F04007224FB /* SHMAVPlayerInterface+Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804841ECB7F04007224FB /* SHMAVPlayerInterface+Observables.swift */; };
+		3458048C1ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804861ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift */; };
+		3458048D1ECB7F0C007224FB /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804811ECB7F04007224FB /* SHMAVPlayerInterface.swift */; };
+		345804901ECB7F0C007224FB /* SHMAVPlayerInterface+Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804841ECB7F04007224FB /* SHMAVPlayerInterface+Observables.swift */; };
+		345804921ECB7F0C007224FB /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804861ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift */; };
+		345804931ECB7F0D007224FB /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804811ECB7F04007224FB /* SHMAVPlayerInterface.swift */; };
+		345804961ECB7F0D007224FB /* SHMAVPlayerInterface+Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804841ECB7F04007224FB /* SHMAVPlayerInterface+Observables.swift */; };
+		345804981ECB7F0D007224FB /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804861ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift */; };
+		345804991ECB7F0E007224FB /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804811ECB7F04007224FB /* SHMAVPlayerInterface.swift */; };
+		3458049C1ECB7F0E007224FB /* SHMAVPlayerInterface+Observables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804841ECB7F04007224FB /* SHMAVPlayerInterface+Observables.swift */; };
+		3458049E1ECB7F0E007224FB /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804861ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift */; };
 		E8E215C8C4490935D02DD034 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A373FC71264E29119597E8 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework */; };
 		EA5882FD81AE361AD9840BCD /* Pods_SHMAVPlayerIntefaceExampleiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */; };
 /* End PBXBuildFile section */
@@ -96,13 +92,12 @@
 		3423A9641ECB07E300AA647D /* XCTestCase+Wait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Wait.swift"; sourceTree = "<group>"; };
 		3423A9761ECB081100AA647D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3423A9781ECB081E00AA647D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3423A9881ECB094800AA647D /* SHMAVPlayerInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMAVPlayerInterface.swift; sourceTree = "<group>"; };
 		3423A98D1ECB09D000AA647D /* MyPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlayerController.swift; sourceTree = "<group>"; };
-		3445BCDA1ECB101500A234CD /* SHMAVPlayerInterface+Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SHMAVPlayerInterface+Types.swift"; path = "../Source/SHMAVPlayerInterface+Types.swift"; sourceTree = "<group>"; };
-		3445BCDF1ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHMAVPlayerInterface+KVO.swift"; sourceTree = "<group>"; };
-		3445BCE41ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHMAVPlayerInterface+Notifications.swift"; sourceTree = "<group>"; };
-		3445BCE91ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHMAVPlayerInterface+PlayerObservers.swift"; sourceTree = "<group>"; };
-		3445BCF31ECB163700A234CD /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logging.swift; path = ../Source/Logging.swift; sourceTree = "<group>"; };
+		3445BCF91ECB283600A234CD /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		3445BCFA1ECB283600A234CD /* Observable+IgnoreNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+IgnoreNil.swift"; sourceTree = "<group>"; };
+		345804811ECB7F04007224FB /* SHMAVPlayerInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMAVPlayerInterface.swift; sourceTree = "<group>"; };
+		345804841ECB7F04007224FB /* SHMAVPlayerInterface+Observables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHMAVPlayerInterface+Observables.swift"; sourceTree = "<group>"; };
+		345804861ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHMAVPlayerInterface+Types.swift"; sourceTree = "<group>"; };
 		509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerIntefaceExampleiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538F2B3266B2CF09E988F28E /* Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOSTests/Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		60121E6F64BBD859955DAB66 /* Pods_SHMAVPlayerIntefaceExampleIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerIntefaceExampleIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,14 +285,21 @@
 		3423A9871ECB091F00AA647D /* SHMAVPlayerInterface_lib */ = {
 			isa = PBXGroup;
 			children = (
-				3423A9881ECB094800AA647D /* SHMAVPlayerInterface.swift */,
-				3445BCDA1ECB101500A234CD /* SHMAVPlayerInterface+Types.swift */,
-				3445BCDF1ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift */,
-				3445BCE41ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift */,
-				3445BCE91ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift */,
-				3445BCF31ECB163700A234CD /* Logging.swift */,
+				3445BCF81ECB283600A234CD /* misc */,
+				345804811ECB7F04007224FB /* SHMAVPlayerInterface.swift */,
+				345804861ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift */,
+				345804841ECB7F04007224FB /* SHMAVPlayerInterface+Observables.swift */,
 			);
 			name = SHMAVPlayerInterface_lib;
+			sourceTree = "<group>";
+		};
+		3445BCF81ECB283600A234CD /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				3445BCF91ECB283600A234CD /* Logging.swift */,
+				3445BCFA1ECB283600A234CD /* Observable+IgnoreNil.swift */,
+			);
+			path = misc;
 			sourceTree = "<group>";
 		};
 		F3D56D62A95788B6B6B526F3 /* Pods */ = {
@@ -684,15 +686,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3445BCFC1ECB283600A234CD /* Observable+IgnoreNil.swift in Sources */,
 				3423A9791ECB081E00AA647D /* AppDelegate.swift in Sources */,
-				3445BCF41ECB163700A234CD /* Logging.swift in Sources */,
-				3445BCE01ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift in Sources */,
-				3445BCE51ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift in Sources */,
+				345804871ECB7F04007224FB /* SHMAVPlayerInterface.swift in Sources */,
+				3458048A1ECB7F04007224FB /* SHMAVPlayerInterface+Observables.swift in Sources */,
+				3458048C1ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift in Sources */,
 				3423A9771ECB081100AA647D /* ViewController.swift in Sources */,
 				3423A98E1ECB09D000AA647D /* MyPlayerController.swift in Sources */,
-				3445BCEA1ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift in Sources */,
-				3423A9891ECB094800AA647D /* SHMAVPlayerInterface.swift in Sources */,
-				3445BCDB1ECB101500A234CD /* SHMAVPlayerInterface+Types.swift in Sources */,
+				3445BCFB1ECB283600A234CD /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,15 +701,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3445BCFE1ECB283B00A234CD /* Observable+IgnoreNil.swift in Sources */,
 				3423A97A1ECB082100AA647D /* AppDelegate.swift in Sources */,
-				3445BCF51ECB163700A234CD /* Logging.swift in Sources */,
-				3445BCE11ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift in Sources */,
-				3445BCE61ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift in Sources */,
-				3423A98A1ECB09AB00AA647D /* SHMAVPlayerInterface.swift in Sources */,
+				3458048D1ECB7F0C007224FB /* SHMAVPlayerInterface.swift in Sources */,
+				345804901ECB7F0C007224FB /* SHMAVPlayerInterface+Observables.swift in Sources */,
+				345804921ECB7F0C007224FB /* SHMAVPlayerInterface+Types.swift in Sources */,
 				3423A9721ECB07EB00AA647D /* SHMAVPlayerInterfaceTests.swift in Sources */,
-				3445BCEB1ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift in Sources */,
 				3423A9731ECB07EB00AA647D /* XCTestCase+Wait.swift in Sources */,
-				3445BCDC1ECB101500A234CD /* SHMAVPlayerInterface+Types.swift in Sources */,
+				3445BCFD1ECB283B00A234CD /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,15 +716,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3445BD001ECB283C00A234CD /* Observable+IgnoreNil.swift in Sources */,
 				3423A97E1ECB082800AA647D /* ViewController.swift in Sources */,
-				3445BCF61ECB163700A234CD /* Logging.swift in Sources */,
-				3445BCE21ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift in Sources */,
-				3445BCE71ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift in Sources */,
+				345804931ECB7F0D007224FB /* SHMAVPlayerInterface.swift in Sources */,
+				345804961ECB7F0D007224FB /* SHMAVPlayerInterface+Observables.swift in Sources */,
+				345804981ECB7F0D007224FB /* SHMAVPlayerInterface+Types.swift in Sources */,
 				3423A97B1ECB082500AA647D /* AppDelegate.swift in Sources */,
 				3423A98F1ECB09D000AA647D /* MyPlayerController.swift in Sources */,
-				3445BCEC1ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift in Sources */,
-				3423A98B1ECB09AC00AA647D /* SHMAVPlayerInterface.swift in Sources */,
-				3445BCDD1ECB101500A234CD /* SHMAVPlayerInterface+Types.swift in Sources */,
+				3445BCFF1ECB283C00A234CD /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,15 +731,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3445BD021ECB283C00A234CD /* Observable+IgnoreNil.swift in Sources */,
 				3423A97C1ECB082500AA647D /* AppDelegate.swift in Sources */,
-				3445BCF71ECB163700A234CD /* Logging.swift in Sources */,
-				3445BCE31ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift in Sources */,
-				3445BCE81ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift in Sources */,
-				3423A98C1ECB09AC00AA647D /* SHMAVPlayerInterface.swift in Sources */,
+				345804991ECB7F0E007224FB /* SHMAVPlayerInterface.swift in Sources */,
+				3458049C1ECB7F0E007224FB /* SHMAVPlayerInterface+Observables.swift in Sources */,
+				3458049E1ECB7F0E007224FB /* SHMAVPlayerInterface+Types.swift in Sources */,
 				3423A9741ECB07EC00AA647D /* SHMAVPlayerInterfaceTests.swift in Sources */,
-				3445BCED1ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift in Sources */,
 				3423A9751ECB07EC00AA647D /* XCTestCase+Wait.swift in Sources */,
-				3445BCDE1ECB101500A234CD /* SHMAVPlayerInterface+Types.swift in Sources */,
+				3445BD011ECB283C00A234CD /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,11 +10,17 @@ import Foundation
 import AVKit
 import AVFoundation
 import RxSwift
+import RxCocoa
 
 class MyPlayerController: AVPlayerViewController
 {
     var     bag = DisposeBag()
     var     playerInterface: SHMAVPlayerInterface?
+    
+    deinit
+    {
+        ldebug("Destroying player controller")
+    }
     
     override var player: AVPlayer?
     {
@@ -35,17 +41,6 @@ class MyPlayerController: AVPlayerViewController
             playerInterface = SHMAVPlayerInterface(player: newPlayer)
             
             subscribeToPlayerInterface()
-            
-            let asset = AVAsset(url: URL(string: "https://tungsten.aaplimg.com/VOD/bipbop_adv_example_v2/master.m3u8")!)
-            let item = AVPlayerItem(asset: asset)
-            
-            let config = SHMAVPlayerInterface.Configuration(
-                observeProperties: [.playerItemStatus, .playbackPosition],
-                positionUpdateInterval: 0.1,
-                positionUpdateQueue: nil
-            )
-            
-            playerInterface?.set(playerItem: item, configuration: config)
         }
     }
     
@@ -59,22 +54,20 @@ class MyPlayerController: AVPlayerViewController
     
     func subscribeToPlayerInterface()
     {
-        guard let playerInterface = self.playerInterface else { return }
-        
-        playerInterface.playerItemStatusObservable
-            .subscribe(
-                onNext: { status in
+        //playerInterface?.observePlaybackPosition(updateInterval: 0.1, updateQueue: nil)
+         //   .subscribe(
+           //     onNext: { position in
                     
-                    ldebug("Item status \(status.rawValue)")
-                }
-            )
-            .disposed(by: bag)
+             //       ldebug("Playback position \(position).")
+               // }
+            //)
+            //.disposed(by: bag)
         
-        playerInterface.playbackPositionObservable
+        playerInterface?.observePlayerItemStatus(options: .new)
             .subscribe(
-                onNext: { position in
+                onNext: { itemStatus in
                     
-                    ldebug("Playback position \(position).")
+                    ldebug("Item status \(itemStatus.rawValue)")
                 }
             )
             .disposed(by: bag)

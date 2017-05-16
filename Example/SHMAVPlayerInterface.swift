@@ -11,139 +11,17 @@ import AVFoundation
 
 import RxSwift
 
-extension SHMAVPlayerInterface
-{
-    public var playerStatusObservable: Observable<AVPlayerStatus>
-    {
-        return playerStatusSubject
-            .asObservable()
-            .observeOn(MainScheduler.instance)
-    }
-    
-    public var playerItemStatusObservable: Observable<AVPlayerStatus>
-    {
-        return playerItemStatusSubject
-            .asObservable()
-            .observeOn(MainScheduler.instance)
-    }
-    
-    public var playerBufferStatusObservable: Observable<PlayerItemBufferStatus>
-    {
-        return playerBufferStatusSubject
-            .observeOn(MainScheduler.instance)
-            .asObservable()
-    }
-    
-    public var playbackFinishedObservable: Observable<Void>
-    {
-        return playbackFinishedSubject
-            .asObservable()
-            .observeOn(MainScheduler.instance)
-    }
-    
-    public var playbackPausedObservable: Observable<Bool>
-    {
-        return playbackPausedSubject
-            .asObservable()
-            .observeOn(MainScheduler.instance)
-    }
-    
-    public var playbackPositionObservable: Observable<TimeInterval>
-    {
-        return playbackPositionSubject
-            .asObservable()
-            .observeOn(MainScheduler.instance)
-    }
-    
-    public var externalPlaybackObservable: Observable<Bool>
-    {
-        return externalPlaybackSubject
-            .asObservable()
-            .observeOn(MainScheduler.instance)
-    }
-    
-    public var newAccessLogEventObservable: Observable<AVPlayerItemAccessLogEvent>
-    {
-        return newAccessLogEventSubject
-            .asObservable()
-            .observeOn(MainScheduler.instance)
-    }
-    
-    public var newErrorLogEventObservable: Observable<AVPlayerItemErrorLogEvent>
-    {
-        return newErrorLogEventSubject
-            .asObservable()
-            .observeOn(MainScheduler.instance)
-    }
-}
-
 public class SHMAVPlayerInterface: NSObject
 {
     public let              player: AVPlayer
-    var                     configuration: Configuration
     
     public private(set) var seeking: Bool
-    
-    var                     observingContext: ObservingContext
-    
-    lazy var                playerStatusSubject: PublishSubject<AVPlayerStatus> =
-    {
-        return PublishSubject<AVPlayerStatus>()
-    }()
-    
-    lazy var                playerItemStatusSubject: PublishSubject<AVPlayerStatus> =
-    {
-        return PublishSubject<AVPlayerStatus>()
-    }()
-
-    lazy var                playerBufferStatusSubject: PublishSubject<PlayerItemBufferStatus> =
-    {
-        return PublishSubject<PlayerItemBufferStatus>()
-    }()
-
-    lazy var                playbackFinishedSubject: PublishSubject<Void> =
-    {
-        return PublishSubject<Void>()
-    }()
-
-    lazy var                playbackPausedSubject: PublishSubject<Bool> =
-    {
-        return PublishSubject<Bool>()
-    }()
-
-    lazy var                playbackPositionSubject: PublishSubject<TimeInterval> =
-    {
-        return PublishSubject<TimeInterval>()
-    }()
-
-    lazy var                externalPlaybackSubject: PublishSubject<Bool> =
-    {
-        return PublishSubject<Bool>()
-    }()
-
-    lazy var                newAccessLogEventSubject: PublishSubject<AVPlayerItemAccessLogEvent> =
-    {
-        return PublishSubject<AVPlayerItemAccessLogEvent>()
-    }()
-
-    lazy var                newErrorLogEventSubject: PublishSubject<AVPlayerItemErrorLogEvent> =
-    {
-        return PublishSubject<AVPlayerItemErrorLogEvent>()
-    }()
-
     
     public init(player: AVPlayer)
     {
         self.player = player
         
         seeking = false
-        configuration = Configuration.default
-        observingContext = ObservingContext.empty
-    }
-    
-    deinit
-    {
-        cancelAllObservers()
     }
     
     // MARK: - Public API
@@ -252,17 +130,6 @@ public class SHMAVPlayerInterface: NSObject
         return player.error ?? player.currentItem?.error
     }
     
-    public func set(playerItem: AVPlayerItem?, configuration: Configuration)
-    {
-        cancelAllObservers()
-        
-        self.configuration = configuration
-        
-        player.replaceCurrentItem(with: playerItem)
-        
-        prepareAllObservers()
-    }
-    
     public func play()
     {
         player.play()
@@ -315,26 +182,6 @@ public class SHMAVPlayerInterface: NSObject
         guard let audioGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicAudible) else { return }
         
         item.select(audioTrack.option, in: audioGroup)
-    }
-    
-    // MARK: - Internal API
-    
-    func cancelAllObservers()
-    {
-        removeAllPlayerTimeObservers()
-        removeAllKVOObservers()
-        
-        observingContext = ObservingContext.empty
-    }
-    
-    func prepareAllObservers()
-    {
-        setupPlayerTimeObservers()
-        
-        setupListeningForNotifications()
-        
-        setupPlayerKVOObservers()
-        setupPlayerItemKVOObservers()
     }
 }
 

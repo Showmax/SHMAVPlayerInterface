@@ -11,6 +11,8 @@ import AVFoundation
 
 import XCTest
 
+import RxSwift
+
 class SHMAVPlayerInterfaceTests: XCTestCase
 {
     func test__playerStatusChange__playerStatusChangedCallbackIsCalled()
@@ -145,40 +147,31 @@ class SHMAVPlayerInterfaceTests: XCTestCase
     
     func test1()
     {
-        let player = AVPlayer(playerItem: nil)
-        let playerInterface = SHMAVPlayerInterface(player: player)
+        var bag = DisposeBag()
         
         let asset = AVAsset(url: URL(string: "https://tungsten.aaplimg.com/VOD/bipbop_adv_example_v2/master.m3u8")!)
         let item = AVPlayerItem(asset: asset)
+        let player = AVPlayer(playerItem: item)
         
-        let config = SHMAVPlayerInterface.Configuration(positionUpdateInterval: 0.1, positionUpdateQueue: nil)
+        let playerInterface = SHMAVPlayerInterface(player: player)
         
-        shmwait(timeout: 3.0, action: { done in
+        shmwait(timeout: 5.0, action: { done in
             
-            ldebug("Current player status \(player.status)")
-            
-            let callbacks = SHMAVPlayerInterface.Callbacks(
-                playerStatusChanged: { status in
-                    
-                    ldebug("Player status changed \(status)")
-                },
-                playbackPositionUpdated: { position in
-            
-                    ldebug("Playback positions \(position)")
-                    if position > 0.0
-                    {
+            playerInterface.observePlaybackPosition(updateInterval: 0.1, updateQueue: nil)
+                .subscribe(
+                    onNext: { position in
+                        
+                        ldebug("Testing position \(position)")
+                        guard position > 0.0 else { return }
+                        
                         done()
                     }
-                    
-                }
-            )
-            
-            let playerItem = SHMAVPlayerInterface.PlayerItem(item: item, configuration: config, callbacks: callbacks)
-            playerInterface.set(playerItem: playerItem)
+                )
+                .disposed(by: bag)
             
             playerInterface.play()
         })
         
-        playerInterface.set(playerItem: nil)
+        bag = DisposeBag()
     }
 }

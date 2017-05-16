@@ -30,7 +30,9 @@ class ViewController: UIViewController
     {
         super.viewDidAppear(animated)
         
-        let player = AVPlayer(playerItem: nil)
+        let asset = AVAsset(url: URL(string: "https://tungsten.aaplimg.com/VOD/bipbop_adv_example_v2/master.m3u8")!)
+        let item = AVPlayerItem(asset: asset)
+        let player = AVPlayer(playerItem: item)
         
         let playerController = MyPlayerController()
         playerController.player = player
