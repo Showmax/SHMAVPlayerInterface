@@ -155,16 +155,16 @@ class SHMAVPlayerInterfaceTests: XCTestCase
         
         shmwait(timeout: 3.0, action: { done in
             
-            print("Current player status \(player.status)")
+            ldebug("Current player status \(player.status)")
             
             let callbacks = SHMAVPlayerInterface.Callbacks(
                 playerStatusChanged: { status in
                     
-                    print("Player status changed \(status)")
+                    ldebug("Player status changed \(status)")
                 },
                 playbackPositionUpdated: { position in
             
-                    print("Playback positions \(position)")
+                    ldebug("Playback positions \(position)")
                     if position > 0.0
                     {
                         done()

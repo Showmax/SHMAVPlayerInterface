@@ -65,7 +65,7 @@ class MyPlayerController: AVPlayerViewController
             .subscribe(
                 onNext: { status in
                     
-                    print("Item status \(status.rawValue)")
+                    ldebug("Item status \(status.rawValue)")
                 }
             )
             .disposed(by: bag)
@@ -74,7 +74,7 @@ class MyPlayerController: AVPlayerViewController
             .subscribe(
                 onNext: { position in
                     
-                    print("Playback position \(position).")
+                    ldebug("Playback position \(position).")
                 }
             )
             .disposed(by: bag)

@@ -51,6 +51,10 @@
 		3445BCEB1ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCE91ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift */; };
 		3445BCEC1ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCE91ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift */; };
 		3445BCED1ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCE91ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift */; };
+		3445BCF41ECB163700A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF31ECB163700A234CD /* Logging.swift */; };
+		3445BCF51ECB163700A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF31ECB163700A234CD /* Logging.swift */; };
+		3445BCF61ECB163700A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF31ECB163700A234CD /* Logging.swift */; };
+		3445BCF71ECB163700A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF31ECB163700A234CD /* Logging.swift */; };
 		E8E215C8C4490935D02DD034 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A373FC71264E29119597E8 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework */; };
 		EA5882FD81AE361AD9840BCD /* Pods_SHMAVPlayerIntefaceExampleiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */; };
 /* End PBXBuildFile section */
@@ -98,6 +102,7 @@
 		3445BCDF1ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHMAVPlayerInterface+KVO.swift"; sourceTree = "<group>"; };
 		3445BCE41ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHMAVPlayerInterface+Notifications.swift"; sourceTree = "<group>"; };
 		3445BCE91ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHMAVPlayerInterface+PlayerObservers.swift"; sourceTree = "<group>"; };
+		3445BCF31ECB163700A234CD /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logging.swift; path = ../Source/Logging.swift; sourceTree = "<group>"; };
 		509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerIntefaceExampleiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538F2B3266B2CF09E988F28E /* Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOSTests/Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		60121E6F64BBD859955DAB66 /* Pods_SHMAVPlayerIntefaceExampleIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerIntefaceExampleIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +295,7 @@
 				3445BCDF1ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift */,
 				3445BCE41ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift */,
 				3445BCE91ECB111600A234CD /* SHMAVPlayerInterface+PlayerObservers.swift */,
+				3445BCF31ECB163700A234CD /* Logging.swift */,
 			);
 			name = SHMAVPlayerInterface_lib;
 			sourceTree = "<group>";
@@ -679,6 +685,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3423A9791ECB081E00AA647D /* AppDelegate.swift in Sources */,
+				3445BCF41ECB163700A234CD /* Logging.swift in Sources */,
 				3445BCE01ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift in Sources */,
 				3445BCE51ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift in Sources */,
 				3423A9771ECB081100AA647D /* ViewController.swift in Sources */,
@@ -694,6 +701,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3423A97A1ECB082100AA647D /* AppDelegate.swift in Sources */,
+				3445BCF51ECB163700A234CD /* Logging.swift in Sources */,
 				3445BCE11ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift in Sources */,
 				3445BCE61ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift in Sources */,
 				3423A98A1ECB09AB00AA647D /* SHMAVPlayerInterface.swift in Sources */,
@@ -709,6 +717,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3423A97E1ECB082800AA647D /* ViewController.swift in Sources */,
+				3445BCF61ECB163700A234CD /* Logging.swift in Sources */,
 				3445BCE21ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift in Sources */,
 				3445BCE71ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift in Sources */,
 				3423A97B1ECB082500AA647D /* AppDelegate.swift in Sources */,
@@ -724,6 +733,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3423A97C1ECB082500AA647D /* AppDelegate.swift in Sources */,
+				3445BCF71ECB163700A234CD /* Logging.swift in Sources */,
 				3445BCE31ECB10A600A234CD /* SHMAVPlayerInterface+KVO.swift in Sources */,
 				3445BCE81ECB10DB00A234CD /* SHMAVPlayerInterface+Notifications.swift in Sources */,
 				3423A98C1ECB09AC00AA647D /* SHMAVPlayerInterface.swift in Sources */,

@@ -13,15 +13,68 @@ import RxSwift
 
 extension SHMAVPlayerInterface
 {
-    public var playerStatusObservable: Observable<AVPlayerStatus> { return playerStatusSubject.asObservable() }
-    public var playerItemStatusObservable: Observable<AVPlayerStatus> { return playerItemStatusSubject.asObservable() }
-    public var playerBufferStatusObservable: Observable<PlayerItemBufferStatus> { return playerBufferStatusSubject.asObservable() }
-    public var playbackFinishedObservable: Observable<Void> { return playbackFinishedSubject.asObservable() }
-    public var playbackPausedObservable: Observable<Bool> { return playbackPausedSubject.asObservable() }
-    public var playbackPositionObservable: Observable<TimeInterval> { return playbackPositionSubject.asObservable() }
-    public var externalPlaybackObservable: Observable<Bool> { return externalPlaybackSubject.asObservable() }
-    public var newAccessLogEventObservable: Observable<AVPlayerItemAccessLogEvent> { return newAccessLogEventSubject.asObservable() }
-    public var newErrorLogEventObservable: Observable<AVPlayerItemErrorLogEvent> { return newErrorLogEventSubject.asObservable() }
+    public var playerStatusObservable: Observable<AVPlayerStatus>
+    {
+        return playerStatusSubject
+            .asObservable()
+            .observeOn(MainScheduler.instance)
+    }
+    
+    public var playerItemStatusObservable: Observable<AVPlayerStatus>
+    {
+        return playerItemStatusSubject
+            .asObservable()
+            .observeOn(MainScheduler.instance)
+    }
+    
+    public var playerBufferStatusObservable: Observable<PlayerItemBufferStatus>
+    {
+        return playerBufferStatusSubject
+            .observeOn(MainScheduler.instance)
+            .asObservable()
+    }
+    
+    public var playbackFinishedObservable: Observable<Void>
+    {
+        return playbackFinishedSubject
+            .asObservable()
+            .observeOn(MainScheduler.instance)
+    }
+    
+    public var playbackPausedObservable: Observable<Bool>
+    {
+        return playbackPausedSubject
+            .asObservable()
+            .observeOn(MainScheduler.instance)
+    }
+    
+    public var playbackPositionObservable: Observable<TimeInterval>
+    {
+        return playbackPositionSubject
+            .asObservable()
+            .observeOn(MainScheduler.instance)
+    }
+    
+    public var externalPlaybackObservable: Observable<Bool>
+    {
+        return externalPlaybackSubject
+            .asObservable()
+            .observeOn(MainScheduler.instance)
+    }
+    
+    public var newAccessLogEventObservable: Observable<AVPlayerItemAccessLogEvent>
+    {
+        return newAccessLogEventSubject
+            .asObservable()
+            .observeOn(MainScheduler.instance)
+    }
+    
+    public var newErrorLogEventObservable: Observable<AVPlayerItemErrorLogEvent>
+    {
+        return newErrorLogEventSubject
+            .asObservable()
+            .observeOn(MainScheduler.instance)
+    }
 }
 
 public class SHMAVPlayerInterface: NSObject

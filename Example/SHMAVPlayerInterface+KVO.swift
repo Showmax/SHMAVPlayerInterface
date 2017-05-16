@@ -16,7 +16,7 @@ extension SHMAVPlayerInterface
         let player = self.player
         let item = player.currentItem
         
-        print("PAths to remove item \(observingContext.pathsObservedForItem)")
+        ldebug("PAths to remove item \(observingContext.pathsObservedForItem)")
         
         observingContext.pathsObservedForItem.forEach({ item?.removeObserver(self, forKeyPath: $0) })
         observingContext.pathsObservedForItem = []
@@ -73,7 +73,7 @@ extension SHMAVPlayerInterface
         observingContext.pathsObservedForItem = createPathsToObserveForItem()
         observingContext.pathsObservedForItem.forEach({ item.addObserver(self, forKeyPath: $0, options: .new, context: nil) })
         
-        print("Paths for item \(observingContext.pathsObservedForItem)")
+        ldebug("Paths for item \(observingContext.pathsObservedForItem)")
     }
     
     
@@ -104,7 +104,7 @@ extension SHMAVPlayerInterface
                 let changedStatus = changed[NSKeyValueChangeKey.newKey] as? NSNumber,
                 let status = AVPlayerStatus(rawValue: changedStatus.intValue) else
             {
-                print("No status")
+                ldebug("No status")
                 
                 return
             }

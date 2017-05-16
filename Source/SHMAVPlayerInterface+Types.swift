@@ -11,20 +11,24 @@ import AVFoundation
 
 extension SHMAVPlayerInterface
 {
-    struct ObserveProperties: OptionSet
+    public typealias PlayerItemBufferStatus = (bufferEmpty: Bool, bufferFull: Bool)
+    
+    public struct ObserveProperties: OptionSet
     {
-        let rawValue: Int
+        public let rawValue: Int
         
-        static let playerStatus = ObserveProperties(rawValue: 1 << 0)
-        static let playerItemStatus = ObserveProperties(rawValue: 1 << 1)
-        static let playerBufferStatus = ObserveProperties(rawValue: 1 << 2)
-        static let playbackFinished = ObserveProperties(rawValue: 1 << 3)
-        static let playbackPaused = ObserveProperties(rawValue: 1 << 4)
-        static let playbackPosition = ObserveProperties(rawValue: 1 << 5)
-        static let playbackStall = ObserveProperties(rawValue: 1 << 6)
-        static let externalPlayback = ObserveProperties(rawValue: 1 << 7)
-        static let accessLogEvent = ObserveProperties(rawValue: 1 << 8)
-        static let errorLogEvent = ObserveProperties(rawValue: 1 << 9)
+        public init(rawValue: Int) { self.rawValue = rawValue }
+        
+        public static let playerStatus = ObserveProperties(rawValue: 1 << 0)
+        public static let playerItemStatus = ObserveProperties(rawValue: 1 << 1)
+        public static let playerBufferStatus = ObserveProperties(rawValue: 1 << 2)
+        public static let playbackFinished = ObserveProperties(rawValue: 1 << 3)
+        public static let playbackPaused = ObserveProperties(rawValue: 1 << 4)
+        public static let playbackPosition = ObserveProperties(rawValue: 1 << 5)
+        public static let playbackStall = ObserveProperties(rawValue: 1 << 6)
+        public static let externalPlayback = ObserveProperties(rawValue: 1 << 7)
+        public static let accessLogEvent = ObserveProperties(rawValue: 1 << 8)
+        public static let errorLogEvent = ObserveProperties(rawValue: 1 << 9)
     }
     
     public struct Configuration
@@ -43,25 +47,20 @@ extension SHMAVPlayerInterface
             )
         }
     }
-}
-
-extension SHMAVPlayerInterface
-{
+    
     public struct Subtitle
     {
         let languageCode: String
         let forced: Bool
         let option: AVMediaSelectionOption
     }
-}
-
-extension SHMAVPlayerInterface
-{
+    
     public struct AudioTrack
     {
         let languageCode: String
         let option: AVMediaSelectionOption
     }
+
 }
 
 extension SHMAVPlayerInterface
@@ -87,9 +86,5 @@ extension SHMAVPlayerInterface
             )
         }
     }
-}
 
-extension SHMAVPlayerInterface
-{
-    public typealias PlayerItemBufferStatus = (bufferEmpty: Bool, bufferFull: Bool)
 }
