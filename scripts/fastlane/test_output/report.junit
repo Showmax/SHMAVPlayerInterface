@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='SHMTableView_Example_tvOS_Tests.xctest' tests='45' failures='0'>
+  <testsuite name='SHMTableView_Example_tvOS_Tests.JFDiffTests' tests='1' failures='0'>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.JFDiffTests' name='testDiff' time='0.014'/>
+  </testsuite>
+  <testsuite name='SHMTableView_Example_tvOS_Tests.SHMDiffableTests' tests='2' failures='0'>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMDiffableTests' name='test__comparingStringToDifferentType__willNotEqual' time='0.001'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMDiffableTests' name='test__sameStrings__willEqual' time='0.001'/>
+  </testsuite>
+  <testsuite name='SHMTableView_Example_tvOS_Tests.SHMTableChangesFinderTests' tests='13' failures='0'>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableChangesFinderTests' name='test__comparingDifferentChanges__willNotEqual' time='0.005'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableChangesFinderTests' name='test__emptySectionThatIsFilledWithRows__isMentionedInChanges' time='0.003'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableChangesFinderTests' name='test__identicalInstances__notMentionedInChanges' time='0.001'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableChangesFinderTests' name='test__identicalLists__haveEmptyChanges' time='0.001'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableChangesFinderTests' name='test__measure__findingChangesWhenInsertingAndDeletingRows' time='0.341'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableChangesFinderTests' name='test__rowsDeletedFromList__areMentionedInChanges' time='0.002'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableChangesFinderTests' name='test__rowsInsertedAndDeletedInList__areMentionedInChanges' time='0.001'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableChangesFinderTests' name='test__rowsInsertedToList__areMentionedInChanges' time='0.001'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableChangesFinderTests' name='test__rowsWithIdenticalValuesDeletedInList__areMentionedInChanges' time='0.001'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableChangesFinderTests' name='test__sectionAppendedToEndOfList__isMentionedInChanges' time='0.001'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableChangesFinderTests' name='test__sectionsAppendedToList__areMentionedInChanges' time='0.001'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableChangesFinderTests' name='test__sectionsDeletedFromList__areMentionedInChanges' time='0.002'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableChangesFinderTests' name='test__sectionsInsertedAndDeletedInList__areMentionedInChanges' time='0.001'/>
+  </testsuite>
+  <testsuite name='SHMTableView_Example_tvOS_Tests.SHMTableOperatorsTests' tests='5' failures='0'>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableOperatorsTests' name='test__arrayOfRows__canBeAddedToSection' time='0.009'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableOperatorsTests' name='test__row__canBeAddedToSection' time='0.006'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableOperatorsTests' name='test__rowAddedToEmptyTable__willBeAddedToAutomaticallyCreatedSection' time='0.004'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableOperatorsTests' name='test__rowAddedToNonEmptyTable__willBeAddedToFirstSection' time='0.005'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableOperatorsTests' name='test__section__canBeAddedToTable' time='0.004'/>
+  </testsuite>
+  <testsuite name='SHMTableView_Example_tvOS_Tests.SHMTableRowProtocolTests' tests='3' failures='0'>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableRowProtocolTests' name='test__action__isCalledOnRowSelection' time='0.013'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableRowProtocolTests' name='test__cellHides__configureOnHideIsCalled' time='0.033'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableRowProtocolTests' name='test__configureMethods__areCalledDuringTableLoading' time='0.010'/>
+  </testsuite>
+  <testsuite name='SHMTableView_Example_tvOS_Tests.SHMTableRowTests' tests='4' failures='0'>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableRowTests' name='test__callingInitWithAction__willSetAction' time='0.001'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableRowTests' name='test__rowsOfdifferentTypes__willNotEqual' time='0.001'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableRowTests' name='test__rowsOfSameInstances__willEqual' time='0.000'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableRowTests' name='test__rowsWithDifferentReusableIdentifiers__willNotEqual' time='0.000'/>
+  </testsuite>
+  <testsuite name='SHMTableView_Example_tvOS_Tests.SHMTableViewControllerTests' tests='1' failures='0'>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewControllerTests' name='test__afterSettingTableView__thenNewSHMTableIsCreated' time='0.002'/>
+  </testsuite>
+  <testsuite name='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' tests='14' failures='0'>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' name='test__append__willAddSectionAfterExistingTableSections' time='0.006'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' name='test__append__willNotTriggerDataReloading' time='0.004'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' name='test__definedFooterTitle__isUsedByTableView' time='0.033'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' name='test__definedFooterView__isUsedByTableView' time='0.009'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' name='test__definedHeaderTitle__isUsedByTableView' time='0.029'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' name='test__definedHeaderView__isUsedByTableView' time='0.027'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' name='test__emptyDataSource__shouldDisplayEmptyTableView' time='0.004'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' name='test__registeringUnknownNib__willThrowError' time='0.018'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' name='test__reloadData__isCalledWhenForcedReload' time='0.005'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' name='test__reloadData__isCalledWhenRemovingAllVisibleSections' time='0.034'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' name='test__reloadDataDifferences__isCalledWhenAtLeastOneVisibleSectionIsUnchanged' time='0.058'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' name='test__sectionWithNoRows__shouldBeDisplayedInTableView' time='0.026'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' name='test__tableFilledWithRows__hasAllRequiredNibsRegistered' time='0.009'/>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTests' name='test__update__willInitiateDataReload' time='0.032'/>
+  </testsuite>
+  <testsuite name='SHMTableView_Example_tvOS_Tests.SHMTableViewTestsEditing' tests='1' failures='0'>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTestsEditing' name='test__afterEnablingEditing__dataSourceMethodsAreCalled' time='0.038'/>
+  </testsuite>
+  <testsuite name='SHMTableView_Example_tvOS_Tests.SHMTableViewTestsScrollDelegate' tests='1' failures='0'>
+    <testcase classname='SHMTableView_Example_tvOS_Tests.SHMTableViewTestsScrollDelegate' name='test__whenSetScrollDelegate__scrollDelegateMethodCallsAreForwardedToScrollDelegate' time='0.005'/>
+  </testsuite>
+</testsuites>

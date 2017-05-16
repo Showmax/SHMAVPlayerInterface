@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: Switch to ios prepare_project lane" time="0.000859">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: clear_derived_data" time="0.197258">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: cd '../../Example' &amp;&amp; rm -rf Pods &amp;&amp; pod install" time="1.902557">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: Switch to ios tests_scan lane" time="0.000941">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: scan" time="36.784916">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>
