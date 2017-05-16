@@ -1,0 +1,44 @@
+use_frameworks!
+
+# Default pods groups. This is installed in every target.
+
+def default_pods
+    pod 'RxSwift'
+    pod 'RxCocoa'
+end
+
+def test_frameworks
+    pod 'Nimble'
+    pod 'RxBlocking'
+    pod 'RxTest'
+    pod 'GCDWebServer'
+end
+
+#IOS
+target :SHMAVPlayerIntefaceExampleiOS do
+    platform :ios, '9.3'
+
+    default_pods
+end
+
+target :SHMAVPlayerIntefaceExampleIOSTests do
+    platform :ios, '9.3'
+
+    default_pods
+    test_frameworks
+end
+
+#TVOS
+target :SHMAVPlayerInterfaceExampleTVOS do
+    platform :tvos, '10.0'
+
+    default_pods
+end
+
+target :SHMAVPlayerInterfaceExampleTVOSTests do
+    platform :tvos, '10.0'
+
+    default_pods
+    test_frameworks
+end
+

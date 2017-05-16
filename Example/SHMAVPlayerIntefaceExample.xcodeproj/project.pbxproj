@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		236EED729AE98F90225E500F /* Pods_SHMAVPlayerIntefaceExampleIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60121E6F64BBD859955DAB66 /* Pods_SHMAVPlayerIntefaceExampleIOSTests.framework */; };
+		29089D7B1A8F62A6F8405D12 /* Pods_SHMAVPlayerInterfaceExampleTVOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 948E5258B8E2D4368917EF3C /* Pods_SHMAVPlayerInterfaceExampleTVOS.framework */; };
 		3423A9651ECB07E300AA647D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3423A94C1ECB07E300AA647D /* Assets.xcassets */; };
 		3423A9661ECB07E300AA647D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3423A94D1ECB07E300AA647D /* LaunchScreen.storyboard */; };
 		3423A9671ECB07E300AA647D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3423A94F1ECB07E300AA647D /* Main.storyboard */; };
@@ -19,9 +21,7 @@
 		3423A97A1ECB082100AA647D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9781ECB081E00AA647D /* AppDelegate.swift */; };
 		3423A97B1ECB082500AA647D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A95A1ECB07E300AA647D /* AppDelegate.swift */; };
 		3423A97C1ECB082500AA647D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A95A1ECB07E300AA647D /* AppDelegate.swift */; };
-		3423A97D1ECB082800AA647D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9761ECB081100AA647D /* ViewController.swift */; };
 		3423A97E1ECB082800AA647D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9761ECB081100AA647D /* ViewController.swift */; };
-		3423A97F1ECB082900AA647D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9761ECB081100AA647D /* ViewController.swift */; };
 		3423A9801ECB083300AA647D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3423A94D1ECB07E300AA647D /* LaunchScreen.storyboard */; };
 		3423A9811ECB083300AA647D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3423A94F1ECB07E300AA647D /* Main.storyboard */; };
 		3423A9821ECB083A00AA647D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3423A9531ECB07E300AA647D /* Assets.xcassets */; };
@@ -30,6 +30,13 @@
 		3423A9851ECB084100AA647D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3423A9541ECB07E300AA647D /* Main.storyboard */; };
 		3423A9861ECB084700AA647D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3423A94C1ECB07E300AA647D /* Assets.xcassets */; };
 		3423A9891ECB094800AA647D /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9881ECB094800AA647D /* SHMAVPlayerInterface.swift */; };
+		3423A98A1ECB09AB00AA647D /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9881ECB094800AA647D /* SHMAVPlayerInterface.swift */; };
+		3423A98B1ECB09AC00AA647D /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9881ECB094800AA647D /* SHMAVPlayerInterface.swift */; };
+		3423A98C1ECB09AC00AA647D /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9881ECB094800AA647D /* SHMAVPlayerInterface.swift */; };
+		3423A98E1ECB09D000AA647D /* MyPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A98D1ECB09D000AA647D /* MyPlayerController.swift */; };
+		3423A98F1ECB09D000AA647D /* MyPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A98D1ECB09D000AA647D /* MyPlayerController.swift */; };
+		E8E215C8C4490935D02DD034 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A373FC71264E29119597E8 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework */; };
+		EA5882FD81AE361AD9840BCD /* Pods_SHMAVPlayerIntefaceExampleiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22A373FC71264E29119597E8 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3423A8F61ECB06B300AA647D /* SHMAVPlayerIntefaceExampleiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHMAVPlayerIntefaceExampleiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3423A90A1ECB06B300AA647D /* SHMAVPlayerIntefaceExampleIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHMAVPlayerIntefaceExampleIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3423A92D1ECB075000AA647D /* SHMAVPlayerInterfaceExampleTVOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHMAVPlayerInterfaceExampleTVOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +77,18 @@
 		3423A9761ECB081100AA647D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3423A9781ECB081E00AA647D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3423A9881ECB094800AA647D /* SHMAVPlayerInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMAVPlayerInterface.swift; sourceTree = "<group>"; };
+		3423A98D1ECB09D000AA647D /* MyPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlayerController.swift; sourceTree = "<group>"; };
+		509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerIntefaceExampleiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		538F2B3266B2CF09E988F28E /* Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOSTests/Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		60121E6F64BBD859955DAB66 /* Pods_SHMAVPlayerIntefaceExampleIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerIntefaceExampleIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6456163510795B94C62CEC38 /* Pods-SHMAVPlayerInterfaceExampleTVOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHMAVPlayerInterfaceExampleTVOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOS/Pods-SHMAVPlayerInterfaceExampleTVOS.debug.xcconfig"; sourceTree = "<group>"; };
+		705C1ADC165FD7373B8CBE72 /* Pods-SHMAVPlayerInterfaceExampleTVOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHMAVPlayerInterfaceExampleTVOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOSTests/Pods-SHMAVPlayerInterfaceExampleTVOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		948E5258B8E2D4368917EF3C /* Pods_SHMAVPlayerInterfaceExampleTVOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerInterfaceExampleTVOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4810329C4DF6A2FD4D54227 /* Pods-SHMAVPlayerIntefaceExampleIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHMAVPlayerIntefaceExampleIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHMAVPlayerIntefaceExampleIOSTests/Pods-SHMAVPlayerIntefaceExampleIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C06055408199A0C3739BCB36 /* Pods-SHMAVPlayerInterfaceExampleTVOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHMAVPlayerInterfaceExampleTVOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOS/Pods-SHMAVPlayerInterfaceExampleTVOS.release.xcconfig"; sourceTree = "<group>"; };
+		DEC04FFBC632C6D6FE61C9D9 /* Pods-SHMAVPlayerIntefaceExampleiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHMAVPlayerIntefaceExampleiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHMAVPlayerIntefaceExampleiOS/Pods-SHMAVPlayerIntefaceExampleiOS.release.xcconfig"; sourceTree = "<group>"; };
+		EE25419BC6F6A0B75C177464 /* Pods-SHMAVPlayerIntefaceExampleIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHMAVPlayerIntefaceExampleIOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHMAVPlayerIntefaceExampleIOSTests/Pods-SHMAVPlayerIntefaceExampleIOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		F3B5E99C877B23261E014824 /* Pods-SHMAVPlayerIntefaceExampleiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHMAVPlayerIntefaceExampleiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHMAVPlayerIntefaceExampleiOS/Pods-SHMAVPlayerIntefaceExampleiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5882FD81AE361AD9840BCD /* Pods_SHMAVPlayerIntefaceExampleiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236EED729AE98F90225E500F /* Pods_SHMAVPlayerIntefaceExampleIOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29089D7B1A8F62A6F8405D12 /* Pods_SHMAVPlayerInterfaceExampleTVOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,12 +120,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E215C8C4490935D02DD034 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04FB94FA9F0D0289FF0B0651 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60121E6F64BBD859955DAB66 /* Pods_SHMAVPlayerIntefaceExampleIOSTests.framework */,
+				509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */,
+				948E5258B8E2D4368917EF3C /* Pods_SHMAVPlayerInterfaceExampleTVOS.framework */,
+				22A373FC71264E29119597E8 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3423A8ED1ECB06B300AA647D = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +146,8 @@
 				3423A94A1ECB07E300AA647D /* Resources */,
 				3423A95C1ECB07E300AA647D /* Tests */,
 				3423A8F71ECB06B300AA647D /* Products */,
+				F3D56D62A95788B6B6B526F3 /* Pods */,
+				04FB94FA9F0D0289FF0B0651 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +198,7 @@
 				3423A9581ECB07E300AA647D /* ios */,
 				3423A9591ECB07E300AA647D /* tvos */,
 				3423A9761ECB081100AA647D /* ViewController.swift */,
+				3423A98D1ECB09D000AA647D /* MyPlayerController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -218,8 +256,8 @@
 		3423A9621ECB07E300AA647D /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				3423A9631ECB07E300AA647D /* SHMAVPlayerInterfaceTests.swift */,
 				3423A9641ECB07E300AA647D /* XCTestCase+Wait.swift */,
+				3423A9631ECB07E300AA647D /* SHMAVPlayerInterfaceTests.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -232,6 +270,21 @@
 			name = SHMAVPlayerInterface_lib;
 			sourceTree = "<group>";
 		};
+		F3D56D62A95788B6B6B526F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4810329C4DF6A2FD4D54227 /* Pods-SHMAVPlayerIntefaceExampleIOSTests.debug.xcconfig */,
+				EE25419BC6F6A0B75C177464 /* Pods-SHMAVPlayerIntefaceExampleIOSTests.release.xcconfig */,
+				F3B5E99C877B23261E014824 /* Pods-SHMAVPlayerIntefaceExampleiOS.debug.xcconfig */,
+				DEC04FFBC632C6D6FE61C9D9 /* Pods-SHMAVPlayerIntefaceExampleiOS.release.xcconfig */,
+				6456163510795B94C62CEC38 /* Pods-SHMAVPlayerInterfaceExampleTVOS.debug.xcconfig */,
+				C06055408199A0C3739BCB36 /* Pods-SHMAVPlayerInterfaceExampleTVOS.release.xcconfig */,
+				538F2B3266B2CF09E988F28E /* Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig */,
+				705C1ADC165FD7373B8CBE72 /* Pods-SHMAVPlayerInterfaceExampleTVOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -239,9 +292,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3423A9131ECB06B300AA647D /* Build configuration list for PBXNativeTarget "SHMAVPlayerIntefaceExampleiOS" */;
 			buildPhases = (
+				14D286F8487F3F3D5F6CEBB6 /* [CP] Check Pods Manifest.lock */,
 				3423A8F21ECB06B300AA647D /* Sources */,
 				3423A8F31ECB06B300AA647D /* Frameworks */,
 				3423A8F41ECB06B300AA647D /* Resources */,
+				574E138F13647DAE69F16BFA /* [CP] Embed Pods Frameworks */,
+				AA2683E8965FFB39CC50AA91 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,9 +312,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3423A9161ECB06B300AA647D /* Build configuration list for PBXNativeTarget "SHMAVPlayerIntefaceExampleIOSTests" */;
 			buildPhases = (
+				11C811F2151350F6201A860E /* [CP] Check Pods Manifest.lock */,
 				3423A9061ECB06B300AA647D /* Sources */,
 				3423A9071ECB06B300AA647D /* Frameworks */,
 				3423A9081ECB06B300AA647D /* Resources */,
+				5D40514E9C18116AEDC39332 /* [CP] Embed Pods Frameworks */,
+				867ECB56E8288C44FB0F9357 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -274,9 +333,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3423A9441ECB075000AA647D /* Build configuration list for PBXNativeTarget "SHMAVPlayerInterfaceExampleTVOS" */;
 			buildPhases = (
+				1614FBA2A1E745461AB58440 /* [CP] Check Pods Manifest.lock */,
 				3423A9291ECB075000AA647D /* Sources */,
 				3423A92A1ECB075000AA647D /* Frameworks */,
 				3423A92B1ECB075000AA647D /* Resources */,
+				E76303D87A3F0A298CD3E99F /* [CP] Embed Pods Frameworks */,
+				8E8B094E93986E5925601A95 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,9 +353,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3423A9471ECB075000AA647D /* Build configuration list for PBXNativeTarget "SHMAVPlayerInterfaceExampleTVOSTests" */;
 			buildPhases = (
+				F0DE05E2E61422BB19863C11 /* [CP] Check Pods Manifest.lock */,
 				3423A9391ECB075000AA647D /* Sources */,
 				3423A93A1ECB075000AA647D /* Frameworks */,
 				3423A93B1ECB075000AA647D /* Resources */,
+				29D11C61F60D6DB25136226B /* [CP] Embed Pods Frameworks */,
+				7D7EA5211F618E38E23E2C53 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -401,6 +466,189 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11C811F2151350F6201A860E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		14D286F8487F3F3D5F6CEBB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1614FBA2A1E745461AB58440 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		29D11C61F60D6DB25136226B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOSTests/Pods-SHMAVPlayerInterfaceExampleTVOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		574E138F13647DAE69F16BFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHMAVPlayerIntefaceExampleiOS/Pods-SHMAVPlayerIntefaceExampleiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D40514E9C18116AEDC39332 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHMAVPlayerIntefaceExampleIOSTests/Pods-SHMAVPlayerIntefaceExampleIOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D7EA5211F618E38E23E2C53 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOSTests/Pods-SHMAVPlayerInterfaceExampleTVOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		867ECB56E8288C44FB0F9357 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHMAVPlayerIntefaceExampleIOSTests/Pods-SHMAVPlayerIntefaceExampleIOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E8B094E93986E5925601A95 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOS/Pods-SHMAVPlayerInterfaceExampleTVOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA2683E8965FFB39CC50AA91 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHMAVPlayerIntefaceExampleiOS/Pods-SHMAVPlayerIntefaceExampleiOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E76303D87A3F0A298CD3E99F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOS/Pods-SHMAVPlayerInterfaceExampleTVOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0DE05E2E61422BB19863C11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3423A8F21ECB06B300AA647D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -408,6 +656,7 @@
 			files = (
 				3423A9791ECB081E00AA647D /* AppDelegate.swift in Sources */,
 				3423A9771ECB081100AA647D /* ViewController.swift in Sources */,
+				3423A98E1ECB09D000AA647D /* MyPlayerController.swift in Sources */,
 				3423A9891ECB094800AA647D /* SHMAVPlayerInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,8 +666,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3423A97A1ECB082100AA647D /* AppDelegate.swift in Sources */,
+				3423A98A1ECB09AB00AA647D /* SHMAVPlayerInterface.swift in Sources */,
 				3423A9721ECB07EB00AA647D /* SHMAVPlayerInterfaceTests.swift in Sources */,
-				3423A97D1ECB082800AA647D /* ViewController.swift in Sources */,
 				3423A9731ECB07EB00AA647D /* XCTestCase+Wait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +678,8 @@
 			files = (
 				3423A97E1ECB082800AA647D /* ViewController.swift in Sources */,
 				3423A97B1ECB082500AA647D /* AppDelegate.swift in Sources */,
+				3423A98F1ECB09D000AA647D /* MyPlayerController.swift in Sources */,
+				3423A98B1ECB09AC00AA647D /* SHMAVPlayerInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,8 +688,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3423A97C1ECB082500AA647D /* AppDelegate.swift in Sources */,
+				3423A98C1ECB09AC00AA647D /* SHMAVPlayerInterface.swift in Sources */,
 				3423A9741ECB07EC00AA647D /* SHMAVPlayerInterfaceTests.swift in Sources */,
-				3423A97F1ECB082900AA647D /* ViewController.swift in Sources */,
 				3423A9751ECB07EC00AA647D /* XCTestCase+Wait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +834,7 @@
 		};
 		3423A9141ECB06B300AA647D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B5E99C877B23261E014824 /* Pods-SHMAVPlayerIntefaceExampleiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C226648446;
@@ -596,6 +848,7 @@
 		};
 		3423A9151ECB06B300AA647D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEC04FFBC632C6D6FE61C9D9 /* Pods-SHMAVPlayerIntefaceExampleiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C226648446;
@@ -609,6 +862,7 @@
 		};
 		3423A9171ECB06B300AA647D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4810329C4DF6A2FD4D54227 /* Pods-SHMAVPlayerIntefaceExampleIOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -624,6 +878,7 @@
 		};
 		3423A9181ECB06B300AA647D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE25419BC6F6A0B75C177464 /* Pods-SHMAVPlayerIntefaceExampleIOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -639,6 +894,7 @@
 		};
 		3423A9451ECB075000AA647D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6456163510795B94C62CEC38 /* Pods-SHMAVPlayerInterfaceExampleTVOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -656,6 +912,7 @@
 		};
 		3423A9461ECB075000AA647D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C06055408199A0C3739BCB36 /* Pods-SHMAVPlayerInterfaceExampleTVOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -673,6 +930,7 @@
 		};
 		3423A9481ECB075000AA647D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 538F2B3266B2CF09E988F28E /* Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -690,6 +948,7 @@
 		};
 		3423A9491ECB075000AA647D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 705C1ADC165FD7373B8CBE72 /* Pods-SHMAVPlayerInterfaceExampleTVOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

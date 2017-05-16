@@ -1,0 +1,32 @@
+PODS:
+  - GCDWebServer (3.3.3):
+    - GCDWebServer/Core (= 3.3.3)
+  - GCDWebServer/Core (3.3.3)
+  - Nimble (7.0.0)
+  - RxBlocking (3.4.1):
+    - RxSwift (~> 3.4)
+  - RxCocoa (3.4.1):
+    - RxSwift (~> 3.4)
+  - RxSwift (3.4.1)
+  - RxTest (3.4.1):
+    - RxSwift (~> 3.4)
+
+DEPENDENCIES:
+  - GCDWebServer
+  - Nimble
+  - RxBlocking
+  - RxCocoa
+  - RxSwift
+  - RxTest
+
+SPEC CHECKSUMS:
+  GCDWebServer: 1c39a1f0763e4eb492bee021e4270fce097d3555
+  Nimble: 874982b605d4d752fcac6be695d13c502de84b1b
+  RxBlocking: 1e8c41cfe7ca2fc0e19d0e616c553845c63cbbd3
+  RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
+  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
+  RxTest: a6fd6e4069face7c6488f96f6c42296b3e44db48
+
+PODFILE CHECKSUM: 2ee6a5cb710f6c2125900b607e7c3e2bf5222de4
+
+COCOAPODS: 1.2.1
