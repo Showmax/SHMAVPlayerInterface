@@ -37,7 +37,7 @@ extension Reactive where Base: AVPlayer
     public func paused(options: NSKeyValueObservingOptions) -> Observable<Bool>
     {
         return base.rx.rate(options: options)
-            .map({ $0 > 0.0 })
+            .map({ $0 <= 0.0 })
     }
     
     public func playbackPosition(updateInterval: TimeInterval, updateQueue: DispatchQueue?) -> Observable<TimeInterval>
