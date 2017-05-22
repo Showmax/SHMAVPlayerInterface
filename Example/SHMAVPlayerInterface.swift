@@ -30,12 +30,12 @@ public class SHMAVPlayerInterface
     {
         guard let item = player.currentItem else { return nil }
         
-        return CMTimeGetSeconds(item.duration)
+        return item.duration.seconds
     }
     
     public var playbackPosition: TimeInterval
     {
-        return CMTimeGetSeconds(player.currentTime())
+        return player.currentTime().seconds
     }
     
     public var availableSubtitles: [Subtitle]

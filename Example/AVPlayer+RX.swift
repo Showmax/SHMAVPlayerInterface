@@ -56,9 +56,7 @@ extension Reactive where Base: AVPlayer
                 queue: updateQueue,
                 using: { positionTime in
                     
-                    let position = CMTimeGetSeconds(positionTime)
-                    
-                    observer.onNext(position)
+                    observer.onNext(positionTime.seconds)
             })
             
             return Disposables.create
