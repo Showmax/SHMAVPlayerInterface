@@ -12,6 +12,8 @@ import AVFoundation
 import RxSwift
 import RxCocoa
 
+
+
 class MyPlayerController: AVPlayerViewController
 {
     var     bag = DisposeBag()
@@ -63,14 +65,50 @@ class MyPlayerController: AVPlayerViewController
             //)
             //.disposed(by: bag)
         
-        playerInterface?.observePlayerItemStatus(options: .new)
+        playerInterface?.player.rx.status(options: [.initial, .new])
             .subscribe(
                 onNext: { itemStatus in
                     
-                    ldebug("Item status \(itemStatus.rawValue)")
+                    ldebug("player status \(itemStatus.rawValue)")
                 }
             )
             .disposed(by: bag)
+        
+        playerInterface?.player.currentItem?.rx.status(options: [.initial, .new])
+            .subscribe(
+                onNext: { itemStatus in
+                    
+                    ldebug("player item status \(itemStatus.rawValue)")
+                }
+            )
+            .disposed(by: bag)
+        
+        playerInterface?.player.rx.playbackPosition(updateInterval: 0.1, updateQueue: nil)
+            .subscribe(
+                onNext: { position in
+                    
+                    ldebug("position \(position)")
+                }
+            )
+            .disposed(by: bag)
+        
+        playerInterface?.player.currentItem?.rx.bufferStatus(options: [.new])
+            .subscribe(
+                onNext: { bufferStatus in
+                    
+                    ldebug("bufferStatus \(bufferStatus)")
+                }
+            )
+            .disposed(by: bag)
+        
+//        playerInterface?.observePlayerItemStatus(options: .new)
+//            .subscribe(
+//                onNext: { itemStatus in
+//                    
+//                    ldebug("Item status \(itemStatus.rawValue)")
+//                }
+//            )
+//            .disposed(by: bag)
     }
     
 }

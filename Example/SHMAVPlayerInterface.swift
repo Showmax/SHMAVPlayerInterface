@@ -11,7 +11,7 @@ import AVFoundation
 
 import RxSwift
 
-public class SHMAVPlayerInterface: NSObject
+public class SHMAVPlayerInterface
 {
     public let              player: AVPlayer
     
@@ -184,55 +184,3 @@ public class SHMAVPlayerInterface: NSObject
         item.select(audioTrack.option, in: audioGroup)
     }
 }
-
-/*
- - callbacking - delegate? closure with events? combination?
- - what should user configure on player itself and what should be configured through API of this library?
- 
- AVPlayer:
- 
- MVP:
- 
- X play
- X pause
- X replace current item (destroy observing on current and set new)
- X seek to position in seconds (user cancelPendingSeeks())
- X report playback progress (interval should be configurable, automatically remove observer)
- X report stall and resume playback (rate, isPlaybackLikelyToKeepUp, buffer status, AVPlayerItemPlaybackStalled notif?)
- X report buffer status (underflow, has data)
- X report player status
- X get error
- 
- - observing rate
- X observing externalPlaybackActive (report change on external playback)
- X observing status (report state changes, report failed - AVPlayerItemFailedToPlayToEndTime notif?)
- 
- FULL:
- - reasonForWaitingToPlay observing
- - report boundary times (set time and report them through callbacks)
- - observing volume
- 
- AVPlayerItem:
- 
- MVP:
- X duration in seconds
- X current playback position in seconds
- X access_log (report changes in profile, AVPlayerItemNewAccessLogEntry notif)
- X error_log (probably only for debugging, report errors, AVPlayerItemNewErrorLogEntry notif)
- 
- X api to list subtitles
- X api to swtich subtitles
- X api to list audio languages
- X api to switch audio languages
- 
- X playback finished (AVPlayerItemDidPlayToEndTime notif)
- 
- 
- 
- Full:
- - observing tracks
- - loaded time ranges (report array of ranges in seconds or compute everything togegher?)
- - observing presentationSize
- - observing timedMetadata
- 
- */
