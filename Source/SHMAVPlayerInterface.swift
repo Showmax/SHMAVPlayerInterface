@@ -45,7 +45,15 @@ public class SHMAVPlayerInterface
     {
         guard let item = player.currentItem else { return nil }
         
-        return item.duration.seconds
+        let seconds = item.duration.seconds
+        if seconds.isNaN
+        {
+            return nil
+            
+        } else
+        {
+            return seconds
+        }
     }
     
     /// Return current playback position in seconds.
