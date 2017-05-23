@@ -37,8 +37,7 @@ class AVPlayerItemRXTests: SHMTestCase
     
     func test__playbackFinished__isSignaledWhenPlaybackFinish()
     {
-        let player = createPlayer()
-        let playerInterface = SHMAVPlayerInterface(player: player)
+        let (player, playerInterface) = createPlayerAndInterface()
         
         shmwait(timeout: 5.0, action: { done in
             
@@ -55,6 +54,8 @@ class AVPlayerItemRXTests: SHMTestCase
                             done()
                             return
                         }
+                        
+                        print("Duration \(duration)")
                         
                         seeked = true
                         

@@ -40,20 +40,13 @@ public class SHMAVPlayerInterface
     
     // MARK: - Playback state and control
     
-    /// Return current asset duration if it's available. If `player` doesn't have `currentItem` then this method return `nil`.
+    /// Return current asset duration if it's available. If `player` doesn't have `currentItem` or current item didn't load duration information yet
+    /// then this method return `nil`.
     public var duration: TimeInterval?
     {
-        guard let item = player.currentItem else { return nil }
-        
-        let seconds = item.duration.seconds
-        if seconds.isNaN
-        {
-            return nil
-            
-        } else
-        {
-            return seconds
-        }
+        let seconds = player.currentItem?.duration.seconds ?? TimeInterval.nan
+
+        return seconds.isNaN ? nil : seconds
     }
     
     /// Return current playback position in seconds.
@@ -74,7 +67,7 @@ public class SHMAVPlayerInterface
     /// - playback is paused (rate is <= 0.0)
     /// - seeking operation is NOT in progress
     /// - `currentItem`'s playback buffer is empty
-    public var probablyStalled: Bool
+    public var playbackProbablyStalled: Bool
     {
         return paused && !seeking && (player.currentItem?.isPlaybackBufferEmpty ?? false)
     }
