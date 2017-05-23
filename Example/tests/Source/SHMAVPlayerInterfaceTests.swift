@@ -143,12 +143,85 @@ class SHMAVPlayerInterfaceTests: SHMTestCase
         })
     }
     
-//    func test__availableSubtitles__shouldBeAsInAsset()
-//    {
-//        let (player, playerInterface) = createPlayerAndInterface()
-//        
-//        let languages = playerInterface.availableSubtitles.map({ ($0.languageCode, $0.forced) }).sor
-//        
-//        print(languages)
-//    }
+    func test__availableSubtitles__shouldBeAsInAsset()
+    {
+        let (_, playerInterface) = createPlayerAndInterface()
+        
+        let expectedLanguages = "enen_feses_ffrfr_fjaja_f"
+        let languages = playerInterface.availableSubtitles
+            .map({ "\($0.languageCode)\($0.forced ? "_f" : "")" })
+            .sorted()
+            .reduce("", +)
+        
+        expect(expectedLanguages) == languages
+    }
+    
+    func test__deselectSubtitle__noSubtitlesAreSelected()
+    {
+        let (_, playerInterface) = createPlayerAndInterface()
+        
+        guard let subtitle = playerInterface.availableSubtitles.last else
+        {
+            XCTFail("Test asset must have some subtitles.")
+            return
+        }
+        
+        playerInterface.select(subtitle: subtitle)
+        expect(playerInterface.selectedSubtitle).toNot(beNil())
+        
+        playerInterface.select(subtitle: nil)
+        expect(playerInterface.selectedSubtitle).to(beNil())
+    }
+    
+    func test__selectSubtitle__thatSubtitlesTrackIsSelected()
+    {
+        let (_, playerInterface) = createPlayerAndInterface()
+        
+        guard let subtitle = playerInterface.availableSubtitles.filter({ !$0.forced }).last else
+        {
+            XCTFail("Test asset must have some subtitles.")
+            return
+        }
+        
+        playerInterface.select(subtitle: nil)
+        expect(playerInterface.selectedSubtitle).to(beNil())
+        
+        playerInterface.select(subtitle: subtitle)
+        expect(playerInterface.selectedSubtitle).toNot(beNil())
+        
+        guard let selectedSubtitle = playerInterface.selectedSubtitle else { return }
+        
+        expect(selectedSubtitle.option) == subtitle.option
+    }
+    
+    func test__availableAudioTracks__shouldBeAsInAsset()
+    {
+        let (_, playerInterface) = createPlayerAndInterface()
+        
+        let expectedAudioTracks = "engeng"
+        let audioTracks = playerInterface.availableAudioTracks
+            .map({ "\($0.languageCode)" })
+            .sorted()
+            .reduce("", +)
+        
+        expect(expectedAudioTracks) == audioTracks
+    }
+    
+    func test__selectAudioTrack__thatAudioTrackIsSelected()
+    {
+        let (_, playerInterface) = createPlayerAndInterface()
+        
+        guard let audioTrack = playerInterface.availableAudioTracks.last else
+        {
+            XCTFail("Test asset must have some subtitles.")
+            return
+        }
+        
+        playerInterface.select(audioTrack: audioTrack)
+        expect(playerInterface.selectedAudioTrack).toNot(beNil())
+        
+        guard let selectedAudioTrack = playerInterface.selectedAudioTrack else { return }
+        
+        expect(selectedAudioTrack.option) == audioTrack.option
+    }
 }

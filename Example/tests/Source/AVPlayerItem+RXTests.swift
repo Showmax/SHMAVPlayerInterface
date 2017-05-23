@@ -55,8 +55,6 @@ class AVPlayerItemRXTests: SHMTestCase
                             return
                         }
                         
-                        print("Duration \(duration)")
-                        
                         seeked = true
                         
                         // when player is ready then we seek to almost and and wait for end notification

@@ -185,6 +185,23 @@ public class SHMAVPlayerInterface
         )
     }
     
+    /// This method selects subtitle track. If `nil` is passed then no track is selected and current one is deselected.
+    ///
+    /// You should pass here only `Subtitle` instance previously returned by `SHMAVPlayerInterface`.
+    ///
+    /// - Parameter subtitle: Subtitle track to select. If this is `nil` then no track is selected and current one is deselected.
+    public func select(subtitle: Subtitle?)
+    {
+        guard   let item = player.currentItem,
+                let subtitlesGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible)
+                else
+        {
+            return
+        }
+        
+        item.select(subtitle?.option, in: subtitlesGroup)
+    }
+    
     /// Return array of available audio tracks.
     public var availableAudioTracks: [AudioTrack]
     {
@@ -219,23 +236,6 @@ public class SHMAVPlayerInterface
             languageCode: languageCode,
             option: selectedOption
         )
-    }
-    
-    /// This method selects subtitle track. If `nil` is passed then no track is selected and current one is deselected.
-    ///
-    /// You should pass here only `Subtitle` instance previously returned by `SHMAVPlayerInterface`.
-    ///
-    /// - Parameter subtitle: Subtitle track to select. If this is `nil` then no track is selected and current one is deselected.
-    public func select(subtitle: Subtitle?)
-    {
-        guard   let item = player.currentItem,
-                let subtitlesGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible)
-                else
-        {
-            return
-        }
-        
-        item.select(subtitle?.option, in: subtitlesGroup)
     }
     
     /// This method selects audio track. If `nil` is passed then no track is selected and current one is deselected.
