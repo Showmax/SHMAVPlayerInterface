@@ -10,8 +10,11 @@ import Foundation
 import AVFoundation
 
 import XCTest
+import Nimble
+import RxSwift
+import RxBlocking
 
-class SHMAVPlayerInterfaceTests: XCTestCase
+class SHMAVPlayerInterfaceTests: SHMTestCase
 {
     func test__playerStatusChange__playerStatusChangedCallbackIsCalled()
     {
@@ -143,42 +146,35 @@ class SHMAVPlayerInterfaceTests: XCTestCase
     
     
     
-    func test1()
-    {
-        let player = AVPlayer(playerItem: nil)
-        let playerInterface = SHMAVPlayerInterface(player: player)
-        
-        let asset = AVAsset(url: URL(string: "https://tungsten.aaplimg.com/VOD/bipbop_adv_example_v2/master.m3u8")!)
-        let item = AVPlayerItem(asset: asset)
-        
-        let config = SHMAVPlayerInterface.Configuration(positionUpdateInterval: 0.1, positionUpdateQueue: nil)
-        
-        shmwait(timeout: 3.0, action: { done in
-            
-            print("Current player status \(player.status)")
-            
-            let callbacks = SHMAVPlayerInterface.Callbacks(
-                playerStatusChanged: { status in
-                    
-                    print("Player status changed \(status)")
-                },
-                playbackPositionUpdated: { position in
-            
-                    print("Playback positions \(position)")
-                    if position > 0.0
-                    {
-                        done()
-                    }
-                    
-                }
-            )
-            
-            let playerItem = SHMAVPlayerInterface.PlayerItem(item: item, configuration: config, callbacks: callbacks)
-            playerInterface.set(playerItem: playerItem)
-            
-            playerInterface.play()
-        })
-        
-        playerInterface.set(playerItem: nil)
-    }
+//    func test1()
+//    {
+//        var bag = DisposeBag()
+//        
+//        let asset = AVAsset(url: URL(string: "https://tungsten.aaplimg.com/VOD/bipbop_adv_example_v2/master.m3u8")!)
+//        let item = AVPlayerItem(asset: asset)
+//        let player = AVPlayer(playerItem: item)
+//        
+//        let playerInterface = SHMAVPlayerInterface(player: player)
+//        
+//        shmwait(timeout: 5.0, action: { done in
+//            
+//            
+//            
+//            playerInterface.observePlaybackPosition(updateInterval: 0.1, updateQueue: nil)
+//                .subscribe(
+//                    onNext: { position in
+//                        
+//                        ldebug("Testing position \(position)")
+//                        guard position > 0.0 else { return }
+//                        
+//                        done()
+//                    }
+//                )
+//                .disposed(by: bag)
+//            
+//            playerInterface.play()
+//        })
+//        
+//        bag = DisposeBag()
+//    }
 }
