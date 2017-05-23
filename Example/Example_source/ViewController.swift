@@ -22,7 +22,7 @@ class ViewController: UIViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //        "https://tungsten.aaplimg.com/VOD/bipbop_adv_example_v2/master.m3u8"
+        //        "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"
     }
     
     
@@ -30,7 +30,8 @@ class ViewController: UIViewController
     {
         super.viewDidAppear(animated)
         
-        let asset = AVAsset(url: URL(string: "https://tungsten.aaplimg.com/VOD/bipbop_adv_example_v2/master.m3u8")!)
+        let asset = AVAsset(url: URL(string: "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8")!)
+        
         let item = AVPlayerItem(asset: asset)
         let player = AVPlayer(playerItem: item)
         

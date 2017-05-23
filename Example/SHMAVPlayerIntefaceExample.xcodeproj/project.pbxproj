@@ -16,12 +16,6 @@
 		3423A9731ECB07EB00AA647D /* XCTestCase+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9641ECB07E300AA647D /* XCTestCase+Wait.swift */; };
 		3423A9741ECB07EC00AA647D /* SHMAVPlayerInterfaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9631ECB07E300AA647D /* SHMAVPlayerInterfaceTests.swift */; };
 		3423A9751ECB07EC00AA647D /* XCTestCase+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9641ECB07E300AA647D /* XCTestCase+Wait.swift */; };
-		3423A9771ECB081100AA647D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9761ECB081100AA647D /* ViewController.swift */; };
-		3423A9791ECB081E00AA647D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9781ECB081E00AA647D /* AppDelegate.swift */; };
-		3423A97A1ECB082100AA647D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9781ECB081E00AA647D /* AppDelegate.swift */; };
-		3423A97B1ECB082500AA647D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A95A1ECB07E300AA647D /* AppDelegate.swift */; };
-		3423A97C1ECB082500AA647D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A95A1ECB07E300AA647D /* AppDelegate.swift */; };
-		3423A97E1ECB082800AA647D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A9761ECB081100AA647D /* ViewController.swift */; };
 		3423A9801ECB083300AA647D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3423A94D1ECB07E300AA647D /* LaunchScreen.storyboard */; };
 		3423A9811ECB083300AA647D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3423A94F1ECB07E300AA647D /* Main.storyboard */; };
 		3423A9821ECB083A00AA647D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3423A9531ECB07E300AA647D /* Assets.xcassets */; };
@@ -29,32 +23,42 @@
 		3423A9841ECB083F00AA647D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3423A9541ECB07E300AA647D /* Main.storyboard */; };
 		3423A9851ECB084100AA647D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3423A9541ECB07E300AA647D /* Main.storyboard */; };
 		3423A9861ECB084700AA647D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3423A94C1ECB07E300AA647D /* Assets.xcassets */; };
-		3423A98E1ECB09D000AA647D /* MyPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A98D1ECB09D000AA647D /* MyPlayerController.swift */; };
-		3423A98F1ECB09D000AA647D /* MyPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423A98D1ECB09D000AA647D /* MyPlayerController.swift */; };
-		343F3E6C1ED2EFAA00FD02BC /* AVPlayerItem+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343F3E6B1ED2EFAA00FD02BC /* AVPlayerItem+RX.swift */; };
-		343F3E6D1ED2EFAA00FD02BC /* AVPlayerItem+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343F3E6B1ED2EFAA00FD02BC /* AVPlayerItem+RX.swift */; };
-		343F3E6E1ED2EFAA00FD02BC /* AVPlayerItem+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343F3E6B1ED2EFAA00FD02BC /* AVPlayerItem+RX.swift */; };
-		343F3E6F1ED2EFAA00FD02BC /* AVPlayerItem+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343F3E6B1ED2EFAA00FD02BC /* AVPlayerItem+RX.swift */; };
-		3445BCFB1ECB283600A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF91ECB283600A234CD /* Logging.swift */; };
-		3445BCFC1ECB283600A234CD /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCFA1ECB283600A234CD /* Observable+IgnoreNil.swift */; };
-		3445BCFD1ECB283B00A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF91ECB283600A234CD /* Logging.swift */; };
-		3445BCFE1ECB283B00A234CD /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCFA1ECB283600A234CD /* Observable+IgnoreNil.swift */; };
-		3445BCFF1ECB283C00A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF91ECB283600A234CD /* Logging.swift */; };
-		3445BD001ECB283C00A234CD /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCFA1ECB283600A234CD /* Observable+IgnoreNil.swift */; };
-		3445BD011ECB283C00A234CD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCF91ECB283600A234CD /* Logging.swift */; };
-		3445BD021ECB283C00A234CD /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445BCFA1ECB283600A234CD /* Observable+IgnoreNil.swift */; };
-		345804871ECB7F04007224FB /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804811ECB7F04007224FB /* SHMAVPlayerInterface.swift */; };
-		3458048A1ECB7F04007224FB /* AVPlayer+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804841ECB7F04007224FB /* AVPlayer+RX.swift */; };
-		3458048C1ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804861ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift */; };
-		3458048D1ECB7F0C007224FB /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804811ECB7F04007224FB /* SHMAVPlayerInterface.swift */; };
-		345804901ECB7F0C007224FB /* AVPlayer+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804841ECB7F04007224FB /* AVPlayer+RX.swift */; };
-		345804921ECB7F0C007224FB /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804861ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift */; };
-		345804931ECB7F0D007224FB /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804811ECB7F04007224FB /* SHMAVPlayerInterface.swift */; };
-		345804961ECB7F0D007224FB /* AVPlayer+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804841ECB7F04007224FB /* AVPlayer+RX.swift */; };
-		345804981ECB7F0D007224FB /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804861ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift */; };
-		345804991ECB7F0E007224FB /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804811ECB7F04007224FB /* SHMAVPlayerInterface.swift */; };
-		3458049C1ECB7F0E007224FB /* AVPlayer+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804841ECB7F04007224FB /* AVPlayer+RX.swift */; };
-		3458049E1ECB7F0E007224FB /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345804861ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift */; };
+		343864A31ED40D4C00562510 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3438649E1ED40D4C00562510 /* AppDelegate.swift */; };
+		343864A41ED40D4C00562510 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3438649E1ED40D4C00562510 /* AppDelegate.swift */; };
+		343864A71ED40D4C00562510 /* MyPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3438649F1ED40D4C00562510 /* MyPlayerController.swift */; };
+		343864A81ED40D4C00562510 /* MyPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3438649F1ED40D4C00562510 /* MyPlayerController.swift */; };
+		343864A91ED40D4C00562510 /* MyPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3438649F1ED40D4C00562510 /* MyPlayerController.swift */; };
+		343864AA1ED40D4C00562510 /* MyPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3438649F1ED40D4C00562510 /* MyPlayerController.swift */; };
+		343864AD1ED40D4C00562510 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864A11ED40D4C00562510 /* AppDelegate.swift */; };
+		343864AE1ED40D4C00562510 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864A11ED40D4C00562510 /* AppDelegate.swift */; };
+		343864AF1ED40D4C00562510 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864A21ED40D4C00562510 /* ViewController.swift */; };
+		343864B01ED40D4C00562510 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864A21ED40D4C00562510 /* ViewController.swift */; };
+		343864B11ED40D4C00562510 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864A21ED40D4C00562510 /* ViewController.swift */; };
+		343864B21ED40D4C00562510 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864A21ED40D4C00562510 /* ViewController.swift */; };
+		343864BB1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B41ED40D8B00562510 /* AVPlayer+RX.swift */; };
+		343864BC1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B41ED40D8B00562510 /* AVPlayer+RX.swift */; };
+		343864BD1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B41ED40D8B00562510 /* AVPlayer+RX.swift */; };
+		343864BE1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B41ED40D8B00562510 /* AVPlayer+RX.swift */; };
+		343864BF1ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B51ED40D8B00562510 /* AVPlayerItem+RX.swift */; };
+		343864C01ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B51ED40D8B00562510 /* AVPlayerItem+RX.swift */; };
+		343864C11ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B51ED40D8B00562510 /* AVPlayerItem+RX.swift */; };
+		343864C21ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B51ED40D8B00562510 /* AVPlayerItem+RX.swift */; };
+		343864CB1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B91ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift */; };
+		343864CC1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B91ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift */; };
+		343864CD1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B91ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift */; };
+		343864CE1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B91ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift */; };
+		343864CF1ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864BA1ED40D8B00562510 /* SHMAVPlayerInterface.swift */; };
+		343864D01ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864BA1ED40D8B00562510 /* SHMAVPlayerInterface.swift */; };
+		343864D11ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864BA1ED40D8B00562510 /* SHMAVPlayerInterface.swift */; };
+		343864D21ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864BA1ED40D8B00562510 /* SHMAVPlayerInterface.swift */; };
+		343864D91ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */; };
+		343864DA1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */; };
+		343864DB1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */; };
+		343864DC1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */; };
+		343864DE1ED40EAA00562510 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864DD1ED40EAA00562510 /* Logging.swift */; };
+		343864DF1ED40EAA00562510 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864DD1ED40EAA00562510 /* Logging.swift */; };
+		343864E01ED40EAA00562510 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864DD1ED40EAA00562510 /* Logging.swift */; };
+		343864E11ED40EAA00562510 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864DD1ED40EAA00562510 /* Logging.swift */; };
 		E8E215C8C4490935D02DD034 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A373FC71264E29119597E8 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework */; };
 		EA5882FD81AE361AD9840BCD /* Pods_SHMAVPlayerIntefaceExampleiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */; };
 /* End PBXBuildFile section */
@@ -89,20 +93,20 @@
 		3423A9531ECB07E300AA647D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3423A9551ECB07E300AA647D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3423A9561ECB07E300AA647D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3423A95A1ECB07E300AA647D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3423A95F1ECB07E300AA647D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3423A9611ECB07E300AA647D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3423A9631ECB07E300AA647D /* SHMAVPlayerInterfaceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMAVPlayerInterfaceTests.swift; sourceTree = "<group>"; };
 		3423A9641ECB07E300AA647D /* XCTestCase+Wait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Wait.swift"; sourceTree = "<group>"; };
-		3423A9761ECB081100AA647D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3423A9781ECB081E00AA647D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3423A98D1ECB09D000AA647D /* MyPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlayerController.swift; sourceTree = "<group>"; };
-		343F3E6B1ED2EFAA00FD02BC /* AVPlayerItem+RX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AVPlayerItem+RX.swift"; path = "../Source/AVPlayerItem+RX.swift"; sourceTree = "<group>"; };
-		3445BCF91ECB283600A234CD /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
-		3445BCFA1ECB283600A234CD /* Observable+IgnoreNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+IgnoreNil.swift"; sourceTree = "<group>"; };
-		345804811ECB7F04007224FB /* SHMAVPlayerInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMAVPlayerInterface.swift; sourceTree = "<group>"; };
-		345804841ECB7F04007224FB /* AVPlayer+RX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayer+RX.swift"; sourceTree = "<group>"; };
-		345804861ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHMAVPlayerInterface+Types.swift"; sourceTree = "<group>"; };
+		3438649E1ED40D4C00562510 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3438649F1ED40D4C00562510 /* MyPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlayerController.swift; sourceTree = "<group>"; };
+		343864A11ED40D4C00562510 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		343864A21ED40D4C00562510 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		343864B41ED40D8B00562510 /* AVPlayer+RX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayer+RX.swift"; sourceTree = "<group>"; };
+		343864B51ED40D8B00562510 /* AVPlayerItem+RX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayerItem+RX.swift"; sourceTree = "<group>"; };
+		343864B91ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHMAVPlayerInterface+Types.swift"; sourceTree = "<group>"; };
+		343864BA1ED40D8B00562510 /* SHMAVPlayerInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMAVPlayerInterface.swift; sourceTree = "<group>"; };
+		343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+IgnoreNil.swift"; sourceTree = "<group>"; };
+		343864DD1ED40EAA00562510 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerIntefaceExampleiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538F2B3266B2CF09E988F28E /* Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOSTests/Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		60121E6F64BBD859955DAB66 /* Pods_SHMAVPlayerIntefaceExampleIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerIntefaceExampleIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				3423A9871ECB091F00AA647D /* SHMAVPlayerInterface_lib */,
-				3423A9571ECB07E300AA647D /* Source */,
+				3438649C1ED40D4C00562510 /* Example_source */,
 				3423A94A1ECB07E300AA647D /* Resources */,
 				3423A95C1ECB07E300AA647D /* Tests */,
 				3423A8F71ECB06B300AA647D /* Products */,
@@ -213,33 +217,6 @@
 				3423A9531ECB07E300AA647D /* Assets.xcassets */,
 				3423A9541ECB07E300AA647D /* Main.storyboard */,
 				3423A9561ECB07E300AA647D /* Info.plist */,
-			);
-			path = tvos;
-			sourceTree = "<group>";
-		};
-		3423A9571ECB07E300AA647D /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				3423A9581ECB07E300AA647D /* ios */,
-				3423A9591ECB07E300AA647D /* tvos */,
-				3423A9761ECB081100AA647D /* ViewController.swift */,
-				3423A98D1ECB09D000AA647D /* MyPlayerController.swift */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		3423A9581ECB07E300AA647D /* ios */ = {
-			isa = PBXGroup;
-			children = (
-				3423A9781ECB081E00AA647D /* AppDelegate.swift */,
-			);
-			path = ios;
-			sourceTree = "<group>";
-		};
-		3423A9591ECB07E300AA647D /* tvos */ = {
-			isa = PBXGroup;
-			children = (
-				3423A95A1ECB07E300AA647D /* AppDelegate.swift */,
 			);
 			path = tvos;
 			sourceTree = "<group>";
@@ -290,22 +267,50 @@
 		3423A9871ECB091F00AA647D /* SHMAVPlayerInterface_lib */ = {
 			isa = PBXGroup;
 			children = (
-				3445BCF81ECB283600A234CD /* misc */,
-				345804811ECB7F04007224FB /* SHMAVPlayerInterface.swift */,
-				345804861ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift */,
-				345804841ECB7F04007224FB /* AVPlayer+RX.swift */,
-				343F3E6B1ED2EFAA00FD02BC /* AVPlayerItem+RX.swift */,
+				343864B31ED40D8B00562510 /* Source */,
 			);
 			name = SHMAVPlayerInterface_lib;
 			sourceTree = "<group>";
 		};
-		3445BCF81ECB283600A234CD /* misc */ = {
+		3438649C1ED40D4C00562510 /* Example_source */ = {
 			isa = PBXGroup;
 			children = (
-				3445BCF91ECB283600A234CD /* Logging.swift */,
-				3445BCFA1ECB283600A234CD /* Observable+IgnoreNil.swift */,
+				3438649D1ED40D4C00562510 /* ios */,
+				343864A01ED40D4C00562510 /* tvos */,
+				343864A21ED40D4C00562510 /* ViewController.swift */,
+				3438649F1ED40D4C00562510 /* MyPlayerController.swift */,
+				343864DD1ED40EAA00562510 /* Logging.swift */,
 			);
-			path = misc;
+			path = Example_source;
+			sourceTree = "<group>";
+		};
+		3438649D1ED40D4C00562510 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				3438649E1ED40D4C00562510 /* AppDelegate.swift */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		343864A01ED40D4C00562510 /* tvos */ = {
+			isa = PBXGroup;
+			children = (
+				343864A11ED40D4C00562510 /* AppDelegate.swift */,
+			);
+			path = tvos;
+			sourceTree = "<group>";
+		};
+		343864B31ED40D8B00562510 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				343864BA1ED40D8B00562510 /* SHMAVPlayerInterface.swift */,
+				343864B91ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift */,
+				343864B41ED40D8B00562510 /* AVPlayer+RX.swift */,
+				343864B51ED40D8B00562510 /* AVPlayerItem+RX.swift */,
+				343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */,
+			);
+			name = Source;
+			path = ../Source;
 			sourceTree = "<group>";
 		};
 		F3D56D62A95788B6B6B526F3 /* Pods */ = {
@@ -692,15 +697,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3445BCFC1ECB283600A234CD /* Observable+IgnoreNil.swift in Sources */,
-				343F3E6C1ED2EFAA00FD02BC /* AVPlayerItem+RX.swift in Sources */,
-				3423A9791ECB081E00AA647D /* AppDelegate.swift in Sources */,
-				345804871ECB7F04007224FB /* SHMAVPlayerInterface.swift in Sources */,
-				3458048A1ECB7F04007224FB /* AVPlayer+RX.swift in Sources */,
-				3458048C1ECB7F04007224FB /* SHMAVPlayerInterface+Types.swift in Sources */,
-				3423A9771ECB081100AA647D /* ViewController.swift in Sources */,
-				3423A98E1ECB09D000AA647D /* MyPlayerController.swift in Sources */,
-				3445BCFB1ECB283600A234CD /* Logging.swift in Sources */,
+				343864CB1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */,
+				343864BF1ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */,
+				343864A71ED40D4C00562510 /* MyPlayerController.swift in Sources */,
+				343864BB1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */,
+				343864AF1ED40D4C00562510 /* ViewController.swift in Sources */,
+				343864A31ED40D4C00562510 /* AppDelegate.swift in Sources */,
+				343864CF1ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */,
+				343864DE1ED40EAA00562510 /* Logging.swift in Sources */,
+				343864D91ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,15 +713,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3445BCFE1ECB283B00A234CD /* Observable+IgnoreNil.swift in Sources */,
-				343F3E6D1ED2EFAA00FD02BC /* AVPlayerItem+RX.swift in Sources */,
-				3423A97A1ECB082100AA647D /* AppDelegate.swift in Sources */,
-				3458048D1ECB7F0C007224FB /* SHMAVPlayerInterface.swift in Sources */,
-				345804901ECB7F0C007224FB /* AVPlayer+RX.swift in Sources */,
-				345804921ECB7F0C007224FB /* SHMAVPlayerInterface+Types.swift in Sources */,
+				343864B01ED40D4C00562510 /* ViewController.swift in Sources */,
+				343864A41ED40D4C00562510 /* AppDelegate.swift in Sources */,
+				343864D01ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */,
+				343864DF1ED40EAA00562510 /* Logging.swift in Sources */,
 				3423A9721ECB07EB00AA647D /* SHMAVPlayerInterfaceTests.swift in Sources */,
+				343864BC1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */,
+				343864CC1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */,
+				343864A81ED40D4C00562510 /* MyPlayerController.swift in Sources */,
+				343864DA1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */,
+				343864C01ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */,
 				3423A9731ECB07EB00AA647D /* XCTestCase+Wait.swift in Sources */,
-				3445BCFD1ECB283B00A234CD /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,15 +731,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3445BD001ECB283C00A234CD /* Observable+IgnoreNil.swift in Sources */,
-				343F3E6E1ED2EFAA00FD02BC /* AVPlayerItem+RX.swift in Sources */,
-				3423A97E1ECB082800AA647D /* ViewController.swift in Sources */,
-				345804931ECB7F0D007224FB /* SHMAVPlayerInterface.swift in Sources */,
-				345804961ECB7F0D007224FB /* AVPlayer+RX.swift in Sources */,
-				345804981ECB7F0D007224FB /* SHMAVPlayerInterface+Types.swift in Sources */,
-				3423A97B1ECB082500AA647D /* AppDelegate.swift in Sources */,
-				3423A98F1ECB09D000AA647D /* MyPlayerController.swift in Sources */,
-				3445BCFF1ECB283C00A234CD /* Logging.swift in Sources */,
+				343864CD1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */,
+				343864C11ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */,
+				343864AD1ED40D4C00562510 /* AppDelegate.swift in Sources */,
+				343864BD1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */,
+				343864A91ED40D4C00562510 /* MyPlayerController.swift in Sources */,
+				343864B11ED40D4C00562510 /* ViewController.swift in Sources */,
+				343864D11ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */,
+				343864E01ED40EAA00562510 /* Logging.swift in Sources */,
+				343864DB1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,15 +747,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3445BD021ECB283C00A234CD /* Observable+IgnoreNil.swift in Sources */,
-				343F3E6F1ED2EFAA00FD02BC /* AVPlayerItem+RX.swift in Sources */,
-				3423A97C1ECB082500AA647D /* AppDelegate.swift in Sources */,
-				345804991ECB7F0E007224FB /* SHMAVPlayerInterface.swift in Sources */,
-				3458049C1ECB7F0E007224FB /* AVPlayer+RX.swift in Sources */,
-				3458049E1ECB7F0E007224FB /* SHMAVPlayerInterface+Types.swift in Sources */,
+				343864B21ED40D4C00562510 /* ViewController.swift in Sources */,
 				3423A9741ECB07EC00AA647D /* SHMAVPlayerInterfaceTests.swift in Sources */,
+				343864D21ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */,
+				343864E11ED40EAA00562510 /* Logging.swift in Sources */,
+				343864AA1ED40D4C00562510 /* MyPlayerController.swift in Sources */,
+				343864BE1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */,
+				343864CE1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */,
+				343864AE1ED40D4C00562510 /* AppDelegate.swift in Sources */,
+				343864DC1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */,
+				343864C21ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */,
 				3423A9751ECB07EC00AA647D /* XCTestCase+Wait.swift in Sources */,
-				3445BD011ECB283C00A234CD /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

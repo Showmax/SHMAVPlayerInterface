@@ -101,6 +101,18 @@ class MyPlayerController: AVPlayerViewController
             )
             .disposed(by: bag)
         
+        playerInterface?.player.currentItem?.rx.errorLogEvent
+            .subscribe(
+                onNext: { event in
+                    
+                    let str = "\(event.uri) \(event.errorStatusCode) \(event.errorDomain) \(event.errorComment)"
+                    ldebug(str)
+                }
+            )
+            .disposed(by: bag)
+        
+//        playerInterface?.player.currentTime?.rx.acc
+        
 //        playerInterface?.observePlayerItemStatus(options: .new)
 //            .subscribe(
 //                onNext: { itemStatus in
