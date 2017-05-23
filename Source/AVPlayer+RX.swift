@@ -46,6 +46,7 @@ extension Reactive where Base: AVPlayer
     {
         return base.rx.rate(options: options)
             .map({ $0 <= 0.0 })
+            .distinctUntilChanged()
     }
     
     /// Create observable which will emitt playback position.

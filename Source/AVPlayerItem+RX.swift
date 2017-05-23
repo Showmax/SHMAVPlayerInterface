@@ -15,17 +15,17 @@ import RxCocoa
 extension AVPlayerItem
 {
     /// Structure used to provide informations about player item's current status.
-    public struct SHMPlayerItemBufferStatus
+    public struct SHMPlayerItemBufferStatus: Equatable
     {
         let bufferEmpty: Bool
         let bufferFull: Bool
-    }
-}
+        
+        public static func == (lhs: AVPlayerItem.SHMPlayerItemBufferStatus, rhs: AVPlayerItem.SHMPlayerItemBufferStatus) -> Bool
+        {
+            return lhs.bufferEmpty == rhs.bufferEmpty && lhs.bufferFull == rhs.bufferFull
+        }
 
-extension AVPlayerItem.SHMPlayerItemBufferStatus: Equatable {}
-public func == (lhs: AVPlayerItem.SHMPlayerItemBufferStatus, rhs: AVPlayerItem.SHMPlayerItemBufferStatus) -> Bool
-{
-    return lhs.bufferEmpty == rhs.bufferEmpty && lhs.bufferFull == rhs.bufferFull
+    }
 }
 
 extension Reactive where Base: AVPlayerItem
