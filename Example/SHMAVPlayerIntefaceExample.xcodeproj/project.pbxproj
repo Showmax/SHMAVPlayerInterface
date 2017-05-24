@@ -59,8 +59,15 @@
 		343864DC1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */; };
 		343864DE1ED40EAA00562510 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864DD1ED40EAA00562510 /* Logging.swift */; };
 		343864E01ED40EAA00562510 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864DD1ED40EAA00562510 /* Logging.swift */; };
+		3439B2D11ED5B56400E870BA /* MyPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3439B2D01ED5B56400E870BA /* MyPlayerController.xib */; };
+		3439B2D31ED5B57D00E870BA /* MyPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3439B2D21ED5B57D00E870BA /* MyPlayerController.xib */; };
+		3439B2D51ED5B9FA00E870BA /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3439B2D41ED5B9FA00E870BA /* CustomSlider.swift */; };
 		347666751ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347666741ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift */; };
 		347666761ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347666741ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift */; };
+		347666781ED469B300055930 /* MyPlayerControllerOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 347666771ED469B300055930 /* MyPlayerControllerOverlayView.xib */; };
+		3476667C1ED46CBC00055930 /* MyPlayerController+Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476667B1ED46CBC00055930 /* MyPlayerController+Overlay.swift */; };
+		3476667E1ED46CDF00055930 /* MyPlayerControllerOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476667D1ED46CDF00055930 /* MyPlayerControllerOverlayView.swift */; };
+		347666801ED46E4A00055930 /* MyPlayerController+Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3476667F1ED46E4A00055930 /* MyPlayerController+Overlay.swift */; };
 		E8E215C8C4490935D02DD034 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A373FC71264E29119597E8 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework */; };
 		EA5882FD81AE361AD9840BCD /* Pods_SHMAVPlayerIntefaceExampleiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */; };
 /* End PBXBuildFile section */
@@ -113,7 +120,14 @@
 		343864BA1ED40D8B00562510 /* SHMAVPlayerInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMAVPlayerInterface.swift; sourceTree = "<group>"; };
 		343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+IgnoreNil.swift"; sourceTree = "<group>"; };
 		343864DD1ED40EAA00562510 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		3439B2D01ED5B56400E870BA /* MyPlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPlayerController.xib; sourceTree = "<group>"; };
+		3439B2D21ED5B57D00E870BA /* MyPlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPlayerController.xib; sourceTree = "<group>"; };
+		3439B2D41ED5B9FA00E870BA /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		347666741ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerExternalPlaybackMock.swift; sourceTree = "<group>"; };
+		347666771ED469B300055930 /* MyPlayerControllerOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPlayerControllerOverlayView.xib; sourceTree = "<group>"; };
+		3476667B1ED46CBC00055930 /* MyPlayerController+Overlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyPlayerController+Overlay.swift"; sourceTree = "<group>"; };
+		3476667D1ED46CDF00055930 /* MyPlayerControllerOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlayerControllerOverlayView.swift; sourceTree = "<group>"; };
+		3476667F1ED46E4A00055930 /* MyPlayerController+Overlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyPlayerController+Overlay.swift"; sourceTree = "<group>"; };
 		509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerIntefaceExampleiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538F2B3266B2CF09E988F28E /* Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOSTests/Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		60121E6F64BBD859955DAB66 /* Pods_SHMAVPlayerIntefaceExampleIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerIntefaceExampleIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -300,6 +314,11 @@
 			isa = PBXGroup;
 			children = (
 				3438649E1ED40D4C00562510 /* AppDelegate.swift */,
+				3439B2D01ED5B56400E870BA /* MyPlayerController.xib */,
+				3476667B1ED46CBC00055930 /* MyPlayerController+Overlay.swift */,
+				3476667D1ED46CDF00055930 /* MyPlayerControllerOverlayView.swift */,
+				347666771ED469B300055930 /* MyPlayerControllerOverlayView.xib */,
+				3439B2D41ED5B9FA00E870BA /* CustomSlider.swift */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -308,6 +327,8 @@
 			isa = PBXGroup;
 			children = (
 				343864A11ED40D4C00562510 /* AppDelegate.swift */,
+				3439B2D21ED5B57D00E870BA /* MyPlayerController.xib */,
+				3476667F1ED46E4A00055930 /* MyPlayerController+Overlay.swift */,
 			);
 			path = tvos;
 			sourceTree = "<group>";
@@ -487,6 +508,8 @@
 			files = (
 				3423A9671ECB07E300AA647D /* Main.storyboard in Resources */,
 				3423A9651ECB07E300AA647D /* Assets.xcassets in Resources */,
+				347666781ED469B300055930 /* MyPlayerControllerOverlayView.xib in Resources */,
+				3439B2D11ED5B56400E870BA /* MyPlayerController.xib in Resources */,
 				3423A9661ECB07E300AA647D /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +528,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3439B2D31ED5B57D00E870BA /* MyPlayerController.xib in Resources */,
 				3423A9821ECB083A00AA647D /* Assets.xcassets in Resources */,
 				3423A9841ECB083F00AA647D /* Main.storyboard in Resources */,
 			);
@@ -709,11 +733,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3476667E1ED46CDF00055930 /* MyPlayerControllerOverlayView.swift in Sources */,
 				343864CB1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */,
 				343864BF1ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */,
 				343864A71ED40D4C00562510 /* MyPlayerController.swift in Sources */,
 				343864BB1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */,
+				3476667C1ED46CBC00055930 /* MyPlayerController+Overlay.swift in Sources */,
 				343864AF1ED40D4C00562510 /* ViewController.swift in Sources */,
+				3439B2D51ED5B9FA00E870BA /* CustomSlider.swift in Sources */,
 				343864A31ED40D4C00562510 /* AppDelegate.swift in Sources */,
 				343864CF1ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */,
 				343864DE1ED40EAA00562510 /* Logging.swift in Sources */,
@@ -748,6 +775,7 @@
 				343864C11ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */,
 				343864AD1ED40D4C00562510 /* AppDelegate.swift in Sources */,
 				343864BD1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */,
+				347666801ED46E4A00055930 /* MyPlayerController+Overlay.swift in Sources */,
 				343864A91ED40D4C00562510 /* MyPlayerController.swift in Sources */,
 				343864B11ED40D4C00562510 /* ViewController.swift in Sources */,
 				343864D11ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */,
@@ -920,6 +948,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C226648446;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.showmax.SHMAVPlayerIntefaceExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -934,6 +963,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C226648446;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.showmax.SHMAVPlayerIntefaceExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

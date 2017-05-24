@@ -12,38 +12,43 @@ import AVFoundation
 import RxSwift
 import RxCocoa
 
-
-
-class MyPlayerController: AVPlayerViewController
+class MyPlayerController: UIViewController
 {
-    var     bag = DisposeBag()
-    var     playerInterface: SHMAVPlayerInterface?
+    var     bag: DisposeBag
+    var     playerInterface: SHMAVPlayerInterface
+    
+    let     playerController: AVPlayerViewController
     
     deinit
     {
         ldebug("Destroying player controller")
     }
     
-    override var player: AVPlayer?
+    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, player: AVPlayer)
     {
-        get { return super.player }
-        set
-        {
-            defer
-            {
-                super.player = newValue
-            }
-            
-            guard let newPlayer = newValue else
-            {
-                playerInterface = nil
-                return
-            }
-            
-            playerInterface = SHMAVPlayerInterface(player: newPlayer)
-            
-            subscribeToPlayerInterface()
-        }
+        playerInterface = SHMAVPlayerInterface(player: player)
+        playerController = AVPlayerViewController()
+        bag = DisposeBag()
+        
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        addChildViewController(playerController)
+        add(view: playerController.view, to: view)
+        playerController.didMove(toParentViewController: self)
+        
+        playerController.player = player
+    }
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        return nil
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        setupOverlayView(with: playerInterface)
     }
     
     override func viewWillDisappear(_ animated: Bool)
@@ -51,76 +56,31 @@ class MyPlayerController: AVPlayerViewController
         super.viewWillDisappear(animated)
         
         bag = DisposeBag()
-        playerInterface = nil
     }
     
-    func subscribeToPlayerInterface()
+    func add(view: UIView, to overlayView: UIView)
     {
-        //playerInterface?.observePlaybackPosition(updateInterval: 0.1, updateQueue: nil)
-         //   .subscribe(
-           //     onNext: { position in
-                    
-             //       ldebug("Playback position \(position).")
-               // }
-            //)
-            //.disposed(by: bag)
+        overlayView.addSubview(view)
         
-//        playerInterface?.player.rx.status(options: [.initial, .new])
-//            .subscribe(
-//                onNext: { itemStatus in
-//                    
-//                    ldebug("player status \(itemStatus.rawValue)")
-//                }
-//            )
-//            .disposed(by: bag)
-//        
-//        playerInterface?.player.currentItem?.rx.status(options: [.initial, .new])
-//            .subscribe(
-//                onNext: { itemStatus in
-//                    
-//                    ldebug("player item status \(itemStatus.rawValue)")
-//                }
-//            )
-//            .disposed(by: bag)
-//        
-//        playerInterface?.player.rx.playbackPosition(updateInterval: 0.1, updateQueue: nil)
-//            .subscribe(
-//                onNext: { position in
-//                    
-//                    ldebug("position \(position)")
-//                }
-//            )
-//            .disposed(by: bag)
-//        
-//        playerInterface?.player.currentItem?.rx.bufferStatus(options: [.new])
-//            .subscribe(
-//                onNext: { bufferStatus in
-//                    
-//                    ldebug("bufferStatus \(bufferStatus)")
-//                }
-//            )
-//            .disposed(by: bag)
-//        
-//        playerInterface?.player.currentItem?.rx.errorLogEvent
-//            .subscribe(
-//                onNext: { event in
-//                    
-//                    let str = "\(event.uri) \(event.errorStatusCode) \(event.errorDomain) \(event.errorComment)"
-//                    ldebug(str)
-//                }
-//            )
-//            .disposed(by: bag)
+        view.translatesAutoresizingMaskIntoConstraints = false
         
-//        playerInterface?.player.currentTime?.rx.acc
-        
-//        playerInterface?.observePlayerItemStatus(options: .new)
-//            .subscribe(
-//                onNext: { itemStatus in
-//                    
-//                    ldebug("Item status \(itemStatus.rawValue)")
-//                }
-//            )
-//            .disposed(by: bag)
+        overlayView.addConstraint(fullscreenConstraintForAttribute(.left, superview: overlayView, view: view))
+        overlayView.addConstraint(fullscreenConstraintForAttribute(.right, superview: overlayView, view: view))
+        overlayView.addConstraint(fullscreenConstraintForAttribute(.top, superview: overlayView, view: view))
+        overlayView.addConstraint(fullscreenConstraintForAttribute(.bottom, superview: overlayView, view: view))
+    }
+    
+    func fullscreenConstraintForAttribute(_ attribute: NSLayoutAttribute, superview: UIView, view: UIView) -> NSLayoutConstraint
+    {
+        return NSLayoutConstraint(
+            item: view,
+            attribute: attribute,
+            relatedBy: .equal,
+            toItem: superview,
+            attribute: attribute,
+            multiplier: 1.0,
+            constant: 0.0
+        )
     }
     
 }
