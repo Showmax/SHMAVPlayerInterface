@@ -9,6 +9,11 @@ disabled_rules: # rule identifiers to exclude from running
  - sorted_imports
  - missing_docs #for now because this can't work with Xcode 8 doc strings.
  - shorthand_operator
+ - explicit_type_interface
+ - file_header
+ - for_where
+ - notification_center_detachment
+ - number_separator
 
 opt_in_rules:
  - closure_spacing
@@ -22,9 +27,11 @@ opt_in_rules:
  - first_where
  - operator_whitespace
  - operator_usage_whitespace
+ - valid_docs
 
 excluded:
  - Pods
+ - 3rd_party
  - Tests
 
 attributes:
@@ -42,15 +49,20 @@ colon:
 comma: error
 conditional_returns_on_newline: error
 control_statement: error
+discarded_notification_center_observer: error
 empty_count: error
 empty_parameters: error
 empty_parentheses_with_trailing_closure: error
 explicit_init: error
+fatal_error_message: error
 first_where: error
 force_cast: error
 force_try: error
 force_unwrapping: error
 implicit_getter: error
+implicitly_unwrapped_optional:
+    severity: error
+
 large_tuple:
     warning: 3
     error: 3
@@ -62,7 +74,9 @@ legacy_constructor: error
 legacy_nsgeometry_functions: error
     
 mark: error
-nesting: error
+nesting:
+    severity: error
+
 operator_whitespace: error
 operator_usage_whitespace: error
 overridden_super_call:
@@ -74,9 +88,11 @@ redundant_nil_coalescing:
 redundant_void_return: error
 return_arrow_whitespace: error
 redundant_string_enum_value: error
+redundant_discardable_let: error
 statement_position:
   severity: error
 
+syntactic_sugar: error
 todo: error
 trailing_newline: error
 trailing_semicolon: error
@@ -124,7 +140,7 @@ type_name:
     warning: 50
     error: 50
 
-variable_name:
+identifier_name:
   min_length:
     warning: 0
     error: 0

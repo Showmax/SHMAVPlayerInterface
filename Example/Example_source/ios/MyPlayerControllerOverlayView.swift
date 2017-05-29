@@ -183,7 +183,7 @@ class MyPlayerControllerOverlayView: UIView
     {
          let sliderPositionObservable = slider.rx.value
             .asObservable()
-            .filter({[weak self] (position: Float) in
+            .filter({[weak self] (_: Float) in
                 
                 return !(self?.updateSliderUsingPlaybackPosition ?? true)
             })

@@ -367,6 +367,7 @@
 			buildConfigurationList = 3423A9131ECB06B300AA647D /* Build configuration list for PBXNativeTarget "SHMAVPlayerIntefaceExampleiOS" */;
 			buildPhases = (
 				14D286F8487F3F3D5F6CEBB6 /* [CP] Check Pods Manifest.lock */,
+				3440BA271EDC1C2800294F88 /* Swiftlint */,
 				3423A8F21ECB06B300AA647D /* Sources */,
 				3423A8F31ECB06B300AA647D /* Frameworks */,
 				3423A8F41ECB06B300AA647D /* Resources */,
@@ -408,6 +409,7 @@
 			buildConfigurationList = 3423A9441ECB075000AA647D /* Build configuration list for PBXNativeTarget "SHMAVPlayerInterfaceExampleTVOS" */;
 			buildPhases = (
 				1614FBA2A1E745461AB58440 /* [CP] Check Pods Manifest.lock */,
+				3440BA281EDC1C4700294F88 /* Swiftlint */,
 				3423A9291ECB075000AA647D /* Sources */,
 				3423A92A1ECB075000AA647D /* Frameworks */,
 				3423A92B1ECB075000AA647D /* Resources */,
@@ -603,6 +605,34 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOSTests/Pods-SHMAVPlayerInterfaceExampleTVOSTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		3440BA271EDC1C2800294F88 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=\"/usr/local/bin:${PATH}\"\nif which swiftlint >/dev/null; then\nswiftlint\nswiftlint lint --path ../Source/\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		3440BA281EDC1C4700294F88 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=\"/usr/local/bin:${PATH}\"\nif which swiftlint >/dev/null; then\nswiftlint\nswiftlint lint --path ../Source/\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		574E138F13647DAE69F16BFA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

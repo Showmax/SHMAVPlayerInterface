@@ -22,7 +22,12 @@ class ViewController: UIViewController
     {
         super.viewDidAppear(animated)
         
-        let asset = AVAsset(url: URL(string: "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8")!)
+        guard let assetURL = URL(string: "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8") else
+        {
+            fatalError("Can't create URL for asset.")
+        }
+        
+        let asset = AVAsset(url: assetURL)
         
         let item = AVPlayerItem(asset: asset)
         let player = AVPlayer(playerItem: item)
@@ -33,12 +38,5 @@ class ViewController: UIViewController
             
             playerController?.playerInterface.play()
         })
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
+    }    
 }
