@@ -12,6 +12,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+/// This class represent custom UI over player.
 class MyPlayerControllerOverlayView: UIView
 {
     var                 bag = DisposeBag()
@@ -22,13 +23,14 @@ class MyPlayerControllerOverlayView: UIView
     @IBOutlet var       playbackPositionLabel: UILabel!
     @IBOutlet var       playbackRemainingLabel: UILabel!
     
-    var                 updateSlider = true
+    var                 updateSliderUsingPlaybackPosition = true
     
     var                 playerInterface: SHMAVPlayerInterface? = nil
     var                 closeClosure: (() -> Void)? = nil
     
     // MARK: - Actions
     
+    /// This method is called when user hit play/pause button. It just call play or pause on `playerInterface`.
     @IBAction func playPause()
     {
         guard let playerInterface = self.playerInterface else { return }
@@ -36,6 +38,7 @@ class MyPlayerControllerOverlayView: UIView
         playerInterface.paused ? playerInterface.play() : playerInterface.pause()
     }
     
+    /// Skip playback position about 10 seconds back. If current playback position is `< 10.0` then skip to`0.0`.
     @IBAction func rewind()
     {
         guard let playerInterface = self.playerInterface else { return }
@@ -56,6 +59,7 @@ class MyPlayerControllerOverlayView: UIView
         })
     }
     
+    /// Skip playback position about 10 seconds forward. If current playback position is `> duration - 10.0` then skip to `duration - 1.0`.
     @IBAction func forward()
     {
         guard let playerInterface = self.playerInterface, let duration = playerInterface.duration else { return }
@@ -76,6 +80,7 @@ class MyPlayerControllerOverlayView: UIView
         })
     }
     
+    /// This method is called when user hit close button. It calls `closeClosure`.
     @IBAction func close()
     {
         closeClosure?()
@@ -83,22 +88,32 @@ class MyPlayerControllerOverlayView: UIView
     
     // MARK: - API
 
+    /// Use new player interface. Drop current dispose bag and bind observables to UI.
+    ///
+    /// - Parameter playerInterface: Player interface to use.
     func useNew(playerInterface: SHMAVPlayerInterface)
     {
         bag = DisposeBag()
         self.playerInterface = playerInterface
         
-        setupPositionSubscription(with: playerInterface)
+        setupPlaybackPositionSubscription(with: playerInterface)
         setupPausePlayButtonBindigs(with: playerInterface)
-        setupSubscriptionToSlider()
+        setupSubscriptionToSliderTouchEvents()
+        setupSubscriptionToSliderValue()
     }
     
-    func setupPositionSubscription(with playerInterface: SHMAVPlayerInterface)
+    // MARK: - Subscription and binding to UI
+    
+    /// This method use playback position observable and bind it to seek slider and to position labels.
+    /// Signals from this observable are filtered so it's emitting only when `self.updateSliderUsingPlaybackPosition` is `true`.
+    ///
+    /// - Parameter playerInterface: Player interface to use.
+    func setupPlaybackPositionSubscription(with playerInterface: SHMAVPlayerInterface)
     {
         let positionObservable = playerInterface.player.rx.playbackPosition(updateInterval: 1.0, updateQueue: nil)
-            .filter({[weak self] position in
+            .filter({[weak self] _ in
                 
-                return self?.updateSlider ?? false
+                return self?.updateSliderUsingPlaybackPosition ?? false
             })
             .share()
         
@@ -115,6 +130,9 @@ class MyPlayerControllerOverlayView: UIView
         bindObservableToPositionLabels(observable: positionObservable)
     }
     
+    /// Use paused observable and bind it to play button.
+    ///
+    /// - Parameter playerInterface: Player interface to use.
     func setupPausePlayButtonBindigs(with playerInterface: SHMAVPlayerInterface)
     {
         playerInterface.player.rx.paused(options: [.initial, .new])
@@ -123,7 +141,15 @@ class MyPlayerControllerOverlayView: UIView
             .disposed(by: bag)
     }
     
-    func setupSubscriptionToSlider()
+    /// This method listents to slider's touch events and track them. 
+    ///
+    /// When user start touching slider then `self.updateSliderUsingPlaybackPosition` is set to `false`. Thanks to this slider position is take from
+    /// it's value not from playback position.
+    ///
+    /// When user stop touch slider then `self.updateSliderUsingPlaybackPosition` is set to `true` and playback seek to current slider position.
+    /// Slider position is now updated using playback position.
+    ///
+    func setupSubscriptionToSliderTouchEvents()
     {
         slider.eventsObservable
             .subscribe(
@@ -134,7 +160,7 @@ class MyPlayerControllerOverlayView: UIView
                     switch event
                     {
                     case .touchBegin:
-                        me.updateSlider = false
+                        me.updateSliderUsingPlaybackPosition = false
                         
                     case .touchEnded:
                         guard let duration = me.playerInterface?.duration, duration > 0.0 else { return }
@@ -143,19 +169,23 @@ class MyPlayerControllerOverlayView: UIView
                         
                         me.playerInterface?.seek(to: position, completionHandler: { _ in
                             
-                            self?.updateSlider = true
+                            self?.updateSliderUsingPlaybackPosition = true
                             self?.playerInterface?.play()
                         })
                     }
                 }
             )
             .disposed(by: bag)
-        
+    }
+    
+    /// This value observe slider value and when `self.updateSliderUsingPlaybackPosition` is `false` then update position labels.
+    func setupSubscriptionToSliderValue()
+    {
          let sliderPositionObservable = slider.rx.value
             .asObservable()
             .filter({[weak self] (position: Float) in
                 
-                return !(self?.updateSlider ?? true)
+                return !(self?.updateSliderUsingPlaybackPosition ?? true)
             })
             .map({[weak self] (value: Float) -> TimeInterval in
                 
@@ -168,6 +198,9 @@ class MyPlayerControllerOverlayView: UIView
         bindObservableToPositionLabels(observable: sliderPositionObservable)
     }
     
+    /// This method takes observable which emitt some playback position and bind it to position labels.
+    ///
+    /// - Parameter observable: Observable which emitt some playback position.
     func bindObservableToPositionLabels(observable: Observable<TimeInterval>)
     {
         observable
@@ -189,8 +222,13 @@ class MyPlayerControllerOverlayView: UIView
     }
 }
 
+// MARK: - Misc
+
 extension TimeInterval
 {
+    /// Convert some number of seconds to "time string". For example: 131 -> 02:11
+    ///
+    /// - Returns: String which contains time in human readable form.
     func timeToText() -> String
     {
         if self.isNaN || self < 0

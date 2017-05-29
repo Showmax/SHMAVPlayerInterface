@@ -17,6 +17,7 @@ enum CustomSliderEvent
     case touchEnded
 }
 
+/// This class is custom implementation of `UISlider` which helps tracking user interaction with this slider.
 class CustomSlider: UISlider
 {
     private var     eventsSubject = PublishSubject<CustomSliderEvent>()

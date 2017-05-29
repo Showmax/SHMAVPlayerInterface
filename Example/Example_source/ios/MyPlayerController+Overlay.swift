@@ -11,6 +11,9 @@ import UIKit
 
 extension MyPlayerController
 {
+    /// Create and show custom UI over player.
+    ///
+    /// - Parameter playerInterface: Current player interface to use.
     func setupOverlayView(with playerInterface: SHMAVPlayerInterface)
     {
         playerController.showsPlaybackControls = false

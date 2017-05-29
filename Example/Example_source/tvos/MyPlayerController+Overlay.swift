@@ -10,6 +10,7 @@ import Foundation
 
 extension MyPlayerController
 {
+    /// For tvOS there is no custom UI. So no action here.
     func setupOverlayView(with playerInterface: SHMAVPlayerInterface)
     {
     }

@@ -12,17 +12,13 @@ import AVFoundation
 import RxSwift
 import RxCocoa
 
+/// This controller wrap `AVPlayerViewController`. Thanks to this we can present custom UI over player.
 class MyPlayerController: UIViewController
 {
     var     bag: DisposeBag
     var     playerInterface: SHMAVPlayerInterface
     
     let     playerController: AVPlayerViewController
-    
-    deinit
-    {
-        ldebug("Destroying player controller")
-    }
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, player: AVPlayer)
     {

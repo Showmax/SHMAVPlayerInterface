@@ -17,15 +17,7 @@ class ViewController: UIViewController
 {
     var     bag = DisposeBag()
     
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //        "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"
-    }
-    
-    
+    /// Initialize and present player controller.
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
