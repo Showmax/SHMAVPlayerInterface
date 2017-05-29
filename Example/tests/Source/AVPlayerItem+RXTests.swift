@@ -18,7 +18,7 @@ import RxBlocking
 
 class AVPlayerItemRXTests: SHMTestCase
 {
-    func test__twoSameSHMPlayerItemBufferStatuSes__areEqual()
+    func test__twoSameSHMPlayerItemBufferStatuses__areEqual()
     {
         let status1 = AVPlayerItem.SHMPlayerItemBufferStatus(bufferEmpty: true, bufferFull: false)
         let status2 = AVPlayerItem.SHMPlayerItemBufferStatus(bufferEmpty: true, bufferFull: false)
@@ -26,7 +26,7 @@ class AVPlayerItemRXTests: SHMTestCase
         expect(status1) == status2
     }
     
-    func test__twoDifferentSHMPlayerItemBufferStatuSes__areNotEqual()
+    func test__twoDifferentSHMPlayerItemBufferStatuses__areNotEqual()
     {
         let status1 = AVPlayerItem.SHMPlayerItemBufferStatus(bufferEmpty: true, bufferFull: false)
         let status2 = AVPlayerItem.SHMPlayerItemBufferStatus(bufferEmpty: true, bufferFull: true)
