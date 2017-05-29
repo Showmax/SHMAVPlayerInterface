@@ -52,7 +52,7 @@ class SHMAVPlayerInterfaceTests: SHMTestCase
         expect(playerInterface.playbackProbablyStalled) == true
     }
     
-    func test__play__playbackShoudlStart()
+    func test__play__playbackShouldStart()
     {
         let (player, playerInterface) = createPlayerAndInterface()
         
