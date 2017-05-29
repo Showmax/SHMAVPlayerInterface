@@ -16,165 +16,212 @@ import RxBlocking
 
 class SHMAVPlayerInterfaceTests: SHMTestCase
 {
-    func test__playerStatusChange__playerStatusChangedCallbackIsCalled()
+    func test__duration__isNilBeforePlayerIsReadyToPlay()
     {
-    }
-    
-    func test__playbackFinish__playbackFinishedCallbackIsCalled()
-    {
+        let (_, playerInterface) = createPlayerAndInterface()
         
+        expect(playerInterface.duration).to(beNil())
     }
     
-    func test__playbackPause__playbackPausedCallbackIsCalled()
+    func test__duration__isSameAsAssetDurationAfterPlayerIsReady()
     {
+        let (player, playerInterface) = createPlayerAndInterface()
         
+        shmwait(timeout: 3.0, action: { done in
+            
+            player.currentItem?.rx.status(options: .new)
+                .subscribe(
+                    onNext: { status in
+                        
+                        guard status == .readyToPlay else { return }
+                        
+                        expect(playerInterface.duration) == kBipBopDuration
+                        done()
+                    }
+                )
+                .disposed(by: self.bag)
+            
+            player.play()
+        })
     }
     
-    func test__playbackResume__playbackPausedCallbackIsCalled()
+    func test__playbackIsProbablyStalled__playbackIsStalledBeforeItStarts()
     {
+        let (_, playerInterface) = createPlayerAndInterface()
         
+        expect(playerInterface.playbackProbablyStalled) == true
     }
     
-    func test__playbackPositionIsUpdated__playbackPositionUpdatedCallbackIsCalled()
+    func test__play__playbackShouldStart()
     {
+        let (player, playerInterface) = createPlayerAndInterface()
         
+        shmwait(timeout: 3.0, action: { done in
+            
+            var playbackStarted = false
+            player.rx.rate(options: .new)
+                .subscribe(
+                    onNext: { rate in
+                        
+                        guard rate >= 1.0 && !playbackStarted else { return }
+                        
+                        playbackStarted = true
+                        done()
+                    }
+                )
+                .disposed(by: self.bag)
+            
+            playerInterface.play()
+        })
     }
     
-    func test__playbackSwitchToExtenralPlayback__externalPlaybackActiveChangedIsCalled()
+    
+    func test__pause__pausePlayback()
     {
+        let (player, playerInterface) = createPlayerAndInterface()
         
+        shmwait(timeout: 3.0, action: { done in
+            
+            var shouldBePaused = false
+            player.rx.playbackPosition(updateInterval: 0.1, updateQueue: nil)
+                .subscribe(
+                    onNext: { position in
+                        
+                        guard position > 0.0 && !shouldBePaused else { return }
+                        
+                        shouldBePaused = true
+                        playerInterface.pause()
+                        
+                        expect(player.rate) == 0.0
+                        done()
+                    }
+                )
+                .disposed(by: self.bag)
+            
+            player.play()
+        })
     }
     
-    func test__playbackSwitchFromExternalPlayback__externalPlaybackActiveChangedIsCalled()
+    func test__seek__shouldSeekToSpecificPosition()
     {
+        let (player, playerInterface) = createPlayerAndInterface()
         
+        shmwait(timeout: 3.0, action: { done in
+            
+            var seeked = false
+            player.currentItem?.rx.status(options: .new)
+                .subscribe(
+                    onNext: { status in
+                        
+                        guard status == .readyToPlay && !seeked else { return }
+                        
+                        guard let duration = playerInterface.duration else
+                        {
+                            XCTFail("Can't read duration of testing asset.")
+                            done()
+                            return
+                        }
+                        
+                        player.pause()
+                        seeked = true
+                        
+                        playerInterface.seek(
+                            to: duration - 1.0,
+                            toleranceBefore: 0.0,
+                            toleranceAfter: 0.0,
+                            cancelPendingSeeks: true,
+                            completionHandler: { _ in
+                                
+                                expect(playerInterface.playbackPosition) == kBipBopDuration - 1.0
+                                done()
+                        })
+                    }
+                )
+                .disposed(by: self.bag)
+            
+            player.play()
+        })
     }
     
-    func test__newAccessLogEvent__newAccessLogEventCallbackIsCalled()
+    func test__availableSubtitles__shouldBeAsInAsset()
     {
-    }
-    
-    func test__newErrorLogEvent__newErrorLogEventIsCalled()
-    {
+        let (_, playerInterface) = createPlayerAndInterface()
         
-    }
-    
-    func test__duration__isSameAsAssetDuration()
-    {
+        let expectedLanguages = "enen_feses_ffrfr_fjaja_f"
+        let languages = playerInterface.availableSubtitles
+            .map({ "\($0.languageCode)\($0.forced ? "_f" : "")" })
+            .sorted()
+            .reduce("", +)
         
+        expect(expectedLanguages) == languages
     }
     
-    func test__playbackPosition__isSameAsCurrentPlaybackPosition()
+    func test__deselectSubtitle__noSubtitlesAreSelected()
     {
+        let (_, playerInterface) = createPlayerAndInterface()
         
+        guard let subtitle = playerInterface.availableSubtitles.last else
+        {
+            XCTFail("Test asset must have some subtitles.")
+            return
+        }
+        
+        playerInterface.select(subtitle: subtitle)
+        expect(playerInterface.selectedSubtitle).toNot(beNil())
+        
+        playerInterface.select(subtitle: nil)
+        expect(playerInterface.selectedSubtitle).to(beNil())
     }
     
-    func test__availableSubtitles__areSameAsSubtitlesProvidedByAsset()
+    func test__selectSubtitle__thatSubtitlesTrackIsSelected()
     {
+        let (_, playerInterface) = createPlayerAndInterface()
         
+        guard let subtitle = playerInterface.availableSubtitles.filter({ !$0.forced }).last else
+        {
+            XCTFail("Test asset must have some subtitles.")
+            return
+        }
+        
+        playerInterface.select(subtitle: nil)
+        expect(playerInterface.selectedSubtitle).to(beNil())
+        
+        playerInterface.select(subtitle: subtitle)
+        expect(playerInterface.selectedSubtitle).toNot(beNil())
+        
+        guard let selectedSubtitle = playerInterface.selectedSubtitle else { return }
+        
+        expect(selectedSubtitle.option) == subtitle.option
     }
     
-    func test__selectedSubtitlesWhenSomeSubtitlesAreSelected__returnSubtitles()
+    func test__availableAudioTracks__shouldBeAsInAsset()
     {
+        let (_, playerInterface) = createPlayerAndInterface()
         
+        let expectedAudioTracks = "engeng"
+        let audioTracks = playerInterface.availableAudioTracks
+            .map({ "\($0.languageCode)" })
+            .sorted()
+            .reduce("", +)
+        
+        expect(expectedAudioTracks) == audioTracks
     }
     
-    func test__selectedSubtitlesWhenNoSubtitlesSelected__returnNil()
+    func test__selectAudioTrack__thatAudioTrackIsSelected()
     {
+        let (_, playerInterface) = createPlayerAndInterface()
         
-    }
-    
-    func test__availableAudioTracks__areSameAsAudioTracksProvidedByAsset()
-    {
+        guard let audioTrack = playerInterface.availableAudioTracks.last else
+        {
+            XCTFail("Test asset must have some subtitles.")
+            return
+        }
         
-    }
-    
-    func test__selectedAudioTrack__returnCurrentlySelectedAudioTrack()
-    {
+        playerInterface.select(audioTrack: audioTrack)
+        expect(playerInterface.selectedAudioTrack).toNot(beNil())
         
-    }
-    
-    func test__pausedByUser__returnTrueWhenPlaybackIsProbablyPausedByUser()
-    {
+        guard let selectedAudioTrack = playerInterface.selectedAudioTrack else { return }
         
+        expect(selectedAudioTrack.option) == audioTrack.option
     }
-    
-    func test__probablyStalled__returnTrueWhenPlaybackIsProbablyStalled()
-    {
-        
-    }
-    
-    func test__error__returnErrorObject()
-    {
-        
-    }
-    
-    func test__setPlayerItem__probablyIntegrationTestWhichTestsIfEverythingSetup()
-    {
-        
-    }
-    
-    func test__play__playbackStarts()
-    {
-        
-    }
-    
-    func test__pause__playbackPause()
-    {
-        
-    }
-    
-    func test__seek__currentPlaybackPositionChangeWhenSeekFinish()
-    {
-        
-    }
-    
-    func test__selectSomeSubtitle__subtitleIsSelected()
-    {
-        
-    }
-    
-    func test__deselectSubtitle__subtitlesAreTurnedOff()
-    {
-        
-    }
-    
-    func test__selectAudioTrack__audioTrackIsSelected()
-    {
-        
-    }
-    
-    
-    
-//    func test1()
-//    {
-//        var bag = DisposeBag()
-//        
-//        let asset = AVAsset(url: URL(string: "https://tungsten.aaplimg.com/VOD/bipbop_adv_example_v2/master.m3u8")!)
-//        let item = AVPlayerItem(asset: asset)
-//        let player = AVPlayer(playerItem: item)
-//        
-//        let playerInterface = SHMAVPlayerInterface(player: player)
-//        
-//        shmwait(timeout: 5.0, action: { done in
-//            
-//            
-//            
-//            playerInterface.observePlaybackPosition(updateInterval: 0.1, updateQueue: nil)
-//                .subscribe(
-//                    onNext: { position in
-//                        
-//                        ldebug("Testing position \(position)")
-//                        guard position > 0.0 else { return }
-//                        
-//                        done()
-//                    }
-//                )
-//                .disposed(by: bag)
-//            
-//            playerInterface.play()
-//        })
-//        
-//        bag = DisposeBag()
-//    }
 }

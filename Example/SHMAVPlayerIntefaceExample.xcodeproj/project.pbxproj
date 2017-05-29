@@ -59,6 +59,8 @@
 		343864DC1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */; };
 		343864DE1ED40EAA00562510 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864DD1ED40EAA00562510 /* Logging.swift */; };
 		343864E01ED40EAA00562510 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864DD1ED40EAA00562510 /* Logging.swift */; };
+		347666751ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347666741ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift */; };
+		347666761ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347666741ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift */; };
 		E8E215C8C4490935D02DD034 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A373FC71264E29119597E8 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework */; };
 		EA5882FD81AE361AD9840BCD /* Pods_SHMAVPlayerIntefaceExampleiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */; };
 /* End PBXBuildFile section */
@@ -111,6 +113,7 @@
 		343864BA1ED40D8B00562510 /* SHMAVPlayerInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMAVPlayerInterface.swift; sourceTree = "<group>"; };
 		343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+IgnoreNil.swift"; sourceTree = "<group>"; };
 		343864DD1ED40EAA00562510 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		347666741ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerExternalPlaybackMock.swift; sourceTree = "<group>"; };
 		509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerIntefaceExampleiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538F2B3266B2CF09E988F28E /* Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOSTests/Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		60121E6F64BBD859955DAB66 /* Pods_SHMAVPlayerIntefaceExampleIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerIntefaceExampleIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -268,6 +271,7 @@
 				340CC8C61ED40FBB007365C7 /* AVPlayer+RXTests.swift */,
 				340CC8C91ED40FC7007365C7 /* AVPlayerItem+RXTests.swift */,
 				340CC8CC1ED40FD1007365C7 /* Observable+IgnoreNilTests.swift */,
+				347666741ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -730,6 +734,7 @@
 				340CC8CD1ED40FD1007365C7 /* Observable+IgnoreNilTests.swift in Sources */,
 				340CC8D21ED41082007365C7 /* SHMTestCase.swift in Sources */,
 				340CC8C71ED40FBB007365C7 /* AVPlayer+RXTests.swift in Sources */,
+				347666751ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift in Sources */,
 				343864C01ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */,
 				3423A9731ECB07EB00AA647D /* XCTestCase+Wait.swift in Sources */,
 			);
@@ -764,6 +769,7 @@
 				340CC8CE1ED40FD1007365C7 /* Observable+IgnoreNilTests.swift in Sources */,
 				340CC8D31ED41082007365C7 /* SHMTestCase.swift in Sources */,
 				340CC8C81ED40FBB007365C7 /* AVPlayer+RXTests.swift in Sources */,
+				347666761ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift in Sources */,
 				343864C21ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */,
 				3423A9751ECB07EC00AA647D /* XCTestCase+Wait.swift in Sources */,
 			);
