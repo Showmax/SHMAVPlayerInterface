@@ -1,5 +1,5 @@
 //
-//  MyPlayerController.swift
+//  ExamplePlayerController.swift
 //  SHMAVPlayerIntefaceExample
 //
 //  Created by Michal Fousek on 16/05/2017.
@@ -13,7 +13,7 @@ import RxSwift
 import RxCocoa
 
 /// This controller wrap `AVPlayerViewController`. Thanks to this we can present custom UI over player.
-class MyPlayerController: UIViewController
+class ExamplePlayerController: UIViewController
 {
     var     bag: DisposeBag
     var     playerInterface: SHMAVPlayerInterface

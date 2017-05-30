@@ -32,7 +32,7 @@ class ViewController: UIViewController
         let item = AVPlayerItem(asset: asset)
         let player = AVPlayer(playerItem: item)
         
-        let playerController = MyPlayerController(nibName: "MyPlayerController", bundle: nil, player: player)
+        let playerController = ExamplePlayerController(nibName: "ExamplePlayerController", bundle: nil, player: player)
         
         present(playerController, animated: true, completion: {[weak playerController] in
             

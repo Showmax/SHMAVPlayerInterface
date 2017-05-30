@@ -1,5 +1,5 @@
 //
-//  MyPlayerControllerOverlayView.swift
+//  ExamplePlayerControllerOverlayView.swift
 //  SHMAVPlayerIntefaceExample
 //
 //  Created by Michal Fousek on 23/05/2017.
@@ -13,7 +13,7 @@ import RxSwift
 import RxCocoa
 
 /// This class represent custom UI over player.
-class MyPlayerControllerOverlayView: UIView
+class ExamplePlayerControllerOverlayView: UIView
 {
     var                 bag = DisposeBag()
     

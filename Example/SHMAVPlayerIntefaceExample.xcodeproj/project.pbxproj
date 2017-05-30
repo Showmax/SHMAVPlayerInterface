@@ -59,15 +59,15 @@
 		347666761ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347666741ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift */; };
 		34E5BCD11EDD3ECF00F684B7 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BCC51EDD3ECF00F684B7 /* Logging.swift */; };
 		34E5BCD21EDD3ECF00F684B7 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BCC81EDD3ECF00F684B7 /* CustomSlider.swift */; };
-		34E5BCD31EDD3ECF00F684B7 /* MyPlayerController+Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BCC91EDD3ECF00F684B7 /* MyPlayerController+Overlay.swift */; };
-		34E5BCD41EDD3ECF00F684B7 /* MyPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E5BCCA1EDD3ECF00F684B7 /* MyPlayerController.xib */; };
-		34E5BCD51EDD3ECF00F684B7 /* MyPlayerControllerOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BCCB1EDD3ECF00F684B7 /* MyPlayerControllerOverlayView.swift */; };
-		34E5BCD61EDD3ECF00F684B7 /* MyPlayerControllerOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E5BCCC1EDD3ECF00F684B7 /* MyPlayerControllerOverlayView.xib */; };
-		34E5BCD71EDD3ECF00F684B7 /* MyPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BCCD1EDD3ECF00F684B7 /* MyPlayerController.swift */; };
+		34E5BCD31EDD3ECF00F684B7 /* ExamplePlayerController+Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BCC91EDD3ECF00F684B7 /* ExamplePlayerController+Overlay.swift */; };
+		34E5BCD41EDD3ECF00F684B7 /* ExamplePlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E5BCCA1EDD3ECF00F684B7 /* ExamplePlayerController.xib */; };
+		34E5BCD51EDD3ECF00F684B7 /* ExamplePlayerControllerOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BCCB1EDD3ECF00F684B7 /* ExamplePlayerControllerOverlayView.swift */; };
+		34E5BCD61EDD3ECF00F684B7 /* ExamplePlayerControllerOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E5BCCC1EDD3ECF00F684B7 /* ExamplePlayerControllerOverlayView.xib */; };
+		34E5BCD71EDD3ECF00F684B7 /* ExamplePlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BCCD1EDD3ECF00F684B7 /* ExamplePlayerController.swift */; };
 		34E5BCDA1EDD3ED400F684B7 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BCC51EDD3ECF00F684B7 /* Logging.swift */; };
-		34E5BCDB1EDD3EE700F684B7 /* MyPlayerController+Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BCCF1EDD3ECF00F684B7 /* MyPlayerController+Overlay.swift */; };
-		34E5BCDC1EDD3EE700F684B7 /* MyPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E5BCD01EDD3ECF00F684B7 /* MyPlayerController.xib */; };
-		34E5BCDD1EDD3EF400F684B7 /* MyPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BCCD1EDD3ECF00F684B7 /* MyPlayerController.swift */; };
+		34E5BCDB1EDD3EE700F684B7 /* ExamplePlayerController+Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BCCF1EDD3ECF00F684B7 /* ExamplePlayerController+Overlay.swift */; };
+		34E5BCDC1EDD3EE700F684B7 /* ExamplePlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E5BCD01EDD3ECF00F684B7 /* ExamplePlayerController.xib */; };
+		34E5BCDD1EDD3EF400F684B7 /* ExamplePlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5BCCD1EDD3ECF00F684B7 /* ExamplePlayerController.swift */; };
 		E8E215C8C4490935D02DD034 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A373FC71264E29119597E8 /* Pods_SHMAVPlayerInterfaceExampleTVOSTests.framework */; };
 		EA5882FD81AE361AD9840BCD /* Pods_SHMAVPlayerIntefaceExampleiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */; };
 /* End PBXBuildFile section */
@@ -120,13 +120,13 @@
 		347666741ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerExternalPlaybackMock.swift; sourceTree = "<group>"; };
 		34E5BCC51EDD3ECF00F684B7 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		34E5BCC81EDD3ECF00F684B7 /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
-		34E5BCC91EDD3ECF00F684B7 /* MyPlayerController+Overlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyPlayerController+Overlay.swift"; sourceTree = "<group>"; };
-		34E5BCCA1EDD3ECF00F684B7 /* MyPlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPlayerController.xib; sourceTree = "<group>"; };
-		34E5BCCB1EDD3ECF00F684B7 /* MyPlayerControllerOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlayerControllerOverlayView.swift; sourceTree = "<group>"; };
-		34E5BCCC1EDD3ECF00F684B7 /* MyPlayerControllerOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPlayerControllerOverlayView.xib; sourceTree = "<group>"; };
-		34E5BCCD1EDD3ECF00F684B7 /* MyPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlayerController.swift; sourceTree = "<group>"; };
-		34E5BCCF1EDD3ECF00F684B7 /* MyPlayerController+Overlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyPlayerController+Overlay.swift"; sourceTree = "<group>"; };
-		34E5BCD01EDD3ECF00F684B7 /* MyPlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPlayerController.xib; sourceTree = "<group>"; };
+		34E5BCC91EDD3ECF00F684B7 /* ExamplePlayerController+Overlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExamplePlayerController+Overlay.swift"; sourceTree = "<group>"; };
+		34E5BCCA1EDD3ECF00F684B7 /* ExamplePlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExamplePlayerController.xib; sourceTree = "<group>"; };
+		34E5BCCB1EDD3ECF00F684B7 /* ExamplePlayerControllerOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplePlayerControllerOverlayView.swift; sourceTree = "<group>"; };
+		34E5BCCC1EDD3ECF00F684B7 /* ExamplePlayerControllerOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExamplePlayerControllerOverlayView.xib; sourceTree = "<group>"; };
+		34E5BCCD1EDD3ECF00F684B7 /* ExamplePlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplePlayerController.swift; sourceTree = "<group>"; };
+		34E5BCCF1EDD3ECF00F684B7 /* ExamplePlayerController+Overlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExamplePlayerController+Overlay.swift"; sourceTree = "<group>"; };
+		34E5BCD01EDD3ECF00F684B7 /* ExamplePlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExamplePlayerController.xib; sourceTree = "<group>"; };
 		509E43ED191D83D55835FF88 /* Pods_SHMAVPlayerIntefaceExampleiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerIntefaceExampleiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538F2B3266B2CF09E988F28E /* Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHMAVPlayerInterfaceExampleTVOSTests/Pods-SHMAVPlayerInterfaceExampleTVOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		60121E6F64BBD859955DAB66 /* Pods_SHMAVPlayerIntefaceExampleIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHMAVPlayerIntefaceExampleIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -334,7 +334,7 @@
 			children = (
 				34E5BCC71EDD3ECF00F684B7 /* ios */,
 				34E5BCCE1EDD3ECF00F684B7 /* tvos */,
-				34E5BCCD1EDD3ECF00F684B7 /* MyPlayerController.swift */,
+				34E5BCCD1EDD3ECF00F684B7 /* ExamplePlayerController.swift */,
 			);
 			path = MyPlayerContoller;
 			sourceTree = "<group>";
@@ -342,11 +342,11 @@
 		34E5BCC71EDD3ECF00F684B7 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				34E5BCC91EDD3ECF00F684B7 /* ExamplePlayerController+Overlay.swift */,
+				34E5BCCA1EDD3ECF00F684B7 /* ExamplePlayerController.xib */,
+				34E5BCCB1EDD3ECF00F684B7 /* ExamplePlayerControllerOverlayView.swift */,
+				34E5BCCC1EDD3ECF00F684B7 /* ExamplePlayerControllerOverlayView.xib */,
 				34E5BCC81EDD3ECF00F684B7 /* CustomSlider.swift */,
-				34E5BCC91EDD3ECF00F684B7 /* MyPlayerController+Overlay.swift */,
-				34E5BCCA1EDD3ECF00F684B7 /* MyPlayerController.xib */,
-				34E5BCCB1EDD3ECF00F684B7 /* MyPlayerControllerOverlayView.swift */,
-				34E5BCCC1EDD3ECF00F684B7 /* MyPlayerControllerOverlayView.xib */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -354,8 +354,8 @@
 		34E5BCCE1EDD3ECF00F684B7 /* tvos */ = {
 			isa = PBXGroup;
 			children = (
-				34E5BCCF1EDD3ECF00F684B7 /* MyPlayerController+Overlay.swift */,
-				34E5BCD01EDD3ECF00F684B7 /* MyPlayerController.xib */,
+				34E5BCCF1EDD3ECF00F684B7 /* ExamplePlayerController+Overlay.swift */,
+				34E5BCD01EDD3ECF00F684B7 /* ExamplePlayerController.xib */,
 			);
 			path = tvos;
 			sourceTree = "<group>";
@@ -524,9 +524,9 @@
 			files = (
 				3423A9671ECB07E300AA647D /* Main.storyboard in Resources */,
 				3423A9651ECB07E300AA647D /* Assets.xcassets in Resources */,
-				34E5BCD41EDD3ECF00F684B7 /* MyPlayerController.xib in Resources */,
+				34E5BCD41EDD3ECF00F684B7 /* ExamplePlayerController.xib in Resources */,
 				3423A9661ECB07E300AA647D /* LaunchScreen.storyboard in Resources */,
-				34E5BCD61EDD3ECF00F684B7 /* MyPlayerControllerOverlayView.xib in Resources */,
+				34E5BCD61EDD3ECF00F684B7 /* ExamplePlayerControllerOverlayView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,7 +544,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34E5BCDC1EDD3EE700F684B7 /* MyPlayerController.xib in Resources */,
+				34E5BCDC1EDD3EE700F684B7 /* ExamplePlayerController.xib in Resources */,
 				3423A9821ECB083A00AA647D /* Assets.xcassets in Resources */,
 				3423A9841ECB083F00AA647D /* Main.storyboard in Resources */,
 			);
@@ -777,17 +777,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34E5BCD51EDD3ECF00F684B7 /* MyPlayerControllerOverlayView.swift in Sources */,
+				34E5BCD51EDD3ECF00F684B7 /* ExamplePlayerControllerOverlayView.swift in Sources */,
 				3440BA251EDC1B0100294F88 /* AppDelegate.swift in Sources */,
 				34E5BCD21EDD3ECF00F684B7 /* CustomSlider.swift in Sources */,
 				343864CB1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */,
 				343864BF1ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */,
-				34E5BCD31EDD3ECF00F684B7 /* MyPlayerController+Overlay.swift in Sources */,
+				34E5BCD31EDD3ECF00F684B7 /* ExamplePlayerController+Overlay.swift in Sources */,
 				343864BB1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */,
 				343864AF1ED40D4C00562510 /* ViewController.swift in Sources */,
 				343864CF1ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */,
 				343864D91ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */,
-				34E5BCD71EDD3ECF00F684B7 /* MyPlayerController.swift in Sources */,
+				34E5BCD71EDD3ECF00F684B7 /* ExamplePlayerController.swift in Sources */,
 				34E5BCD11EDD3ECF00F684B7 /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -815,13 +815,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34E5BCDB1EDD3EE700F684B7 /* MyPlayerController+Overlay.swift in Sources */,
+				34E5BCDB1EDD3EE700F684B7 /* ExamplePlayerController+Overlay.swift in Sources */,
 				343864CD1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */,
 				343864C11ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */,
 				343864BD1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */,
 				343864B11ED40D4C00562510 /* ViewController.swift in Sources */,
 				343864D11ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */,
-				34E5BCDD1EDD3EF400F684B7 /* MyPlayerController.swift in Sources */,
+				34E5BCDD1EDD3EF400F684B7 /* ExamplePlayerController.swift in Sources */,
 				3440BA261EDC1B0300294F88 /* AppDelegate.swift in Sources */,
 				343864DB1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */,
 				34E5BCDA1EDD3ED400F684B7 /* Logging.swift in Sources */,

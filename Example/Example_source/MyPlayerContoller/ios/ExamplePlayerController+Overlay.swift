@@ -1,5 +1,5 @@
 //
-//  MyPlayerController+Overlay.swift
+//  ExamplePlayerController+Overlay.swift
 //  SHMAVPlayerIntefaceExample
 //
 //  Created by Michal Fousek on 23/05/2017.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension MyPlayerController
+extension ExamplePlayerController
 {
     /// Create and show custom UI over player.
     ///
@@ -19,10 +19,10 @@ extension MyPlayerController
         playerController.showsPlaybackControls = false
         
         let possibleOverlay = Bundle.main.loadNibNamed(
-            "MyPlayerControllerOverlayView",
+            "ExamplePlayerControllerOverlayView",
             owner: nil,
             options: nil
-        )?.first as? MyPlayerControllerOverlayView
+        )?.first as? ExamplePlayerControllerOverlayView
         
         guard let overlay = possibleOverlay else
         {
