@@ -176,5 +176,3 @@ class AVPlayerItemRXTests: SHMTestCase
         })
     }
 }
-
-

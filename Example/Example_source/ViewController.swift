@@ -17,37 +17,26 @@ class ViewController: UIViewController
 {
     var     bag = DisposeBag()
     
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //        "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"
-    }
-    
-    
+    /// Initialize and present player controller.
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
         
-        let asset = AVAsset(url: URL(string: "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8")!)
+        guard let assetURL = URL(string: "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8") else
+        {
+            fatalError("Can't create URL for asset.")
+        }
+        
+        let asset = AVAsset(url: assetURL)
         
         let item = AVPlayerItem(asset: asset)
         let player = AVPlayer(playerItem: item)
         
-        let playerController = MyPlayerController()
-        playerController.player = player
+        let playerController = ExamplePlayerController(nibName: "ExamplePlayerController", bundle: nil, player: player)
         
         present(playerController, animated: true, completion: {[weak playerController] in
             
-            playerController?.playerInterface?.play()
+            playerController?.playerInterface.play()
         })
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
+    }    
 }
