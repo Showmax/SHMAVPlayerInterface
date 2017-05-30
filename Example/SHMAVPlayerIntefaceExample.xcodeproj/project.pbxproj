@@ -301,7 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				34E5BCC41EDD3ECF00F684B7 /* Misc */,
-				34E5BCC61EDD3ECF00F684B7 /* MyPlayerContoller */,
+				34E5BCC61EDD3ECF00F684B7 /* ExamplePlayerController */,
 				3440BA211EDC1AF500294F88 /* AppDelegate.swift */,
 				343864A21ED40D4C00562510 /* ViewController.swift */,
 			);
@@ -329,13 +329,14 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
-		34E5BCC61EDD3ECF00F684B7 /* MyPlayerContoller */ = {
+		34E5BCC61EDD3ECF00F684B7 /* ExamplePlayerController */ = {
 			isa = PBXGroup;
 			children = (
 				34E5BCC71EDD3ECF00F684B7 /* ios */,
 				34E5BCCE1EDD3ECF00F684B7 /* tvos */,
 				34E5BCCD1EDD3ECF00F684B7 /* ExamplePlayerController.swift */,
 			);
+			name = ExamplePlayerController;
 			path = MyPlayerContoller;
 			sourceTree = "<group>";
 		};
