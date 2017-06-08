@@ -31,7 +31,6 @@ extension AVPlayerItem
         {
             return lhs.bufferEmpty == rhs.bufferEmpty && lhs.bufferFull == rhs.bufferFull
         }
-
     }
 }
 

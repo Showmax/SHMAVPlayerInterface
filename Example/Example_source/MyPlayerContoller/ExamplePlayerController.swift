@@ -55,6 +55,8 @@ class ExamplePlayerController: UIViewController
         super.viewWillAppear(animated)
         
         setupOverlayView(with: playerInterface)
+        
+        observePlaybackPositionOnAllPlatforms()
     }
     
     override func viewWillDisappear(_ animated: Bool)
@@ -62,6 +64,20 @@ class ExamplePlayerController: UIViewController
         super.viewWillDisappear(animated)
         
         bag = DisposeBag()
+    }
+    
+    func observePlaybackPositionOnAllPlatforms()
+    {
+        // Receive update on playback position every two seconds on main thread.
+        playerInterface.player.rx.playbackPosition(updateInterval: 2.0, updateQueue: nil)
+            .subscribe(
+                onNext: { position in
+                    
+                    ldebug("Playback position: \(position)")
+                    
+                }
+            )
+            .disposed(by: bag)
     }
     
     func add(view: UIView, to overlayView: UIView)
