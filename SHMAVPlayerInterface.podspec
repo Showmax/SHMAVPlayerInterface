@@ -1,38 +1,29 @@
-#
-# Be sure to run `pod lib lint SHMTableView.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
+Pod::Spec.new do |s|
+  s.name             = 'SHMAVPlayerInterface'
+  s.version          = '1.0.0'
+  s.summary          = 'SHMAVPlayerInterface provides easy-to-use interface for AVPlayer. You can forget on KVO, CMTime, media groups and other not so easy-to-use APIs.'
 
-#Pod::Spec.new do |s|
-#  s.name             = 'SHMTableView'
-#  s.version          = '2.0.0'
-#  s.summary          = 'SHMTableView is a wrapper around UITableView datasource, that helps you define table contents by mapping view types to model instances.'
+  s.description      = <<-DESC
 
-#  s.description      = <<-DESC
 
-#HMTableView helps you abstract away the routine stuff in UITableViewDataSource and UITableViewDelegate. Instead you can focus on structure and content to be displayed by UITableView.
+SHMAVPlayerInterface provides easy-to-use interface for AVPlayer. You can forget on KVO, CMTime, media groups and other not so easy-to-use APIs. 
+You have now reactive API to observe important properties. And you also have wrapper around AVPlayer to handle basic actions like play/pause and subtitles changes.
 
-#To use SHMTableView, you must:
+And still you have full control over your AVPlayer.
 
-#    1. Create data model instances
-#    2. Map data models to view types
-#    3. Pass your mapping to the SHMTableView library
+                       DESC
 
-#SHMTableView creates and configures all UITableViewCell instances to be displayed in UITableView.
+  s.homepage         = 'https://github.com/ShowMax/SHMAVPlayerInterface'
+  s.license          = { :type => 'Apache', :file => 'LICENSE' }
+  s.author           = { 'Showmax' => 'ios@showmax.com' }
+  s.source           = { :git => 'https://github.com/ShowMax/SHMAVPlayerInterface.git', :tag => "#{s.version}" }
+  s.social_media_url = 'https://twitter.com/showmaxdevs'
 
-#                       DESC
+  s.platforms = { :ios => "9.0", :tvos => "9.0" }
+  s.frameworks = 'AVFoundation'
 
-#  s.homepage         = 'https://github.com/ShowMax/SHMTableView'
-#  s.license          = { :type => 'Apache', :file => 'LICENSE' }
-#  s.author           = { 'Showmax' => 'ios@showmax.com' }
-#  s.source           = { :git => 'https://github.com/ShowMax/SHMTableView.git', :tag => "#{s.version}" }
-#  s.social_media_url = 'https://twitter.com/showmaxdevs'
+  s.dependency 'RxSwift', '~> 3.5.0'
+  s.dependency 'RxCocoa', '~> 3.5.0'
 
-#  s.platforms = { :ios => "9.0", :tvos => "9.0" }
-#  s.frameworks = 'UIKit'
-
-#  s.source_files = ['Source/*.swift']
-#end
+  s.source_files = ['Source/*.swift']
+end
