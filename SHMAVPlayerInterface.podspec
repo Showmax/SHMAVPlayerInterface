@@ -5,11 +5,9 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
 
-
-SHMAVPlayerInterface provides easy-to-use interface for AVPlayer. You can forget on KVO, CMTime, media groups and other not so easy-to-use APIs. 
-You have now reactive API to observe important properties. And you also have wrapper around AVPlayer to handle basic actions like play/pause and subtitles changes.
-
-And still you have full control over your AVPlayer.
+SHMAVPlayerInterface provides easy-to-use interface for `AVPlayer` and `AVPlayerItem`. You can forget on `KVO`, `CMTime`, media groups and other not so easy-to-use APIs. 
+This library provides reactive API to observe important properties. And you also have wrapper around `AVPlayer` to handle basic actions like play/pause and subtitles changes. 
+And still you have full control over your `AVPlayer`.
 
                        DESC
 
