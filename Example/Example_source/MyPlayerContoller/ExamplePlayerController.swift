@@ -9,8 +9,11 @@
 import Foundation
 import AVKit
 import AVFoundation
+
 import RxSwift
 import RxCocoa
+
+import SHMAVPlayerInterface
 
 /// This controller wrap `AVPlayerViewController`. Thanks to this we can present custom UI over player.
 class ExamplePlayerController: UIViewController

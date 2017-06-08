@@ -33,26 +33,6 @@
 		3423A9861ECB084700AA647D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3423A94C1ECB07E300AA647D /* Assets.xcassets */; };
 		343864AF1ED40D4C00562510 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864A21ED40D4C00562510 /* ViewController.swift */; };
 		343864B11ED40D4C00562510 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864A21ED40D4C00562510 /* ViewController.swift */; };
-		343864BB1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B41ED40D8B00562510 /* AVPlayer+RX.swift */; };
-		343864BC1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B41ED40D8B00562510 /* AVPlayer+RX.swift */; };
-		343864BD1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B41ED40D8B00562510 /* AVPlayer+RX.swift */; };
-		343864BE1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B41ED40D8B00562510 /* AVPlayer+RX.swift */; };
-		343864BF1ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B51ED40D8B00562510 /* AVPlayerItem+RX.swift */; };
-		343864C01ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B51ED40D8B00562510 /* AVPlayerItem+RX.swift */; };
-		343864C11ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B51ED40D8B00562510 /* AVPlayerItem+RX.swift */; };
-		343864C21ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B51ED40D8B00562510 /* AVPlayerItem+RX.swift */; };
-		343864CB1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B91ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift */; };
-		343864CC1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B91ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift */; };
-		343864CD1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B91ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift */; };
-		343864CE1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864B91ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift */; };
-		343864CF1ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864BA1ED40D8B00562510 /* SHMAVPlayerInterface.swift */; };
-		343864D01ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864BA1ED40D8B00562510 /* SHMAVPlayerInterface.swift */; };
-		343864D11ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864BA1ED40D8B00562510 /* SHMAVPlayerInterface.swift */; };
-		343864D21ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864BA1ED40D8B00562510 /* SHMAVPlayerInterface.swift */; };
-		343864D91ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */; };
-		343864DA1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */; };
-		343864DB1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */; };
-		343864DC1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */; };
 		3440BA251EDC1B0100294F88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3440BA211EDC1AF500294F88 /* AppDelegate.swift */; };
 		3440BA261EDC1B0300294F88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3440BA211EDC1AF500294F88 /* AppDelegate.swift */; };
 		347666751ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347666741ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift */; };
@@ -111,11 +91,6 @@
 		3423A9631ECB07E300AA647D /* SHMAVPlayerInterfaceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMAVPlayerInterfaceTests.swift; sourceTree = "<group>"; };
 		3423A9641ECB07E300AA647D /* XCTestCase+Wait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Wait.swift"; sourceTree = "<group>"; };
 		343864A21ED40D4C00562510 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		343864B41ED40D8B00562510 /* AVPlayer+RX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayer+RX.swift"; sourceTree = "<group>"; };
-		343864B51ED40D8B00562510 /* AVPlayerItem+RX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayerItem+RX.swift"; sourceTree = "<group>"; };
-		343864B91ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHMAVPlayerInterface+Types.swift"; sourceTree = "<group>"; };
-		343864BA1ED40D8B00562510 /* SHMAVPlayerInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMAVPlayerInterface.swift; sourceTree = "<group>"; };
-		343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+IgnoreNil.swift"; sourceTree = "<group>"; };
 		3440BA211EDC1AF500294F88 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		347666741ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerExternalPlaybackMock.swift; sourceTree = "<group>"; };
 		34E5BCC51EDD3ECF00F684B7 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
@@ -190,7 +165,6 @@
 		3423A8ED1ECB06B300AA647D = {
 			isa = PBXGroup;
 			children = (
-				3423A9871ECB091F00AA647D /* SHMAVPlayerInterface_lib */,
 				3438649C1ED40D4C00562510 /* Example_source */,
 				3423A94A1ECB07E300AA647D /* Resources */,
 				3423A95C1ECB07E300AA647D /* Tests */,
@@ -289,14 +263,6 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		3423A9871ECB091F00AA647D /* SHMAVPlayerInterface_lib */ = {
-			isa = PBXGroup;
-			children = (
-				343864B31ED40D8B00562510 /* Source */,
-			);
-			name = SHMAVPlayerInterface_lib;
-			sourceTree = "<group>";
-		};
 		3438649C1ED40D4C00562510 /* Example_source */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,19 +272,6 @@
 				343864A21ED40D4C00562510 /* ViewController.swift */,
 			);
 			path = Example_source;
-			sourceTree = "<group>";
-		};
-		343864B31ED40D8B00562510 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				343864BA1ED40D8B00562510 /* SHMAVPlayerInterface.swift */,
-				343864B91ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift */,
-				343864B41ED40D8B00562510 /* AVPlayer+RX.swift */,
-				343864B51ED40D8B00562510 /* AVPlayerItem+RX.swift */,
-				343864D41ED40E6600562510 /* Observable+IgnoreNil.swift */,
-			);
-			name = Source;
-			path = ../Source;
 			sourceTree = "<group>";
 		};
 		34E5BCC41EDD3ECF00F684B7 /* Misc */ = {
@@ -781,13 +734,8 @@
 				34E5BCD51EDD3ECF00F684B7 /* ExamplePlayerControllerOverlayView.swift in Sources */,
 				3440BA251EDC1B0100294F88 /* AppDelegate.swift in Sources */,
 				34E5BCD21EDD3ECF00F684B7 /* CustomSlider.swift in Sources */,
-				343864CB1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */,
-				343864BF1ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */,
 				34E5BCD31EDD3ECF00F684B7 /* ExamplePlayerController+Overlay.swift in Sources */,
-				343864BB1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */,
 				343864AF1ED40D4C00562510 /* ViewController.swift in Sources */,
-				343864CF1ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */,
-				343864D91ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */,
 				34E5BCD71EDD3ECF00F684B7 /* ExamplePlayerController.swift in Sources */,
 				34E5BCD11EDD3ECF00F684B7 /* Logging.swift in Sources */,
 			);
@@ -797,17 +745,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				343864D01ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */,
 				340CC8CA1ED40FC7007365C7 /* AVPlayerItem+RXTests.swift in Sources */,
 				3423A9721ECB07EB00AA647D /* SHMAVPlayerInterfaceTests.swift in Sources */,
-				343864BC1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */,
-				343864CC1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */,
-				343864DA1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */,
 				340CC8CD1ED40FD1007365C7 /* Observable+IgnoreNilTests.swift in Sources */,
 				340CC8D21ED41082007365C7 /* SHMTestCase.swift in Sources */,
 				340CC8C71ED40FBB007365C7 /* AVPlayer+RXTests.swift in Sources */,
 				347666751ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift in Sources */,
-				343864C01ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */,
 				3423A9731ECB07EB00AA647D /* XCTestCase+Wait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -817,14 +760,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				34E5BCDB1EDD3EE700F684B7 /* ExamplePlayerController+Overlay.swift in Sources */,
-				343864CD1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */,
-				343864C11ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */,
-				343864BD1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */,
 				343864B11ED40D4C00562510 /* ViewController.swift in Sources */,
-				343864D11ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */,
 				34E5BCDD1EDD3EF400F684B7 /* ExamplePlayerController.swift in Sources */,
 				3440BA261EDC1B0300294F88 /* AppDelegate.swift in Sources */,
-				343864DB1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */,
 				34E5BCDA1EDD3ED400F684B7 /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -834,16 +772,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3423A9741ECB07EC00AA647D /* SHMAVPlayerInterfaceTests.swift in Sources */,
-				343864D21ED40D8B00562510 /* SHMAVPlayerInterface.swift in Sources */,
 				340CC8CB1ED40FC7007365C7 /* AVPlayerItem+RXTests.swift in Sources */,
-				343864BE1ED40D8B00562510 /* AVPlayer+RX.swift in Sources */,
-				343864CE1ED40D8B00562510 /* SHMAVPlayerInterface+Types.swift in Sources */,
-				343864DC1ED40E6600562510 /* Observable+IgnoreNil.swift in Sources */,
 				340CC8CE1ED40FD1007365C7 /* Observable+IgnoreNilTests.swift in Sources */,
 				340CC8D31ED41082007365C7 /* SHMTestCase.swift in Sources */,
 				340CC8C81ED40FBB007365C7 /* AVPlayer+RXTests.swift in Sources */,
 				347666761ED45C2E00055930 /* AVPlayerExternalPlaybackMock.swift in Sources */,
-				343864C21ED40D8B00562510 /* AVPlayerItem+RX.swift in Sources */,
 				3423A9751ECB07EC00AA647D /* XCTestCase+Wait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

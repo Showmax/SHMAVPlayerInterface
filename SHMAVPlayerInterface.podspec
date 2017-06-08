@@ -19,7 +19,7 @@ And still you have full control over your AVPlayer.
   s.source           = { :git => 'https://github.com/ShowMax/SHMAVPlayerInterface.git', :tag => "#{s.version}" }
   s.social_media_url = 'https://twitter.com/showmaxdevs'
 
-  s.platforms = { :ios => "9.0", :tvos => "9.0" }
+  s.platforms = { :ios => "9.0", :tvos => "10.0" }
   s.frameworks = 'AVFoundation'
 
   s.dependency 'RxSwift', '~> 3.5.0'

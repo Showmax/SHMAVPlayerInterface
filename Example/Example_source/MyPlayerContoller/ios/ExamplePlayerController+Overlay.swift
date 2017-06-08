@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+import SHMAVPlayerInterface
+
 extension ExamplePlayerController
 {
     /// Create and show custom UI over player.

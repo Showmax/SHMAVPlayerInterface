@@ -12,6 +12,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+import SHMAVPlayerInterface
+
 /// This class represent custom UI over player.
 class ExamplePlayerControllerOverlayView: UIView
 {

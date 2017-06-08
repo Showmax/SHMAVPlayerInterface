@@ -1,13 +1,17 @@
 use_frameworks!
 
-# Default pods groups. This is installed in every target.
+def shmavplayerinterface_dev
+    pod 'SHMAVPlayerInterface', :path => '../'
+end
+
 
 def default_pods
-    pod 'RxSwift'
-    pod 'RxCocoa'
+    shmavplayerinterface_dev
 end
 
 def test_frameworks
+    shmavplayerinterface_dev
+
     pod 'Nimble'
     pod 'RxBlocking'
     pod 'RxTest'

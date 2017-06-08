@@ -10,14 +10,20 @@ PODS:
   - RxSwift (3.5.0)
   - RxTest (3.5.0):
     - RxSwift (~> 3.4)
+  - SHMAVPlayerInterface (1.0.0):
+    - RxCocoa (~> 3.5.0)
+    - RxSwift (~> 3.5.0)
 
 DEPENDENCIES:
   - GCDWebServer
   - Nimble
   - RxBlocking
-  - RxCocoa
-  - RxSwift
   - RxTest
+  - SHMAVPlayerInterface (from `../`)
+
+EXTERNAL SOURCES:
+  SHMAVPlayerInterface:
+    :path: "../"
 
 SPEC CHECKSUMS:
   GCDWebServer: 1c39a1f0763e4eb492bee021e4270fce097d3555
@@ -26,7 +32,8 @@ SPEC CHECKSUMS:
   RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
   RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
   RxTest: 1763765fd0e2282b0eb44c9050effdd7fe7156d4
+  SHMAVPlayerInterface: 8c982d982cfda2aba5370061b08d8bb58b4bbc6d
 
-PODFILE CHECKSUM: 2ee6a5cb710f6c2125900b607e7c3e2bf5222de4
+PODFILE CHECKSUM: 3f06fb6c793c2364a40425550c423b4695087f20
 
 COCOAPODS: 1.2.1
