@@ -4,9 +4,11 @@
 [![Platform][platform-badge]][platform-url]
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-**SHMAVPlayerInterface** provides easy-to-use interface for `AVPlayer` and `AVPlayerItem`. You can forget on `KVO`, `CMTime`, media groups and other not so easy-to-use APIs. This library provides reactive API to observe important properties. And you also have wrapper around `AVPlayer` to handle basic actions like play/pause and subtitles changes. And still you have full control over your `AVPlayer`.
+**SHMAVPlayerInterface** provides an easy-to-use interface for `AVPlayer` and `AVPlayerItem`. You can replace `KVO`, `CMTime`, media groups, and other unfriendly APIs.
 
-`SHMAVPlayerInterface` is using [RxSwift](https://github.com/ReactiveX/RxSwift) and [RxCocoa](https://github.com/ReactiveX/RxSwift) libraries. If you are not familiar with reactive programming you should look at them first.
+The SHMAVPlayerInterface library provides a reactive API to observe important properties. SHMAVPlayerInterface also gives you a wrapper around `AVPlayer` to handle basic actions like play/pause and subtitles changes. You still retain full control over your `AVPlayer`.
+
+`SHMAVPlayerInterface` uses [RxSwift](https://github.com/ReactiveX/RxSwift) and [RxCocoa](https://github.com/ReactiveX/RxSwift) libraries. If you are not familiar with reactive programming you should look at these libraries before using SHMAVPlayerInterface.
 
 ## Installation
 
@@ -26,13 +28,15 @@ pod install
 
 ## Getting Started
 
-1) Include `SHMAVPlayerInterface` into your swift file
+There are two options for using SHMAVPlayerInterface:
+
+1) Import `SHMAVPlayerInterface` into your swift file
 
 ```swift
 import SHMAVPlayerInterface
 ```
 
-2a) Create `SHMAVPlayerInterface` object and start using `AVPlayer`
+Option A) Create `SHMAVPlayerInterface` object and start using `AVPlayer`
 
 ```swift
 let player: AVPlayer = ...
@@ -44,7 +48,9 @@ let subtitles = playerInterface.availableSubtitles
 ...
 ```
 
-2b) Or start observing `AVPlayer` (or `AVPlayerItem`) properties via reactive API.
+Option B) Or start observing `AVPlayer` (or `AVPlayerItem`) properties via reactive API.
+
+**IMPORTANT: If you use reactive extension for `AVPlayer` or `AVPlayerItem` then you must dispose your `DisposeBag` before you destroy `AVPlayer` or `AVPlayerItem`. If you don't do it then application will crash.**
 
 ```swift
 let player: AVPlayer = ...
@@ -60,15 +66,15 @@ playerInterface.player.rx.playbackPosition(updateInterval: 1.0, updateQueue: nil
   .disposed(by: bag)
 ```
 
-**IMPORTANT: If you use reactive extension for `AVPlayer` or `AVPlayerItem` then you must dispose your `DisposeBag` before you destroy `AVPlayer` or `AVPlayerItem`. If you don't do it then application will crash.**
+Or you can combine these options as you like.
 
 ## Documentation
 
-Main source of documentation is code. Every public API is commented.
+Primary documentation is in the code comments. Every public API is commented.
 
 ## Example code
 
-This repository contains real world example how to use this library. This example use `AVPlayerViewController` with custom UI on `iOS` and with default UI for `tvOS`.
+This repository contains a real world example how to use this library. This example uses `AVPlayerViewController` with custom UI on `iOS` and with the default UI for `tvOS`.
 
 To run the example project, clone the repo, and run `pod install` from the Example directory.
 
@@ -86,7 +92,7 @@ You can follow us at https://tech.showmax.com and/or https://twitter.com/Showmax
 
 ## Status
 
-This code is exactly one running in our production app. We are using the same pod as you see here. PRs are welcome.
+This code is currently running in our production app. We are using the same pod as you see here. PRs are welcome.
 
 ## License
 
