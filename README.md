@@ -1,4 +1,4 @@
-# SHMTableView
+# SHMAVPlayerInterface
 
 [![Swift][swift-badge]][swift-url]
 [![Platform][platform-badge]][platform-url]
