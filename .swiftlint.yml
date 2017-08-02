@@ -33,6 +33,7 @@ excluded:
  - Pods
  - 3rd_party
  - Tests
+ - tests
 
 attributes:
   severity: error
@@ -73,7 +74,7 @@ legacy_cggeometry_functions: error
 legacy_constant: error
 legacy_constructor: error
 legacy_nsgeometry_functions: error
-    
+
 mark: error
 nesting:
     severity: error
@@ -116,8 +117,8 @@ cyclomatic_complexity:
   error: 15
 
 file_length:
-  warning: 1000
-  error: 1000
+  warning: 10000
+  error: 30000
 
 function_body_length:
   warning: 50
@@ -132,8 +133,8 @@ line_length:
   error: 150
 
 type_body_length:
-  warning: 1000
-  error: 1000
+  warning: 5000
+  error: 9000
 
 type_name:
   min_length:
@@ -159,4 +160,3 @@ custom_rules:
     regex: "((func|var|class|struct|enum|if|switch|guard|protocol|extension|else)[^\n]*\\{$)"
     message: "Opening bracket MUST be on new line."
     severity: error
-  
