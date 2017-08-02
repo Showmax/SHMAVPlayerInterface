@@ -10,7 +10,7 @@ PODS:
   - RxSwift (3.5.0)
   - RxTest (3.5.0):
     - RxSwift (~> 3.4)
-  - SHMAVPlayerInterface (1.0.0):
+  - SHMAVPlayerInterface (2.0.0):
     - RxCocoa (~> 3.5.0)
     - RxSwift (~> 3.5.0)
 
@@ -32,7 +32,7 @@ SPEC CHECKSUMS:
   RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
   RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
   RxTest: 1763765fd0e2282b0eb44c9050effdd7fe7156d4
-  SHMAVPlayerInterface: 8c982d982cfda2aba5370061b08d8bb58b4bbc6d
+  SHMAVPlayerInterface: 6e1254f0344aadfeace9bc649c1fb221849a2411
 
 PODFILE CHECKSUM: 3f06fb6c793c2364a40425550c423b4695087f20
 
