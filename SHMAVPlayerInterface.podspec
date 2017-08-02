@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SHMAVPlayerInterface'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'SHMAVPlayerInterface provides an easy-to-use interface for AVPlayer and AVPlayerItem. You can replace KVO, CMTime, media groups, and other unfriendly APIs.'
 
   s.description      = <<-DESC

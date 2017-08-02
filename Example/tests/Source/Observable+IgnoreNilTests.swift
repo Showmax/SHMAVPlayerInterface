@@ -19,6 +19,7 @@ import XCTest
 import Nimble
 import RxSwift
 import RxBlocking
+@testable import SHMAVPlayerInterface
 
 class ObservableIgnoreNilTests: SHMTestCase
 {

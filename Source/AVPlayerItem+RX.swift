@@ -24,8 +24,14 @@ extension AVPlayerItem
     /// Structure used to provide informations about player item's current status.
     public struct SHMPlayerItemBufferStatus: Equatable
     {
-        let bufferEmpty: Bool
-        let bufferFull: Bool
+        public let bufferEmpty: Bool
+        public let bufferFull: Bool
+        
+        public init(bufferEmpty: Bool, bufferFull: Bool)
+        {
+            self.bufferEmpty = bufferEmpty
+            self.bufferFull = bufferFull
+        }
         
         public static func == (lhs: AVPlayerItem.SHMPlayerItemBufferStatus, rhs: AVPlayerItem.SHMPlayerItemBufferStatus) -> Bool
         {

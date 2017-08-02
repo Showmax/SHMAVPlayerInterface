@@ -20,6 +20,7 @@ import XCTest
 import Nimble
 import RxSwift
 import RxBlocking
+import SHMAVPlayerInterface
 
 class AVPlayerRXTests: SHMTestCase
 {
