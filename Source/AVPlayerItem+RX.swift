@@ -27,6 +27,12 @@ extension AVPlayerItem
         public let bufferEmpty: Bool
         public let bufferFull: Bool
         
+        public init(bufferEmpty: Bool, bufferFull: Bool)
+        {
+            self.bufferEmpty = bufferEmpty
+            self.bufferFull = bufferFull
+        }
+        
         public static func == (lhs: AVPlayerItem.SHMPlayerItemBufferStatus, rhs: AVPlayerItem.SHMPlayerItemBufferStatus) -> Bool
         {
             return lhs.bufferEmpty == rhs.bufferEmpty && lhs.bufferFull == rhs.bufferFull
