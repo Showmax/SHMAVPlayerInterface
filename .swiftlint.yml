@@ -117,8 +117,8 @@ cyclomatic_complexity:
   error: 15
 
 file_length:
-  warning: 10000
-  error: 30000
+  warning: 1000
+  error: 1000
 
 function_body_length:
   warning: 50
@@ -133,8 +133,8 @@ line_length:
   error: 150
 
 type_body_length:
-  warning: 5000
-  error: 9000
+  warning: 1000
+  error: 1000
 
 type_name:
   min_length:
