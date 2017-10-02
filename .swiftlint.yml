@@ -1,6 +1,5 @@
 disabled_rules: # rule identifiers to exclude from running
  - conditional_returns_on_newline
- - opening_brace
  - private_outlet
  - switch_case_on_newline
  - trailing_whitespace
@@ -79,6 +78,7 @@ mark: error
 nesting:
     severity: error
 
+opening_brace: error
 operator_whitespace: error
 operator_usage_whitespace: error
 overridden_super_call:
@@ -152,11 +152,3 @@ identifier_name:
   max_length:
     warning: 50
     error: 50
-
-custom_rules:
-  open_bracket_on_new_line:
-    included: ".*.swift"
-    name: "Opening bracket on new line."
-    regex: "((func|var|class|struct|enum|if|switch|guard|protocol|extension|else)[^\n]*\\{$)"
-    message: "Opening bracket MUST be on new line."
-    severity: error

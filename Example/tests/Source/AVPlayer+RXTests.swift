@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 import Foundation
 import AVFoundation
 
@@ -22,131 +21,123 @@ import RxSwift
 import RxBlocking
 import SHMAVPlayerInterface
 
-class AVPlayerRXTests: SHMTestCase
-{
-    func test__status__changeToReadyToPlayWhenPlaybackStarts()
-    {
+class AVPlayerRXTests: SHMTestCase {
+    func test__status__changeToReadyToPlayWhenPlaybackStarts() {
         let player = createPlayer()
-        
+
         shmwait(timeout: 3.0, action: { done in
-            
+
             player.rx.status(options: .new)
                 .subscribe(
                     onNext: { status in
-                        
+
                         guard status == .readyToPlay else { return }
-                        
+
                         done()
                     }
                 )
                 .disposed(by: self.bag)
-            
+
             player.play()
         })
     }
-    
-    func test__rate__changeTo1WhenPlaybackStarts()
-    {
+
+    func test__rate__changeTo1WhenPlaybackStarts() {
         let player = createPlayer()
-        
+
         shmwait(timeout: 3.0, action: { done in
-            
+
             player.rx.rate(options: .new)
                 .subscribe(
                     onNext: { rate in
-                        
+
                         guard rate == 1.0 else { return }
-                        
+
                         done()
                     }
                 )
                 .disposed(by: self.bag)
-            
+
             player.play()
         })
     }
-    
-    func test__paused__reportFalseWhenPlaybackStarts()
-    {
+
+    func test__paused__reportFalseWhenPlaybackStarts() {
         let player = createPlayer()
-        
+
         shmwait(timeout: 3.0, action: { done in
-            
+
             player.rx.paused(options: .new)
                 .subscribe(
                     onNext: { paused in
-                        
+
                         guard !paused else { return }
-                        
+
                         done()
                     }
                 )
                 .disposed(by: self.bag)
-            
+
             player.play()
         })
     }
-    
-    func test__pausedIsTrue__whenPlaybackPause()
-    {
+
+    func test__pausedIsTrue__whenPlaybackPause() {
         let player = createPlayer()
-        
+
         shmwait(timeout: 3.0, action: { done in
-            
+
             var shouldBePaused = false
-            
+
             player.rx.playbackPosition(updateInterval: 0.1, updateQueue: nil)
                 .subscribe(
                     onNext: { position in
-                    
+
                         guard position > 0.0 && !shouldBePaused else { return }
-                        
+
                         shouldBePaused = true
                         player.pause()
                     }
                 )
                 .disposed(by: self.bag)
-            
-            
+
             player.rx.paused(options: .new)
                 .subscribe(
                     onNext: { paused in
-                        
+
                         guard shouldBePaused else { return }
-                        
+
                         expect(paused) == true
                         done()
                     }
                 )
                 .disposed(by: self.bag)
-            
+
             player.play()
         })
     }
-    
-    func test__playbackPosition__changeWhenPlaybackStarts()
-    {
+
+    func test__playbackPosition__changeWhenPlaybackStarts() {
         let player = createPlayer()
-        
+
         shmwait(timeout: 3.0, action: { done in
-            
+
             player.rx.playbackPosition(updateInterval: 0.1, updateQueue: nil)
                 .subscribe(
                     onNext: { position in
-                        
+
                         guard position > 0.0 else { return }
-                        
+
                         done()
                     }
                 )
                 .disposed(by: self.bag)
-            
+
             player.play()
         })
     }
-    
-    func test__externalPlaybackActive__shouldChangeWhenPlayerConnectToAirPlay()
-    {
+
+    func test__externalPlaybackActive__shouldChangeWhenPlayerConnectToAirPlay() {
         //dont know how to do this yet
     }
 }

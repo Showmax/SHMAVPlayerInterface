@@ -12,23 +12,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 import Foundation
 
-var dateFormatter: DateFormatter? = nil
+var dateFormatter: DateFormatter?
 
-func ldebug(_ message: Any, function: String = #function, line: Int = #line, file: String = #file)
-{
+func ldebug(_ message: Any, function: String = #function, line: Int = #line, file: String = #file) {
 #if DEBUG
-    if dateFormatter == nil
-    {
+    if dateFormatter == nil {
         dateFormatter = DateFormatter()
         dateFormatter?.dateFormat = "HH:mm:ss.SSS"
     }
-    
+
     let filename = ((file as NSString).lastPathComponent as NSString).deletingPathExtension
-    
+
     print("\(dateFormatter?.string(from: Date()) ?? "") \(Int(Thread.isMainThread ? 1 : 0)) [\(filename):\(line)] \(function): \(message)")
 #endif
-    
+
 }

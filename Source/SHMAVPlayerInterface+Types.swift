@@ -18,11 +18,9 @@ import AVFoundation
 
 import RxSwift
 
-extension SHMAVPlayerInterface
-{
+extension SHMAVPlayerInterface {
     /// This structure represent one subtitle track.
-    public struct Subtitle
-    {
+    public struct Subtitle {
         /// ISO language code of this subtitle track.
         public let languageCode: String
         /// Indicates if subtitles are forced.
@@ -32,8 +30,7 @@ extension SHMAVPlayerInterface
     }
     
     /// This structure represent one audio track.
-    public struct AudioTrack
-    {
+    public struct AudioTrack {
         /// ISO language code of this audio track.
         public let languageCode: String
         /// Option which represents this audio track in player.

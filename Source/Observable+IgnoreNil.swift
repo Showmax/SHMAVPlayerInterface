@@ -17,32 +17,26 @@ import Foundation
 
 import RxSwift
 
-protocol OptionalWrapper
-{
+protocol OptionalWrapper {
     associatedtype Wrapped
     
     var value: Wrapped? { get }
 }
 
-extension Optional: OptionalWrapper
-{
-    var value: Wrapped?
-    {
+extension Optional: OptionalWrapper {
+    var value: Wrapped? {
         return self
     }
 }
 
-extension Observable where Element: OptionalWrapper
-{
+extension Observable where Element: OptionalWrapper {
     /// This operator ignore `next` events which contains nil. Output is non-optional type.
     ///
     /// - Returns: Observable with non-optional type.
-    func ignoreNil() -> Observable<E.Wrapped>
-    {
+    func ignoreNil() -> Observable<E.Wrapped> {
         return flatMap({ element -> Observable<E.Wrapped> in
             
-            guard let value = element.value else
-            {
+            guard let value = element.value else {
                 return Observable<E.Wrapped>.empty()
                 
             }

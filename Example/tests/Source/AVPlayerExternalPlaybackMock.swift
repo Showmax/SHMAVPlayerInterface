@@ -12,14 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 import Foundation
 import AVFoundation
 
-class AVPlayerExternalPlaybackMock: AVPlayer
-{
-    override var isExternalPlaybackActive: Bool
-    {
+class AVPlayerExternalPlaybackMock: AVPlayer {
+    override var isExternalPlaybackActive: Bool {
         return super.isExternalPlaybackActive
     }
 }

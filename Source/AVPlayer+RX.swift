@@ -19,14 +19,12 @@ import AVFoundation
 import RxSwift
 import RxCocoa
 
-extension Reactive where Base: AVPlayer
-{
+extension Reactive where Base: AVPlayer {
     /// Create observable which will emitt `AVPlayerStatus` every time player's status change. Only distinct values will be emitted.
     ///
     /// - Parameter options: Observing options which determine the values that are returned. These options are passed to KVO method.
     /// - Returns: Observable which emitt player's status every time it change.
-    public func status(options: NSKeyValueObservingOptions) -> Observable<AVPlayerStatus>
-    {
+    public func status(options: NSKeyValueObservingOptions) -> Observable<AVPlayerStatus> {
         return base.rx.observe(AVPlayerStatus.self, "status", options: options, retainSelf: false)
             .ignoreNil()
             .distinctUntilChanged()
@@ -36,8 +34,7 @@ extension Reactive where Base: AVPlayer
     ///
     /// - Parameter options: Observing options which determine the values that are returned. These options are passed to KVO method.
     /// - Returns: Observable which emitt player's rate every time it change.
-    public func rate(options: NSKeyValueObservingOptions) -> Observable<Float>
-    {
+    public func rate(options: NSKeyValueObservingOptions) -> Observable<Float> {
         return base.rx.observe(Float.self, "rate", options: options, retainSelf: false)
             .ignoreNil()
             .distinctUntilChanged()
@@ -49,8 +46,7 @@ extension Reactive where Base: AVPlayer
     ///
     /// - Parameter options: Observing options which determine the values that are returned. These options are passed to KVO method.
     /// - Returns: Observable which emitt paused state every time player's rate change.
-    public func paused(options: NSKeyValueObservingOptions) -> Observable<Bool>
-    {
+    public func paused(options: NSKeyValueObservingOptions) -> Observable<Bool> {
         return base.rx.rate(options: options)
             .map({ $0 <= 0.0 })
             .distinctUntilChanged()
@@ -62,12 +58,10 @@ extension Reactive where Base: AVPlayer
     ///   - updateInterval: Interval in which is position updated.
     ///   - updateQueue: Queue which is used to update position. If this is set to `nil` then updates are done on main queue.
     /// - Returns: Observable which will emitt playback position.
-    public func playbackPosition(updateInterval: TimeInterval, updateQueue: DispatchQueue?) -> Observable<TimeInterval>
-    {
+    public func playbackPosition(updateInterval: TimeInterval, updateQueue: DispatchQueue?) -> Observable<TimeInterval> {
         return Observable.create({[weak base] observer in
             
-            guard let player = base else
-            {
+            guard let player = base else {
                 observer.onCompleted()
                 return Disposables.create()
             }
@@ -81,8 +75,7 @@ extension Reactive where Base: AVPlayer
                     observer.onNext(positionTime.seconds)
             })
             
-            return Disposables.create
-            {
+            return Disposables.create {
                 player.removeTimeObserver(obj)
             }
         })
@@ -92,8 +85,7 @@ extension Reactive where Base: AVPlayer
     ///
     /// - Parameter options: Observing options which determine the values that are returned. These options are passed to KVO method.
     /// - Returns: Observable which emitt player's externalPlaybackActive every time it change.
-    public func externalPlaybackActive(options: NSKeyValueObservingOptions) -> Observable<Bool>
-    {
+    public func externalPlaybackActive(options: NSKeyValueObservingOptions) -> Observable<Bool> {
         return base.rx.observe(Bool.self, "externalPlaybackActive", options: options, retainSelf: false)
             .ignoreNil()
             .distinctUntilChanged()

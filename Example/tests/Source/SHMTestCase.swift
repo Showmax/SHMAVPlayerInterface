@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 import Foundation
 import AVFoundation
 
@@ -24,40 +23,35 @@ import SHMAVPlayerInterface
 
 let kBipBopDuration: TimeInterval = 1800.045
 
-class SHMTestCase: XCTestCase
-{
+class SHMTestCase: XCTestCase {
     var bag = DisposeBag()
-    var lastPlayer: AVPlayer? = nil
-    
-    override func setUp()
-    {
+    var lastPlayer: AVPlayer?
+
+    override func setUp() {
         super.setUp()
     }
-    
-    override func tearDown()
-    {
+
+    override func tearDown() {
         super.tearDown()
-        
+
         bag = DisposeBag()
         lastPlayer = nil
     }
-    
-    func createPlayer() -> AVPlayer
-    {
+
+    func createPlayer() -> AVPlayer {
         let asset = AVAsset(url: URL(string: "https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8")!)
         let item = AVPlayerItem(asset: asset)
         let player = AVPlayer(playerItem: item)
 
         lastPlayer = player
-        
+
         return player
     }
-    
-    func createPlayerAndInterface() -> (player: AVPlayer, interface: SHMAVPlayerInterface)
-    {
+
+    func createPlayerAndInterface() -> (player: AVPlayer, interface: SHMAVPlayerInterface) {
         let player = createPlayer()
         let interface = SHMAVPlayerInterface(player: player)
-        
+
         return (player: player, interface: interface)
     }
 }

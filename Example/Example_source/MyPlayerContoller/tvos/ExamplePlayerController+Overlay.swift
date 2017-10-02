@@ -12,13 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 import Foundation
 
-extension ExamplePlayerController
-{
+extension ExamplePlayerController {
     /// For tvOS there is no custom UI. So no action here.
-    func setupOverlayView(with playerInterface: SHMAVPlayerInterface)
-    {
+    func setupOverlayView(with playerInterface: SHMAVPlayerInterface) {
     }
 }

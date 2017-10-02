@@ -27,8 +27,7 @@ import RxSwift
 /// This class is only wrapper around `AVPlayer`. This class doesn't inherit from `AVPlayer` class or it doesn't extend that. To use this class
 /// just create instance and pass your player to constructor and that's it.
 ///
-public class SHMAVPlayerInterface
-{
+public class SHMAVPlayerInterface {
     /// Instace of `AVPlayer` wrapped by this instance.
     public let              player: AVPlayer
     
@@ -38,8 +37,7 @@ public class SHMAVPlayerInterface
     /// Create and configure `SHMAVPlayerInterface` instance with existing `AVPlayer` instance.
     ///
     /// - Parameter player: Existing player.
-    public init(player: AVPlayer)
-    {
+    public init(player: AVPlayer) {
         self.player = player
         
         seeking = false
@@ -49,22 +47,19 @@ public class SHMAVPlayerInterface
     
     /// Return current asset duration if it's available. If `player` doesn't have `currentItem` or current item didn't load duration information yet
     /// then this method return `nil`.
-    public var duration: TimeInterval?
-    {
+    public var duration: TimeInterval? {
         let seconds = player.currentItem?.duration.seconds ?? TimeInterval.nan
 
         return seconds.isNaN ? nil : seconds
     }
     
     /// Return current playback position in seconds.
-    public var playbackPosition: TimeInterval
-    {
+    public var playbackPosition: TimeInterval {
         return player.currentTime().seconds
     }
 
     /// Indicates if playback is paused. `player`'s `rate` property is used to determine this.
-    public var paused: Bool
-    {
+    public var paused: Bool {
         return player.rate == 0.0
     }
     
@@ -74,26 +69,22 @@ public class SHMAVPlayerInterface
     /// - playback is paused (rate is <= 0.0)
     /// - seeking operation is NOT in progress
     /// - `currentItem`'s playback buffer is empty
-    public var playbackProbablyStalled: Bool
-    {
+    public var playbackProbablyStalled: Bool {
         return paused && !seeking && (player.currentItem?.isPlaybackBufferEmpty ?? false)
     }
     
     /// Get current error. First try to return error from player and if it's `nil` then return error from `player`'s item.
-    public var error: Error?
-    {
+    public var error: Error? {
         return player.error ?? player.currentItem?.error
     }
     
     /// Resume playback by calling `play()` on `player`.
-    public func play()
-    {
+    public func play() {
         player.play()
     }
     
     /// Pause playback by calling `pause()` on `player`.
-    public func pause()
-    {
+    public func pause() {
         player.pause()
     }
     
@@ -127,10 +118,8 @@ public class SHMAVPlayerInterface
         toleranceAfter: TimeInterval = 0.0,
         cancelPendingSeeks: Bool = true,
         completionHandler: ((Bool) -> Void)? = nil
-    )
-    {
-        if cancelPendingSeeks
-        {
+    ) {
+        if cancelPendingSeeks {
             player.currentItem?.cancelPendingSeeks()
         }
         
@@ -155,10 +144,8 @@ public class SHMAVPlayerInterface
     // MARK: - Subtitles and audio tracks
     
     /// Return array of available subtitles tracks.
-    public var availableSubtitles: [Subtitle]
-    {
-        guard let subtitlesGroup = player.currentItem?.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible) else
-        {
+    public var availableSubtitles: [Subtitle] {
+        guard let subtitlesGroup = player.currentItem?.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible) else {
             return []
         }
         
@@ -174,14 +161,12 @@ public class SHMAVPlayerInterface
     }
     
     /// Return selected subtitle track. If none is selected this property returns `nil`.
-    public var selectedSubtitle: Subtitle?
-    {
+    public var selectedSubtitle: Subtitle? {
         guard   let item = player.currentItem,
                 let subtitlesGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible),
                 let selectedOption = item.selectedMediaOption(in: subtitlesGroup),
                 let languageCode = selectedOption.extendedLanguageTag
-                else
-        {
+                else {
             return nil
         }
         
@@ -197,12 +182,10 @@ public class SHMAVPlayerInterface
     /// You should pass here only `Subtitle` instance previously returned by `SHMAVPlayerInterface`.
     ///
     /// - Parameter subtitle: Subtitle track to select. If this is `nil` then no track is selected and current one is deselected.
-    public func select(subtitle: Subtitle?)
-    {
+    public func select(subtitle: Subtitle?) {
         guard   let item = player.currentItem,
                 let subtitlesGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible)
-                else
-        {
+                else {
             return
         }
         
@@ -210,10 +193,8 @@ public class SHMAVPlayerInterface
     }
     
     /// Return array of available audio tracks.
-    public var availableAudioTracks: [AudioTrack]
-    {
-        guard let audioGroup = player.currentItem?.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicAudible) else
-        {
+    public var availableAudioTracks: [AudioTrack] {
+        guard let audioGroup = player.currentItem?.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicAudible) else {
             return []
         }
         
@@ -228,14 +209,12 @@ public class SHMAVPlayerInterface
     }
     
     /// Return selected audio track. If none is selected this property returns `nil`.
-    public var selectedAudioTrack: AudioTrack?
-    {
+    public var selectedAudioTrack: AudioTrack? {
         guard   let item = player.currentItem,
                 let audioGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicAudible),
                 let selectedOption = item.selectedMediaOption(in: audioGroup),
                 let languageCode = selectedOption.extendedLanguageTag
-                else
-        {
+                else {
             return nil
         }
         
@@ -250,12 +229,10 @@ public class SHMAVPlayerInterface
     /// You should pass here only `AudioTrack` instance previously returned by `SHMAVPlayerInterface`.
     ///
     /// - Parameter subtitle: Audio track to select. If this is `nil` then no track is selected and current one is deselected.
-    public func select(audioTrack: AudioTrack)
-    {
+    public func select(audioTrack: AudioTrack) {
         guard   let item = player.currentItem,
                 let audioGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicAudible)
-                else
-        {
+                else {
             return
         }
         

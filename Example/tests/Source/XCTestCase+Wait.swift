@@ -12,13 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 import Foundation
 
 import XCTest
 
-extension XCTestCase
-{
+extension XCTestCase {
     /// This method can be used to wait for asynchronous operation in tests.
     ///
     /// - Parameters:
@@ -33,16 +31,15 @@ extension XCTestCase
         file: String = #file,
         function: String = #function,
         action: @escaping (_ done: @escaping () -> Void) -> Void
-        )
-    {
+        ) {
         let filename = file.components(separatedBy: "/").last ?? ""
         let expect = expectation(description: "\(filename): \(function)")
-        
+
         action({
-            
+
             expect.fulfill()
         })
-        
+
         waitForExpectations(timeout: timeout)
     }
 }

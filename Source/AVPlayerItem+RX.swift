@@ -19,39 +19,32 @@ import AVFoundation
 import RxSwift
 import RxCocoa
 
-extension AVPlayerItem
-{
+extension AVPlayerItem {
     /// Structure used to provide informations about player item's current status.
-    public struct SHMPlayerItemBufferStatus: Equatable
-    {
+    public struct SHMPlayerItemBufferStatus: Equatable {
         public let bufferEmpty: Bool
         public let bufferFull: Bool
         
-        public init(bufferEmpty: Bool, bufferFull: Bool)
-        {
+        public init(bufferEmpty: Bool, bufferFull: Bool) {
             self.bufferEmpty = bufferEmpty
             self.bufferFull = bufferFull
         }
         
-        public static func == (lhs: AVPlayerItem.SHMPlayerItemBufferStatus, rhs: AVPlayerItem.SHMPlayerItemBufferStatus) -> Bool
-        {
+        public static func == (lhs: AVPlayerItem.SHMPlayerItemBufferStatus, rhs: AVPlayerItem.SHMPlayerItemBufferStatus) -> Bool {
             return lhs.bufferEmpty == rhs.bufferEmpty && lhs.bufferFull == rhs.bufferFull
         }
     }
 }
 
-extension Reactive where Base: AVPlayerItem
-{
+extension Reactive where Base: AVPlayerItem {
     /// Create observable which emitt `completed` signal when this item has played to its end time.
-    public var playbackFinished: Observable<Void>
-    {
+    public var playbackFinished: Observable<Void> {
         return NotificationCenter.default.rx.notification(.AVPlayerItemDidPlayToEndTime, object: base)
             .map({ _ in Void() })
     }
     
     /// Create observable which will emitt `AVPlayerItemAccessLogEvent` every time new event will be added to `AVPlayerItem`'s access log.
-    public var accessLogEvent: Observable<AVPlayerItemAccessLogEvent>
-    {
+    public var accessLogEvent: Observable<AVPlayerItemAccessLogEvent> {
         return NotificationCenter.default.rx.notification(.AVPlayerItemNewAccessLogEntry)
             .map({[weak base] _ -> AVPlayerItemAccessLogEvent? in
                 
@@ -61,8 +54,7 @@ extension Reactive where Base: AVPlayerItem
     }
     
     /// Create observable which will emitt `AVPlayerItemErrorLogEvent` every time new event will be added to `AVPlayerItem`'s error log.
-    public var errorLogEvent: Observable<AVPlayerItemErrorLogEvent>
-    {
+    public var errorLogEvent: Observable<AVPlayerItemErrorLogEvent> {
         return NotificationCenter.default.rx.notification(.AVPlayerItemNewErrorLogEntry)
             .map({[weak base] _ -> AVPlayerItemErrorLogEvent? in
                 
@@ -76,8 +68,7 @@ extension Reactive where Base: AVPlayerItem
     ///
     /// - Parameter options: Observing options which determine the values that are returned. These options are passed to KVO method.
     /// - Returns: Observable which emitt player item's status every time it change.
-    public func status(options: NSKeyValueObservingOptions) -> Observable<AVPlayerItemStatus>
-    {
+    public func status(options: NSKeyValueObservingOptions) -> Observable<AVPlayerItemStatus> {
         return base.rx.observe(AVPlayerItemStatus.self, "status", options: options, retainSelf: false)
             .ignoreNil()
             .distinctUntilChanged()
@@ -87,8 +78,7 @@ extension Reactive where Base: AVPlayerItem
     ///
     /// - Parameter options: Observing options which determine the values that are returned. These options are passed to KVO method.
     /// - Returns: Observable which emitt player item's `playbackBufferEmpty` every time it change.
-    public func playbackBufferEmpty(options: NSKeyValueObservingOptions) -> Observable<Bool>
-    {
+    public func playbackBufferEmpty(options: NSKeyValueObservingOptions) -> Observable<Bool> {
         return base.rx.observe(Bool.self, "playbackBufferEmpty", options: options, retainSelf: false)
             .ignoreNil()
             .distinctUntilChanged()
@@ -98,8 +88,7 @@ extension Reactive where Base: AVPlayerItem
     ///
     /// - Parameter options: Observing options which determine the values that are returned. These options are passed to KVO method.
     /// - Returns: Observable which emitt player item's `playbackBufferFull` every time it change.
-    public func playbackBufferFull(options: NSKeyValueObservingOptions) -> Observable<Bool>
-    {
+    public func playbackBufferFull(options: NSKeyValueObservingOptions) -> Observable<Bool> {
         return base.rx.observe(Bool.self, "playbackBufferFull", options: options, retainSelf: false)
             .ignoreNil()
             .distinctUntilChanged()
@@ -111,8 +100,7 @@ extension Reactive where Base: AVPlayerItem
     /// - Parameter options: Observing options which determine the values that are returned. These options are passed to KVO method.
     /// - Returns: Observable which emitt `AVPlayerItem.SHMPlayerItemBufferStatus` every time player item's `playbackBufferEmpty` or
     ///            `playbackBufferFull` change.
-    public func bufferStatus(options: NSKeyValueObservingOptions) -> Observable<AVPlayerItem.SHMPlayerItemBufferStatus>
-    {
+    public func bufferStatus(options: NSKeyValueObservingOptions) -> Observable<AVPlayerItem.SHMPlayerItemBufferStatus> {
         let bufferEmptyObservable = base.rx.playbackBufferEmpty(options: options)
         let bufferFullObservable = base.rx.playbackBufferFull(options: options)
         
