@@ -13,6 +13,7 @@
 // limitations under the License.
 
 import Foundation
+import SHMAVPlayerInterface
 
 extension ExamplePlayerController {
     /// For tvOS there is no custom UI. So no action here.
