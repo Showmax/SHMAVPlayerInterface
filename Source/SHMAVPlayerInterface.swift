@@ -145,14 +145,14 @@ public class SHMAVPlayerInterface {
     
     /// Return array of available subtitles tracks.
     public var availableSubtitles: [Subtitle] {
-        guard let subtitlesGroup = player.currentItem?.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible) else {
+        guard let subtitlesGroup = player.currentItem?.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristic.legible) else {
             return []
         }
         
         let subtitles = subtitlesGroup.options.flatMap({ option -> Subtitle? in
             
             guard let languageCode = option.extendedLanguageTag else { return nil }
-            let forced = option.hasMediaCharacteristic(AVMediaCharacteristicContainsOnlyForcedSubtitles)
+            let forced = option.hasMediaCharacteristic(AVMediaCharacteristic.containsOnlyForcedSubtitles)
             
             return Subtitle(languageCode: languageCode, forced: forced, option: option)
         })
@@ -163,7 +163,7 @@ public class SHMAVPlayerInterface {
     /// Return selected subtitle track. If none is selected this property returns `nil`.
     public var selectedSubtitle: Subtitle? {
         guard   let item = player.currentItem,
-                let subtitlesGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible),
+                let subtitlesGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristic.legible),
                 let selectedOption = item.selectedMediaOption(in: subtitlesGroup),
                 let languageCode = selectedOption.extendedLanguageTag
                 else {
@@ -172,7 +172,7 @@ public class SHMAVPlayerInterface {
         
         return Subtitle(
             languageCode: languageCode,
-            forced: selectedOption.hasMediaCharacteristic(AVMediaCharacteristicContainsOnlyForcedSubtitles),
+            forced: selectedOption.hasMediaCharacteristic(AVMediaCharacteristic.containsOnlyForcedSubtitles),
             option: selectedOption
         )
     }
@@ -184,7 +184,7 @@ public class SHMAVPlayerInterface {
     /// - Parameter subtitle: Subtitle track to select. If this is `nil` then no track is selected and current one is deselected.
     public func select(subtitle: Subtitle?) {
         guard   let item = player.currentItem,
-                let subtitlesGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicLegible)
+                let subtitlesGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristic.legible)
                 else {
             return
         }
@@ -194,7 +194,7 @@ public class SHMAVPlayerInterface {
     
     /// Return array of available audio tracks.
     public var availableAudioTracks: [AudioTrack] {
-        guard let audioGroup = player.currentItem?.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicAudible) else {
+        guard let audioGroup = player.currentItem?.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristic.audible) else {
             return []
         }
         
@@ -211,7 +211,7 @@ public class SHMAVPlayerInterface {
     /// Return selected audio track. If none is selected this property returns `nil`.
     public var selectedAudioTrack: AudioTrack? {
         guard   let item = player.currentItem,
-                let audioGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicAudible),
+                let audioGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristic.audible),
                 let selectedOption = item.selectedMediaOption(in: audioGroup),
                 let languageCode = selectedOption.extendedLanguageTag
                 else {
@@ -231,7 +231,7 @@ public class SHMAVPlayerInterface {
     /// - Parameter subtitle: Audio track to select. If this is `nil` then no track is selected and current one is deselected.
     public func select(audioTrack: AudioTrack) {
         guard   let item = player.currentItem,
-                let audioGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristicAudible)
+                let audioGroup = item.asset.mediaSelectionGroup(forMediaCharacteristic: AVMediaCharacteristic.audible)
                 else {
             return
         }
